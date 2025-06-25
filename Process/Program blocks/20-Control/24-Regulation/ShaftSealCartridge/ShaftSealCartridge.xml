@@ -1,0 +1,2454 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-25T13:13:07.2274741Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="bEnable" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Enable from process. 1 = enabled, 0 = disabled. </MultiLanguageText></Comment></Member>
+    <Member Name="bReset" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="Cooler" Datatype="&quot;fbOnOffRegulator&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bEnable" Datatype="Bool" /><Member Name="sPV" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="Above" Datatype="Bool" /><Member Name="bReset" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /><Member Name="bAtSetpoint" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stOnOffRegulator&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Controller" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="Recharge" Datatype="&quot;fbOnOffRegulator&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bEnable" Datatype="Bool" /><Member Name="sPV" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="Above" Datatype="Bool" /><Member Name="bReset" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /><Member Name="bAtSetpoint" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stOnOffRegulator&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Controller" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5257" Datatype="&quot;fbLowAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5258" Datatype="&quot;fbHighAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5259" Datatype="&quot;fbHighAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5260" Datatype="&quot;fbLowAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5261" Datatype="&quot;fbLowAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5262" Datatype="&quot;fbHighAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5263" Datatype="&quot;fbHighAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="sValue" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stLimitAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbLimitAlarm&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /><Member Name="tAlarmDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Limit" Datatype="&quot;fbHysteresis&quot;"><Sections><Section Name="Input"><Member Name="fValue" Datatype="Real" /><Member Name="fLimit" Datatype="Real" /><Member Name="fHysteresis" Datatype="Real" /><Member Name="bType" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOutput" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="State" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A5268" Datatype="&quot;fbDigitalAlarm&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="nState" Datatype="USInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="bEnableAuto" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Circulation regulator is enabled in Auto</MultiLanguageText></Comment></Member>
+    <Member Name="bEnableCoolerAuto" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Cooling regulator is enabled in Auto</MultiLanguageText></Comment></Member>
+    <Member Name="bEnableRechargeAuto" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Recharging regulator is enabled in Auto</MultiLanguageText></Comment></Member>
+    <Member Name="bRunReqAuto" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Run in auto</MultiLanguageText></Comment></Member>
+    <Member Name="bStart" Datatype="R_TRIG" Version="1.0" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="CLK" Datatype="Bool" /></Section><Section Name="Output"><Member Name="Q" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Stat_Bit" Datatype="Bool" /></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>ShaftSealCartridge</Name>
+      <Number>13</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_TT_02" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_TT_01" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Calc" />
+        <Component Name="Auxiliary" />
+        <Component Name="ShaftSealDeltaT" />
+      </Symbol>
+    </Access>
+    <Call UId="24">
+      <CallInfo Name="fcCalcSubtract" BlockType="FC">
+        <Parameter Name="sInput1" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="sInput2" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="26">
+      <OpenCon UId="25" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="sInput1" />
+    </Wire>
+    <Wire UId="28">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="sInput2" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="23" />
+      <NameCon UId="24" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Delta-T over shaft seal</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bEnable" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="bEnable" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="bEnableAuto" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="24">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="25" />
+  </Parts>
+  <Wires>
+    <Wire UId="26">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="in1" />
+    </Wire>
+    <Wire UId="27">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="in2" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="out" />
+      <NameCon UId="25" Name="in" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="23" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Start from input pin when enabled from HMI</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>SSC regulator enable</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bManualRun" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="24">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="RCoil" UId="25" />
+    <Part Name="RCoil" UId="26" />
+  </Parts>
+  <Wires>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="in1" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="out" />
+      <NameCon UId="25" Name="in" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Reset manual mode</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> Prevent retriggering</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Access Scope="LocalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="bStart" UId="26" />
+    </Symbol>
+  </Access>
+  <Access Scope="Call" UId="27">
+    <Instruction UId="28">
+      <Token Text="(" UId="29" />
+      <Parameter Name="CLK" UId="30">
+        <Blank Num="1" UId="31" />
+        <Token Text=":=" UId="32" />
+        <Blank Num="1" UId="33" />
+        <Access Scope="LocalVariable" UId="34">
+          <Symbol UId="35">
+            <Component Name="bEnableAuto" UId="36" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="37" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="38" />
+  <NewLine Num="2" UId="39" />
+  <Token Text="CASE" UId="40" />
+  <Blank Num="1" UId="41" />
+  <Access Scope="LocalVariable" UId="42">
+    <Symbol UId="43">
+      <Component Name="nState" UId="44" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="45" />
+  <Token Text="OF" UId="46" />
+  <NewLine Num="1" UId="47" />
+  <Blank Num="8" UId="48" />
+  <NewLine Num="1" UId="49" />
+  <Blank Num="4" UId="50" />
+  <Access Scope="LiteralConstant" UId="51">
+    <Constant UId="52">
+      <ConstantValue UId="54">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="55" />
+  <Blank Num="1" UId="56" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="57">
+    <Text UId="58"> OFF</Text>
+  </LineComment>
+  <NewLine Num="1" UId="59" />
+  <Blank Num="8" UId="60" />
+  <Access Scope="LocalVariable" UId="61">
+    <Symbol UId="62">
+      <Component Name="bEnableCoolerAuto" UId="63" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="64" />
+  <Token Text=":=" UId="65" />
+  <Blank Num="1" UId="66" />
+  <Access Scope="LiteralConstant" UId="67">
+    <Constant UId="68">
+      <ConstantValue UId="70">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="71" />
+  <NewLine Num="1" UId="72" />
+  <Blank Num="8" UId="73" />
+  <Access Scope="LocalVariable" UId="74">
+    <Symbol UId="75">
+      <Component Name="bEnableRechargeAuto" UId="76" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="77" />
+  <Token Text=":=" UId="78" />
+  <Blank Num="1" UId="79" />
+  <Access Scope="LiteralConstant" UId="80">
+    <Constant UId="81">
+      <ConstantValue UId="83">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="84" />
+  <NewLine Num="1" UId="85" />
+  <Blank Num="8" UId="86" />
+  <Access Scope="LocalVariable" UId="87">
+    <Symbol UId="88">
+      <Component Name="bRunReqAuto" UId="89" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="90" />
+  <Token Text=":=" UId="91" />
+  <Blank Num="1" UId="92" />
+  <Access Scope="LiteralConstant" UId="93">
+    <Constant UId="94">
+      <ConstantValue UId="96">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="97" />
+  <NewLine Num="1" UId="98" />
+  <Blank Num="8" UId="99" />
+  <Access Scope="GlobalVariable" UId="100">
+    <Symbol UId="101">
+      <Component Name="DB_Regulators" UId="102" />
+      <Token Text="." UId="103" />
+      <Component Name="ShaftSealCirculation" UId="104" />
+      <Token Text="." UId="105" />
+      <Component Name="bFault" UId="106" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="107" />
+  <Token Text=":=" UId="108" />
+  <Blank Num="1" UId="109" />
+  <Access Scope="LiteralConstant" UId="110">
+    <Constant UId="111">
+      <ConstantValue UId="113">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="114" />
+  <NewLine Num="1" UId="115" />
+  <Blank Num="8" UId="116" />
+  <Token Text="IF" UId="117" />
+  <Blank Num="1" UId="118" />
+  <Access Scope="LocalVariable" UId="119">
+    <Symbol UId="120">
+      <Component Name="bStart" UId="121" />
+      <Token Text="." UId="122" />
+      <Component Name="Q" UId="123" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="124" />
+  <Token Text="THEN" UId="125" />
+  <NewLine Num="1" UId="126" />
+  <Blank Num="12" UId="127" />
+  <Access Scope="LocalVariable" UId="128">
+    <Symbol UId="129">
+      <Component Name="nState" UId="130" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="131" />
+  <Token Text=":=" UId="132" />
+  <Blank Num="1" UId="133" />
+  <Access Scope="LiteralConstant" UId="134">
+    <Constant UId="135">
+      <ConstantValue UId="137">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="138" />
+  <NewLine Num="1" UId="139" />
+  <Blank Num="8" UId="140" />
+  <Token Text="END_IF" UId="141" />
+  <Token Text=";" UId="142" />
+  <NewLine Num="1" UId="143" />
+  <Blank Num="4" UId="144" />
+  <Access Scope="LiteralConstant" UId="145">
+    <Constant UId="146">
+      <ConstantValue UId="148">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="149" />
+  <Blank Num="1" UId="150" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="151">
+    <Text UId="152"> Startup. Wait for pressure and temperature to be ok</Text>
+  </LineComment>
+  <NewLine Num="1" UId="153" />
+  <Blank Num="8" UId="154" />
+  <Access Scope="LocalVariable" UId="155">
+    <Symbol UId="156">
+      <Component Name="bEnableCoolerAuto" UId="157" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="158" />
+  <Token Text=":=" UId="159" />
+  <Blank Num="1" UId="160" />
+  <Access Scope="LiteralConstant" UId="161">
+    <Constant UId="162">
+      <ConstantValue UId="164">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="165" />
+  <NewLine Num="1" UId="166" />
+  <Blank Num="8" UId="167" />
+  <Access Scope="LocalVariable" UId="168">
+    <Symbol UId="169">
+      <Component Name="bEnableRechargeAuto" UId="170" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="171" />
+  <Token Text=":=" UId="172" />
+  <Blank Num="1" UId="173" />
+  <Access Scope="LiteralConstant" UId="174">
+    <Constant UId="175">
+      <ConstantValue UId="177">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="178" />
+  <NewLine Num="1" UId="179" />
+  <Blank Num="8" UId="180" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="181">
+    <Text UId="182">IF "DB_Regulators".ShaftSealCirculation.bEnable = FALSE THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="183" />
+  <Blank Num="8" UId="184" />
+  <Token Text="IF" UId="185" />
+  <Blank Num="1" UId="186" />
+  <Access Scope="LocalVariable" UId="187">
+    <Symbol UId="188">
+      <Component Name="bEnableAuto" UId="189" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="190" />
+  <Token Text="=" UId="191" />
+  <Blank Num="1" UId="192" />
+  <Access Scope="LiteralConstant" UId="193">
+    <Constant UId="194">
+      <ConstantValue UId="196">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="197" />
+  <Token Text="THEN" UId="198" />
+  <NewLine Num="1" UId="199" />
+  <Blank Num="12" UId="200" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="201">
+    <Text UId="202"> Stop command</Text>
+  </LineComment>
+  <NewLine Num="1" UId="203" />
+  <Blank Num="12" UId="204" />
+  <Access Scope="LocalVariable" UId="205">
+    <Symbol UId="206">
+      <Component Name="nState" UId="207" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="208" />
+  <Token Text=":=" UId="209" />
+  <Blank Num="1" UId="210" />
+  <Access Scope="LiteralConstant" UId="211">
+    <Constant UId="212">
+      <ConstantValue UId="214">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="215" />
+  <NewLine Num="1" UId="216" />
+  <Blank Num="8" UId="217" />
+  <Token Text="ELSIF" UId="218" />
+  <Blank Num="1" UId="219" />
+  <Access Scope="GlobalVariable" UId="220">
+    <Symbol UId="221">
+      <Component Name="DB_Regulators" UId="222" />
+      <Token Text="." UId="223" />
+      <Component Name="ShaftSealCirculation" UId="224" />
+      <Token Text="." UId="225" />
+      <Component Name="bPressureLow" UId="226" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="227" />
+  <Token Text="AND" UId="228" />
+  <Blank Num="1" UId="229" />
+  <Access Scope="GlobalVariable" UId="230">
+    <Symbol UId="231">
+      <Component Name="DB_Regulators" UId="232" />
+      <Token Text="." UId="233" />
+      <Component Name="ShaftSealCirculation" UId="234" />
+      <Token Text="." UId="235" />
+      <Component Name="bReservoirLow" UId="236" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="237" />
+  <Token Text="THEN" UId="238" />
+  <NewLine Num="1" UId="239" />
+  <Blank Num="12" UId="240" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="241">
+    <Text UId="242"> Barrier fluid pressure low and low fluid in recharge tank (can't recharge), give up.</Text>
+  </LineComment>
+  <NewLine Num="1" UId="243" />
+  <Blank Num="12" UId="244" />
+  <Access Scope="GlobalVariable" UId="245">
+    <Symbol UId="246">
+      <Component Name="DB_Regulators" UId="247" />
+      <Token Text="." UId="248" />
+      <Component Name="ShaftSealCirculation" UId="249" />
+      <Token Text="." UId="250" />
+      <Component Name="bFault" UId="251" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="252" />
+  <Token Text=":=" UId="253" />
+  <Blank Num="1" UId="254" />
+  <Access Scope="LiteralConstant" UId="255">
+    <Constant UId="256">
+      <ConstantValue UId="258">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="259" />
+  <NewLine Num="1" UId="260" />
+  <Blank Num="12" UId="261" />
+  <Access Scope="LocalVariable" UId="262">
+    <Symbol UId="263">
+      <Component Name="nState" UId="264" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="265" />
+  <Token Text=":=" UId="266" />
+  <Blank Num="1" UId="267" />
+  <Access Scope="LiteralConstant" UId="268">
+    <Constant UId="269">
+      <ConstantValue UId="271">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="272" />
+  <NewLine Num="1" UId="273" />
+  <Blank Num="8" UId="274" />
+  <Token Text="ELSIF" UId="275" />
+  <Blank Num="1" UId="276" />
+  <Access Scope="GlobalVariable" UId="277">
+    <Symbol UId="278">
+      <Component Name="DB_Regulators" UId="279" />
+      <Token Text="." UId="280" />
+      <Component Name="ShaftSealRecharge" UId="281" />
+      <Token Text="." UId="282" />
+      <Component Name="bAtSetpoint" UId="283" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="284" />
+  <Token Text="AND" UId="285" />
+  <Blank Num="1" UId="286" />
+  <Access Scope="GlobalVariable" UId="287">
+    <Symbol UId="288">
+      <Component Name="DB_Regulators" UId="289" />
+      <Token Text="." UId="290" />
+      <Component Name="ShaftSealCooler" UId="291" />
+      <Token Text="." UId="292" />
+      <Component Name="bAtSetpoint" UId="293" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="294" />
+  <Token Text="THEN" UId="295" />
+  <NewLine Num="1" UId="296" />
+  <Blank Num="12" UId="297" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="298">
+    <Text UId="299"> Pressure and temperature ok</Text>
+  </LineComment>
+  <NewLine Num="1" UId="300" />
+  <Blank Num="12" UId="301" />
+  <Access Scope="LocalVariable" UId="302">
+    <Symbol UId="303">
+      <Component Name="nState" UId="304" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="305" />
+  <Token Text=":=" UId="306" />
+  <Blank Num="1" UId="307" />
+  <Access Scope="LiteralConstant" UId="308">
+    <Constant UId="309">
+      <ConstantValue UId="311">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="312" />
+  <NewLine Num="1" UId="313" />
+  <Blank Num="8" UId="314" />
+  <Token Text="END_IF" UId="315" />
+  <Token Text=";" UId="316" />
+  <NewLine Num="1" UId="317" />
+  <Blank Num="4" UId="318" />
+  <Access Scope="LiteralConstant" UId="319">
+    <Constant UId="320">
+      <ConstantValue UId="322">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=":" UId="323" />
+  <Blank Num="1" UId="324" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="325">
+    <Text UId="326"> Running</Text>
+  </LineComment>
+  <NewLine Num="1" UId="327" />
+  <Blank Num="8" UId="328" />
+  <Access Scope="LocalVariable" UId="329">
+    <Symbol UId="330">
+      <Component Name="bRunReqAuto" UId="331" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="332" />
+  <Token Text=":=" UId="333" />
+  <Blank Num="1" UId="334" />
+  <Access Scope="LiteralConstant" UId="335">
+    <Constant UId="336">
+      <ConstantValue UId="338">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="339" />
+  <NewLine Num="1" UId="340" />
+  <Blank Num="8" UId="341" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="342">
+    <Text UId="343">IF "DB_Regulators".ShaftSealCirculation.bEnable = FALSE THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="344" />
+  <Blank Num="8" UId="345" />
+  <Token Text="IF" UId="346" />
+  <Blank Num="1" UId="347" />
+  <Access Scope="LocalVariable" UId="348">
+    <Symbol UId="349">
+      <Component Name="bEnableAuto" UId="350" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="351" />
+  <Token Text="=" UId="352" />
+  <Blank Num="1" UId="353" />
+  <Access Scope="LiteralConstant" UId="354">
+    <Constant UId="355">
+      <ConstantValue UId="357">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="358" />
+  <Token Text="THEN" UId="359" />
+  <NewLine Num="1" UId="360" />
+  <Blank Num="12" UId="361" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="362">
+    <Text UId="363"> Stop command</Text>
+  </LineComment>
+  <NewLine Num="1" UId="364" />
+  <Blank Num="12" UId="365" />
+  <Access Scope="LocalVariable" UId="366">
+    <Symbol UId="367">
+      <Component Name="nState" UId="368" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="369" />
+  <Token Text=":=" UId="370" />
+  <Blank Num="1" UId="371" />
+  <Access Scope="LiteralConstant" UId="372">
+    <Constant UId="373">
+      <ConstantValue UId="375">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="376" />
+  <NewLine Num="1" UId="377" />
+  <Blank Num="8" UId="378" />
+  <Token Text="END_IF" UId="379" />
+  <Token Text=";" UId="380" />
+  <NewLine Num="1" UId="381" />
+  <Blank Num="8" UId="382" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="383">
+    <Text UId="384"> Generate fault signal only in running state.</Text>
+  </LineComment>
+  <NewLine Num="1" UId="385" />
+  <Blank Num="8" UId="386" />
+  <Access Scope="GlobalVariable" UId="387">
+    <Symbol UId="388">
+      <Component Name="DB_Regulators" UId="389" />
+      <Token Text="." UId="390" />
+      <Component Name="ShaftSealCirculation" UId="391" />
+      <Token Text="." UId="392" />
+      <Component Name="bFault" UId="393" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="394" />
+  <Token Text=":=" UId="395" />
+  <Blank Num="1" UId="396" />
+  <Access Scope="GlobalVariable" UId="397">
+    <Symbol UId="398">
+      <Component Name="DB_Regulators" UId="399" />
+      <Token Text="." UId="400" />
+      <Component Name="ShaftSealCirculation" UId="401" />
+      <Token Text="." UId="402" />
+      <Component Name="bPressureLow" UId="403" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="404" />
+  <Token Text="OR" UId="405" />
+  <Blank Num="1" UId="406" />
+  <Access Scope="GlobalVariable" UId="407">
+    <Symbol UId="408">
+      <Component Name="DB_Regulators" UId="409" />
+      <Token Text="." UId="410" />
+      <Component Name="ShaftSealCirculation" UId="411" />
+      <Token Text="." UId="412" />
+      <Component Name="bTemperatureHigh" UId="413" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="414" />
+  <Token Text="OR" UId="415" />
+  <Blank Num="1" UId="416" />
+  <Access Scope="GlobalVariable" UId="417">
+    <Symbol UId="418">
+      <Component Name="DB_Regulators" UId="419" />
+      <Token Text="." UId="420" />
+      <Component Name="ShaftSealCirculation" UId="421" />
+      <Token Text="." UId="422" />
+      <Component Name="bDifferentialPressureHigh" UId="423" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="424" />
+  <NewLine Num="1" UId="425" />
+  <Token Text="END_CASE" UId="426" />
+  <Token Text=";" UId="427" />
+  <NewLine Num="3" UId="428" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Don't go into run state unless the pressure and temperature are first ok</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>SSC system state machine</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bEnableAuto" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="bRunReqAuto" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bManualRun" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bOutput" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="SSC_P_01" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="27">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="A" UId="28">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="O" UId="29">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="30" />
+    <Part Name="Coil" UId="31" />
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="in1" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="in2" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="29" Name="in1" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="23" />
+      <NameCon UId="28" Name="in1" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="28" Name="in2" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in2" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="26" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>SSC Run command</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_LT_01" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5257_SSC_LT_01_Low" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbLowAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5257" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Always active</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5257 SSC barrier fluid reservoir low level</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_PDT_01" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5258_SSC_PDT_01_High" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbHighAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5258" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5258 SSC barrier fluid circulation pump differential pressure above limit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_TT_02" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5259_SSC_TT_02_High" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbHighAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5259" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5259 SSC seal discharge temperature above high limit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_TT_03" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5260_SSC_TT_03_Low" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbLowAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5260" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5260 SSC barrier fluid circulation pump suction temperature below low limit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="30" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_PIT_01" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5261_SSC_PIT_01_Low" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbLowAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5261" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="31" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="33" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5261 SSC barrier fluid pressure below low limit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="35" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Calc" />
+        <Component Name="Auxiliary" />
+        <Component Name="ShaftSealDeltaT" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>1</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5262_DeltaT_ShaftSealHigh" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbHighAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5262" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="36" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="37" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="38" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="39" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5262 SSC Delta T over shaft seal</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3A" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_PIT_01" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5263_SSC_PIT_01_High" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="26">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="27">
+      <CallInfo Name="fbHighAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="28">
+          <Component Name="A5263" />
+        </Instance>
+        <Parameter Name="sValue" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stLimitAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="26" Name="out" />
+      <NameCon UId="27" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <OpenCon UId="29" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="sValue" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="3B" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="3C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="3D" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="3E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5263 SSC barrier fluid pressure above high limit</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="3F" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>false</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bFault" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="nState" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>USInt</ConstantType>
+        <ConstantValue>0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5268_ShaftSealSystemShutdown" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="27">
+      <TemplateValue Name="SrcType" Type="Type">USInt</TemplateValue>
+    </Part>
+    <Call UId="28">
+      <CallInfo Name="fbDigitalAlarm" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="29">
+          <Component Name="A5268" />
+        </Instance>
+        <Parameter Name="bInput" Section="Input" Type="Bool" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stDigitalAlarm&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="30">
+      <IdentCon UId="24" />
+      <NameCon UId="27" Name="in1" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="25" />
+      <NameCon UId="27" Name="in2" />
+    </Wire>
+    <Wire UId="32">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="bEnable" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="21" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="bInput" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="23" />
+      <NameCon UId="28" Name="bAckAll" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="26" />
+      <NameCon UId="28" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="40" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="41" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Regulator fault</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="42" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="43" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A5268 Shaft Seal System Shutdown</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="44" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5261_SSC_PIT_01_Low" />
+        <Component Name="sState" />
+        <Component Name="bActive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bPressureLow" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5257_SSC_LT_01_Low" />
+        <Component Name="sState" />
+        <Component Name="bActive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bReservoirLow" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5263_SSC_PIT_01_High" />
+        <Component Name="sState" />
+        <Component Name="bActive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bPressureHigh" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5262_DeltaT_ShaftSealHigh" />
+        <Component Name="sState" />
+        <Component Name="bActive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bDeltaTHigh" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5259_SSC_TT_02_High" />
+        <Component Name="sState" />
+        <Component Name="bActive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bTemperatureHigh" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="5258_SSC_PDT_01_High" />
+        <Component Name="sState" />
+        <Component Name="bActive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bDifferentialPressureHigh" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="33">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="34" />
+    <Part Name="A" UId="35">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="36" />
+    <Part Name="A" UId="37">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="38" />
+    <Part Name="A" UId="39">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="40" />
+    <Part Name="A" UId="41">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="42" />
+    <Part Name="A" UId="43">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="44" />
+  </Parts>
+  <Wires>
+    <Wire UId="45">
+      <IdentCon UId="21" />
+      <NameCon UId="33" Name="in1" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="22" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="23" />
+      <NameCon UId="35" Name="in1" />
+    </Wire>
+    <Wire UId="49">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="36" Name="in" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="24" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="25" />
+      <NameCon UId="37" Name="in1" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="26" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="27" />
+      <NameCon UId="39" Name="in1" />
+    </Wire>
+    <Wire UId="55">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="28" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="29" />
+      <NameCon UId="41" Name="in1" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="30" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="31" />
+      <NameCon UId="43" Name="in1" />
+    </Wire>
+    <Wire UId="61">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="32" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="45" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="46" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="47" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="48" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Faults</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="49" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bEnableCoolerAuto" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_TT_04" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="24">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="bReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCooler" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="SSC_F_01" />
+      </Symbol>
+    </Access>
+    <Part Name="O" UId="28">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Call UId="29">
+      <CallInfo Name="fbOnOffRegulator" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="30">
+          <Component Name="Cooler" />
+        </Instance>
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sPV" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="Above" Section="Input" Type="Bool" />
+        <Parameter Name="bReset" Section="Input" Type="Bool" />
+        <Parameter Name="bOutput" Section="Output" Type="Bool" />
+        <Parameter Name="bAtSetpoint" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stOnOffRegulator&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="33">
+      <IdentCon UId="21" />
+      <NameCon UId="28" Name="in1" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="in2" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="bEnable" />
+    </Wire>
+    <Wire UId="36">
+      <OpenCon UId="31" />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="sPV" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="Above" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="bReset" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="sTag" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="29" Name="bOutput" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="29" Name="bAtSetpoint" />
+      <OpenCon UId="32" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4A" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="4B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Run when the temperature in the barrier fluid gets too high</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="4C" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="4D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Barrier Fluid cooler</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="4E" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bEnableRechargeAuto" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealCirculation" />
+        <Component Name="bReservoirLow" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_AI" />
+        <Component Name="SSC_PIT_01" />
+        <Component Name="Eng" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>false</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="bReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="ShaftSealRecharge" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="SSC_P_02" />
+      </Symbol>
+    </Access>
+    <Part Name="O" UId="29">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="A" UId="30">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <Negated Name="in2" />
+    </Part>
+    <Call UId="31">
+      <CallInfo Name="fbOnOffRegulator" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="32">
+          <Component Name="Recharge" />
+        </Instance>
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sPV" Section="Input" Type="&quot;stCalcValue&quot;" />
+        <Parameter Name="Above" Section="Input" Type="Bool" />
+        <Parameter Name="bReset" Section="Input" Type="Bool" />
+        <Parameter Name="bOutput" Section="Output" Type="Bool" />
+        <Parameter Name="bAtSetpoint" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stOnOffRegulator&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="in1" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="in2" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in1" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="23" />
+      <NameCon UId="30" Name="in2" />
+    </Wire>
+    <Wire UId="39">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="bEnable" />
+    </Wire>
+    <Wire UId="40">
+      <OpenCon UId="33" />
+      <NameCon UId="31" Name="en" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="sPV" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="Above" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="26" />
+      <NameCon UId="31" Name="bReset" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="31" Name="sTag" />
+    </Wire>
+    <Wire UId="45">
+      <NameCon UId="31" Name="bOutput" />
+      <IdentCon UId="28" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="31" Name="bAtSetpoint" />
+      <OpenCon UId="34" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4F" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="50" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Run when the pressure in the barrier fluid accumulator drops too low (and the reservoir is not empty)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="51" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="52" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Barrier Fuild Recharge pump</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="53" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> Mode</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Token Text="IF" UId="24" />
+  <Blank Num="1" UId="25" />
+  <Access Scope="GlobalVariable" UId="26">
+    <Symbol UId="27">
+      <Component Name="DB_Regulators" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="ShaftSealCirculation" UId="30" />
+      <Token Text="." UId="31" />
+      <Component Name="bManualMode" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="33" />
+  <Token Text="=" UId="34" />
+  <Blank Num="1" UId="35" />
+  <Access Scope="LiteralConstant" UId="36">
+    <Constant UId="37">
+      <ConstantValue UId="39">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="40" />
+  <Token Text="THEN" UId="41" />
+  <NewLine Num="1" UId="42" />
+  <Blank Num="4" UId="43" />
+  <Access Scope="GlobalVariable" UId="44">
+    <Symbol UId="45">
+      <Component Name="DB_Regulators" UId="46" />
+      <Token Text="." UId="47" />
+      <Component Name="ShaftSealCirculation" UId="48" />
+      <Token Text="." UId="49" />
+      <Component Name="nMode" UId="50" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="51" />
+  <Token Text=":=" UId="52" />
+  <Blank Num="1" UId="53" />
+  <Access Scope="LiteralConstant" UId="54">
+    <Constant UId="55">
+      <ConstantValue UId="57">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="58" />
+  <NewLine Num="1" UId="59" />
+  <Token Text="ELSIF" UId="60" />
+  <Blank Num="1" UId="61" />
+  <Access Scope="GlobalVariable" UId="62">
+    <Symbol UId="63">
+      <Component Name="DB_Regulators" UId="64" />
+      <Token Text="." UId="65" />
+      <Component Name="ShaftSealCirculation" UId="66" />
+      <Token Text="." UId="67" />
+      <Component Name="bEnable" UId="68" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="69" />
+  <Token Text="=" UId="70" />
+  <Blank Num="1" UId="71" />
+  <Access Scope="LiteralConstant" UId="72">
+    <Constant UId="73">
+      <ConstantValue UId="75">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="76" />
+  <Token Text="THEN" UId="77" />
+  <NewLine Num="1" UId="78" />
+  <Blank Num="4" UId="79" />
+  <Access Scope="GlobalVariable" UId="80">
+    <Symbol UId="81">
+      <Component Name="DB_Regulators" UId="82" />
+      <Token Text="." UId="83" />
+      <Component Name="ShaftSealCirculation" UId="84" />
+      <Token Text="." UId="85" />
+      <Component Name="nMode" UId="86" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="87" />
+  <Token Text=":=" UId="88" />
+  <Blank Num="1" UId="89" />
+  <Access Scope="LiteralConstant" UId="90">
+    <Constant UId="91">
+      <ConstantValue UId="93">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="94" />
+  <NewLine Num="1" UId="95" />
+  <Token Text="ELSE" UId="96" />
+  <NewLine Num="1" UId="97" />
+  <Blank Num="4" UId="98" />
+  <Access Scope="GlobalVariable" UId="99">
+    <Symbol UId="100">
+      <Component Name="DB_Regulators" UId="101" />
+      <Token Text="." UId="102" />
+      <Component Name="ShaftSealCirculation" UId="103" />
+      <Token Text="." UId="104" />
+      <Component Name="nMode" UId="105" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="106" />
+  <Token Text=":=" UId="107" />
+  <Blank Num="1" UId="108" />
+  <Access Scope="LiteralConstant" UId="109">
+    <Constant UId="110">
+      <ConstantValue UId="112">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="113" />
+  <NewLine Num="1" UId="114" />
+  <Token Text="END_IF" UId="115" />
+  <Token Text=";" UId="116" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="54" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="55" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="56" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="57" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="58" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="59" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>Shaft seal cartridge</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

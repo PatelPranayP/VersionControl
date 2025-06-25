@@ -1,0 +1,52 @@
+﻿FUNCTION "fcAnalogInput" : Void
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Heaten
+VERSION : 0.1
+   VAR_INPUT 
+      bValidData : Bool;
+      iAI : Int;
+      fOffset : Real;
+   END_VAR
+
+   VAR_OUTPUT 
+      fEngValue : Real;
+   END_VAR
+
+   VAR_IN_OUT 
+      sTag : "stAnalogInput";
+   END_VAR
+
+   VAR_TEMP 
+      fSlope : Real;
+      fIntercept : Real;
+      fValue : Real;
+   END_VAR
+
+
+BEGIN
+	// This is a version of fbAnalogInput that does not cache the scaling factors
+	// An FB version takes 315 bytes per instance :(
+	
+	#sTag.Raw.iValue := #iAI;
+	#sTag.Raw.bFault := NOT #bValidData;
+	
+	// Scaling
+	IF NOT #bValidData THEN
+	    #sTag.Eng.bError := TRUE;
+	    #sTag.Eng.fValue := "NaN"();
+	ELSE
+	    #sTag.Eng.bError := FALSE;
+	    IF #sTag.Raw.iMax <> 0 OR #sTag.Raw.iMin <> 0 THEN
+	        #fSlope := (#sTag.Eng.fMax - #sTag.Eng.fMin) / INT_TO_REAL(#sTag.Raw.iMax - #sTag.Raw.iMin);
+	    END_IF;
+	    #fIntercept := #sTag.Eng.fMax - #fSlope*INT_TO_REAL(#sTag.Raw.iMax);
+	    #fValue := INT_TO_REAL(#iAI)*#fSlope + #fIntercept + #fOffset;
+	    // Apply limiting, if enabled
+	    "fcCalcAssign"(fValue := #fValue, sTag := #sTag.Eng);
+	END_IF;
+	
+	// Local output
+	#fEngValue := #sTag.Eng.fValue;
+	
+END_FUNCTION
+

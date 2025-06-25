@@ -1,0 +1,131 @@
+﻿FUNCTION_BLOCK "fbProcessValve2"
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Heaten
+VERSION : 0.1
+   VAR_INPUT 
+      bOpenCommand : Bool;   // Command input (do not write directly into sTag)
+      bCloseCommand : Bool;   // Command input (do not write directly into sTag)
+      bOpenStatus : Bool;   // Status input (do not write directly into sTag)
+      bClosedStatus : Bool;   // Status input (do not write directly into sTag)
+   END_VAR
+
+   VAR_OUTPUT 
+      bOutOpen : Bool;   // Command output
+      bOutClose : Bool;   // Command output
+      bOpeningError : Bool;   // Alarm output
+      bClosingError : Bool;   // Alarm output
+   END_VAR
+
+   VAR_IN_OUT 
+      sTag : "stProcessValve2";
+   END_VAR
+
+   VAR 
+      OpenPulse {InstructionName := 'R_TRIG'; LibVersion := '1.0'; S7_SetPoint := 'False'} : R_TRIG;
+      ClosePulse {InstructionName := 'R_TRIG'; LibVersion := '1.0'} : R_TRIG;
+      OpenTimer {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+      CloseTimer {InstructionName := 'TON_TIME'; LibVersion := '1.0'} : TON_TIME;
+   END_VAR
+
+   VAR_TEMP 
+      bDummy : Bool;
+   END_VAR
+
+   VAR CONSTANT 
+      UNKNOWN : USInt := 0;
+      CLOSED : USInt := 1;
+      OPENING : USInt := 2;
+      OPEN : USInt := 3;
+      CLOSING : USInt := 4;
+      CLOSE_ERROR : USInt := 5;
+      OPEN_ERROR : USInt := 6;
+      NORMALLY_OPEN : Bool := true;
+      NORMALLY_CLOSED : Bool := false;
+   END_VAR
+
+
+BEGIN
+	// fbProcessValve2 - valve with separate open & close commands and separate open & closed feedback
+	// "2" because it has two states, open and closed (not spring return)
+	// The state machine runs like the open/closed feedback are limit switches and deactivates the valve drive signal
+	
+	// Edges to prevent retriggering
+	#OpenPulse(CLK := #bOpenCommand);
+	#ClosePulse(CLK := #bCloseCommand);
+	
+	// Timeouts
+	#OpenTimer(IN := (#sTag.nState = #OPENING), PT := #sTag.tOpeningTimeout);
+	#CloseTimer(IN := (#sTag.nState = #CLOSING), PT := #sTag.tClosingTimeout);
+	
+	// Copy to tag
+	#sTag.bOpenRequest := #bOpenCommand;
+	#sTag.bCloseRequest := #bCloseCommand;
+	#sTag.bOpenStatus := #bOpenStatus;
+	#sTag.bClosedStatus := #bClosedStatus;
+	
+	// Valve state
+	CASE #sTag.nState OF
+	    #UNKNOWN : 
+	        // Detect state
+	        IF #bOpenStatus = TRUE THEN
+	            #sTag.nState := #OPEN;
+	        ELSIF #bClosedStatus = TRUE THEN
+	            #sTag.nState := #CLOSED;
+	        ELSE
+	            // Neither open nor closed
+	            IF #sTag.bNormalState = #NORMALLY_OPEN THEN
+	                // Try to open it
+	                #sTag.nState := #OPENING;
+	                #bOutOpen := TRUE;
+	                #bOutClose := FALSE;
+	            ELSE
+	                // Try to close it
+	                #sTag.nState := #CLOSING;
+	                #bOutClose := TRUE;
+	                #bOutOpen := FALSE;
+	            END_IF;
+	        END_IF;
+	    #CLOSED : 
+	        IF #OpenPulse.Q = TRUE THEN
+	            #sTag.nState := #OPENING;
+	            #bOutOpen := TRUE;
+	        END_IF;
+	    #OPENING :
+	        IF #bOpenStatus = TRUE THEN
+	            #sTag.nState := #OPEN;
+	            #bOutOpen := FALSE;
+	        ELSIF #OpenTimer.Q = TRUE THEN
+	            #sTag.nState := #OPEN_ERROR;
+	            #bOutOpen := FALSE;
+	        END_IF;
+	    #OPEN :
+	        IF #ClosePulse.Q = TRUE THEN
+	            #sTag.nState := #CLOSING;
+	            #bOutClose := TRUE;
+	        END_IF;
+	    #CLOSING : 
+	        IF #bClosedStatus = TRUE THEN
+	            #sTag.nState := #CLOSED;
+	            #bOutClose := FALSE;
+	        ELSIF #CloseTimer.Q = TRUE THEN
+	            #sTag.nState := #CLOSE_ERROR;
+	            #bOutClose := FALSE;
+	        END_IF;
+	    #CLOSE_ERROR :
+	        IF #bClosedStatus = TRUE THEN
+	            #sTag.nState := #CLOSED;
+	        ELSIF #bOpenCommand = TRUE THEN
+	            #sTag.nState := #OPENING;
+	        END_IF;
+	    #OPEN_ERROR :
+	        IF #bOpenStatus = TRUE THEN
+	            #sTag.nState := #OPEN;
+	        ELSIF #bCloseCommand = TRUE THEN
+	            #sTag.nState := #CLOSING;
+	        END_IF;
+	END_CASE;
+	
+	
+	    
+END_FUNCTION_BLOCK
+

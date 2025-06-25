@@ -1,0 +1,942 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-25T13:13:04.1322916Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor>Heaten</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="AnalogInputProcessing_DB" Datatype="&quot;AnalogInputProcessing&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="bHere" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="InputAlarmHandling_DB" Datatype="&quot;InputAlarmHandling&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="A1102" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1103" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1110" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1122" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1123" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1130" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1142" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1143" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1150" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1201" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1202" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1203" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1204" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1205" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1206" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1207" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1208" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1209" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1210" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1212" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1213" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1214" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1215" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1220" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1221" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1223" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1231" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1232" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1233" Datatype="&quot;fbDigitalAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stDigitalAlarm&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Alarm" Datatype="&quot;fbAlarm&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="tDelay" Datatype="Time" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="DelayTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="Alarm" Datatype="Bool" /><Member Name="AlarmUnack" Datatype="Bool" /><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1241" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1242" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1243" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1244" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1255" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1256" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1257" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1264" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1266" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1267" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1268" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1274" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1276" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1277" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1278" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1279" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1280" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1281" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1282" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1283" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1284" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1285" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1286" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1287" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1288" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1289" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1290" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1291" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A1292" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A5250" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A5251" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A5252" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A5253" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A5254" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="A5255" Datatype="&quot;fbHMIEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="InverterDriveProcessing_DB" Datatype="&quot;InverterDriveProcessing&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="HBL_SC_02" Datatype="&quot;fbACS880&quot;"><Sections><Section Name="Input"><Member Name="bCommOk" Datatype="Bool" /><Member Name="bEmergencyStop" Datatype="Bool" /><Member Name="fSpeedSetpoint" Datatype="Real" /><Member Name="fTorqueSetpoint" Datatype="Real" /><Member Name="sRxInstance" Datatype="&quot;stABB_ACSx80_Rx&quot;"><Sections><Section Name="None"><Member Name="SW" Datatype="Word" /><Member Name="Act1" Datatype="Word" /><Member Name="Act2" Datatype="Word" /><Member Name="DataIO_12" Datatype="Word" /><Member Name="DataIO_13" Datatype="Word" /><Member Name="DataIO_14" Datatype="Word" /><Member Name="DataIO_15" Datatype="Word" /><Member Name="DataIO_16" Datatype="Word" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="sTxInstance" Datatype="&quot;stABB_ACSx80_Tx&quot;"><Sections><Section Name="None"><Member Name="CW" Datatype="Word" /><Member Name="Ref1" Datatype="Word" /><Member Name="Ref2" Datatype="Word" /><Member Name="DataIO_4" Datatype="Word" /><Member Name="DataIO_5" Datatype="Word" /><Member Name="DataIO_6" Datatype="Word" /><Member Name="DataIO_7" Datatype="Word" /><Member Name="DataIO_8" Datatype="Word" /></Section></Sections></Member></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stInverterDrive&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="ResetTimer" Datatype="TP_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="HBL_SC_03" Datatype="&quot;fbACS880&quot;"><Sections><Section Name="Input"><Member Name="bCommOk" Datatype="Bool" /><Member Name="bEmergencyStop" Datatype="Bool" /><Member Name="fSpeedSetpoint" Datatype="Real" /><Member Name="fTorqueSetpoint" Datatype="Real" /><Member Name="sRxInstance" Datatype="&quot;stABB_ACSx80_Rx&quot;"><Sections><Section Name="None"><Member Name="SW" Datatype="Word" /><Member Name="Act1" Datatype="Word" /><Member Name="Act2" Datatype="Word" /><Member Name="DataIO_12" Datatype="Word" /><Member Name="DataIO_13" Datatype="Word" /><Member Name="DataIO_14" Datatype="Word" /><Member Name="DataIO_15" Datatype="Word" /><Member Name="DataIO_16" Datatype="Word" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="sTxInstance" Datatype="&quot;stABB_ACSx80_Tx&quot;"><Sections><Section Name="None"><Member Name="CW" Datatype="Word" /><Member Name="Ref1" Datatype="Word" /><Member Name="Ref2" Datatype="Word" /><Member Name="DataIO_4" Datatype="Word" /><Member Name="DataIO_5" Datatype="Word" /><Member Name="DataIO_6" Datatype="Word" /><Member Name="DataIO_7" Datatype="Word" /><Member Name="DataIO_8" Datatype="Word" /></Section></Sections></Member></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stInverterDrive&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="ResetTimer" Datatype="TP_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="HBL_SC_01" Datatype="&quot;fbACS880&quot;"><Sections><Section Name="Input"><Member Name="bCommOk" Datatype="Bool" /><Member Name="bEmergencyStop" Datatype="Bool" /><Member Name="fSpeedSetpoint" Datatype="Real" /><Member Name="fTorqueSetpoint" Datatype="Real" /><Member Name="sRxInstance" Datatype="&quot;stABB_ACSx80_Rx&quot;"><Sections><Section Name="None"><Member Name="SW" Datatype="Word" /><Member Name="Act1" Datatype="Word" /><Member Name="Act2" Datatype="Word" /><Member Name="DataIO_12" Datatype="Word" /><Member Name="DataIO_13" Datatype="Word" /><Member Name="DataIO_14" Datatype="Word" /><Member Name="DataIO_15" Datatype="Word" /><Member Name="DataIO_16" Datatype="Word" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="sTxInstance" Datatype="&quot;stABB_ACSx80_Tx&quot;"><Sections><Section Name="None"><Member Name="CW" Datatype="Word" /><Member Name="Ref1" Datatype="Word" /><Member Name="Ref2" Datatype="Word" /><Member Name="DataIO_4" Datatype="Word" /><Member Name="DataIO_5" Datatype="Word" /><Member Name="DataIO_6" Datatype="Word" /><Member Name="DataIO_7" Datatype="Word" /><Member Name="DataIO_8" Datatype="Word" /></Section></Sections></Member></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stInverterDrive&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="ResetTimer" Datatype="TP_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="HBL_SC_10" Datatype="&quot;fbACS880&quot;"><Sections><Section Name="Input"><Member Name="bCommOk" Datatype="Bool" /><Member Name="bEmergencyStop" Datatype="Bool" /><Member Name="fSpeedSetpoint" Datatype="Real" /><Member Name="fTorqueSetpoint" Datatype="Real" /><Member Name="sRxInstance" Datatype="&quot;stABB_ACSx80_Rx&quot;"><Sections><Section Name="None"><Member Name="SW" Datatype="Word" /><Member Name="Act1" Datatype="Word" /><Member Name="Act2" Datatype="Word" /><Member Name="DataIO_12" Datatype="Word" /><Member Name="DataIO_13" Datatype="Word" /><Member Name="DataIO_14" Datatype="Word" /><Member Name="DataIO_15" Datatype="Word" /><Member Name="DataIO_16" Datatype="Word" /></Section></Sections></Member></Section><Section Name="Output"><Member Name="sTxInstance" Datatype="&quot;stABB_ACSx80_Tx&quot;"><Sections><Section Name="None"><Member Name="CW" Datatype="Word" /><Member Name="Ref1" Datatype="Word" /><Member Name="Ref2" Datatype="Word" /><Member Name="DataIO_4" Datatype="Word" /><Member Name="DataIO_5" Datatype="Word" /><Member Name="DataIO_6" Datatype="Word" /><Member Name="DataIO_7" Datatype="Word" /><Member Name="DataIO_8" Datatype="Word" /></Section></Sections></Member></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stInverterDrive&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="ResetTimer" Datatype="TP_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="State" Datatype="Array[0..7] of Bool" /><Member Name="RetVal" Datatype="Int" /></Section></Sections></Member>
+    <Member Name="DigitalInputProcessing_DB" Datatype="&quot;DigitalInputProcessing&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="HBL_LS_632" Datatype="&quot;stAnalogInput&quot;"><Sections><Section Name="None"><Member Name="Raw" Datatype="&quot;stRawValue&quot;"><Sections><Section Name="None"><Member Name="iMin" Datatype="Int" /><Member Name="iMax" Datatype="Int" /><Member Name="iValue" Datatype="Int" /><Member Name="bFault" Datatype="Bool" /></Section></Sections></Member><Member Name="Eng" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bInitCmd" Datatype="Bool" /></Section></Sections></Member><Member Name="HBL_LS_633" Datatype="&quot;stAnalogInput&quot;"><Sections><Section Name="None"><Member Name="Raw" Datatype="&quot;stRawValue&quot;"><Sections><Section Name="None"><Member Name="iMin" Datatype="Int" /><Member Name="iMax" Datatype="Int" /><Member Name="iValue" Datatype="Int" /><Member Name="bFault" Datatype="Bool" /></Section></Sections></Member><Member Name="Eng" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bInitCmd" Datatype="Bool" /></Section></Sections></Member><Member Name="HBL_LS_644" Datatype="&quot;stAnalogInput&quot;"><Sections><Section Name="None"><Member Name="Raw" Datatype="&quot;stRawValue&quot;"><Sections><Section Name="None"><Member Name="iMin" Datatype="Int" /><Member Name="iMax" Datatype="Int" /><Member Name="iValue" Datatype="Int" /><Member Name="bFault" Datatype="Bool" /></Section></Sections></Member><Member Name="Eng" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bInitCmd" Datatype="Bool" /></Section></Sections></Member><Member Name="HBL_LS_674" Datatype="&quot;stAnalogInput&quot;"><Sections><Section Name="None"><Member Name="Raw" Datatype="&quot;stRawValue&quot;"><Sections><Section Name="None"><Member Name="iMin" Datatype="Int" /><Member Name="iMax" Datatype="Int" /><Member Name="iValue" Datatype="Int" /><Member Name="bFault" Datatype="Bool" /></Section></Sections></Member><Member Name="Eng" Datatype="&quot;stCalcValue&quot;"><Sections><Section Name="None"><Member Name="fMin" Datatype="Real" /><Member Name="fMax" Datatype="Real" /><Member Name="fValue" Datatype="Real" /><Member Name="bError" Datatype="Bool" /><Member Name="bCheckLimits" Datatype="Bool" /><Member Name="bLimited" Datatype="Bool" /></Section></Sections></Member><Member Name="bInitCmd" Datatype="Bool" /></Section></Sections></Member><Member Name="Dummy" Datatype="Bool" /><Member Name="LS632" Datatype="Real" /><Member Name="LS633" Datatype="Real" /><Member Name="LS644" Datatype="Real" /><Member Name="LS674" Datatype="Real" /></Section></Sections></Member>
+    <Member Name="Simulation_DB" Datatype="&quot;Simulation&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input" /><Section Name="Output" /><Section Name="InOut" /><Section Name="Static"><Member Name="OilSump" Datatype="&quot;fbButterworthLPF1&quot;"><Sections><Section Name="Input"><Member Name="fIn" Datatype="Real" /><Member Name="fTs" Datatype="Real" /><Member Name="fCornerFrequency" Datatype="Real" /></Section><Section Name="Output"><Member Name="fOut" Datatype="Real" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="fOutPrev" Datatype="Real" /><Member Name="A" Datatype="Real" /></Section></Sections></Member><Member Name="CPCPump" Datatype="&quot;fbCPCPumpSim&quot;"><Sections><Section Name="Input"><Member Name="bOn" Datatype="Bool" /><Member Name="fSuction" Datatype="Real" /><Member Name="fMaxDeltaP" Datatype="Real" /><Member Name="fMinDeltaP" Datatype="Real" /><Member Name="fCycleTime" Datatype="Real" /></Section><Section Name="Output"><Member Name="fDischarge" Datatype="Real" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="fDeltaP" Datatype="Real" /><Member Name="eOn" Datatype="R_TRIG" Version="1.0"><Sections><Section Name="Input"><Member Name="CLK" Datatype="Bool" /></Section><Section Name="Output"><Member Name="Q" Datatype="Bool" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="Stat_Bit" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member><Member Name="HeatSource" Datatype="&quot;fbButterworthLPF1&quot;"><Sections><Section Name="Input"><Member Name="fIn" Datatype="Real" /><Member Name="fTs" Datatype="Real" /><Member Name="fCornerFrequency" Datatype="Real" /></Section><Section Name="Output"><Member Name="fOut" Datatype="Real" /></Section><Section Name="InOut" /><Section Name="Static"><Member Name="fOutPrev" Datatype="Real" /><Member Name="A" Datatype="Real" /></Section></Sections></Member><Member Name="fHeatSourceGain" Datatype="Real" /></Section></Sections></Member>
+    <Member Name="HBL_HV_640" Datatype="&quot;fbProcessValve2_V2&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bOpenReq" Datatype="Bool" /><Member Name="bCloseReq" Datatype="Bool" /><Member Name="bOpenStat" Datatype="Bool" /><Member Name="bClosedStat" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOpenCmd" Datatype="Bool" /><Member Name="bCloseCmd" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stProcessValve2&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="OpenTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="CloseTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="HBL_HV_670" Datatype="&quot;fbProcessValve2_V2&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bOpenReq" Datatype="Bool" /><Member Name="bCloseReq" Datatype="Bool" /><Member Name="bOpenStat" Datatype="Bool" /><Member Name="bClosedStat" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOpenCmd" Datatype="Bool" /><Member Name="bCloseCmd" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stProcessValve2&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="OpenTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="CloseTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="CPC_HV_852" Datatype="&quot;fbProcessValve2_V2&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bOpenReq" Datatype="Bool" /><Member Name="bCloseReq" Datatype="Bool" /><Member Name="bOpenStat" Datatype="Bool" /><Member Name="bClosedStat" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOpenCmd" Datatype="Bool" /><Member Name="bCloseCmd" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stProcessValve2&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="OpenTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="CloseTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="HBL_HV_861" Datatype="&quot;fbProcessValve2_V2&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bOpenReq" Datatype="Bool" /><Member Name="bCloseReq" Datatype="Bool" /><Member Name="bOpenStat" Datatype="Bool" /><Member Name="bClosedStat" Datatype="Bool" /></Section><Section Name="Output"><Member Name="bOpenCmd" Datatype="Bool" /><Member Name="bCloseCmd" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stProcessValve2&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="OpenTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="CloseTimer" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="bTempOpenReq" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="bTempCloseReq" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="bTempOpenStat" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="bTempCloseStat" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>InputProcessing</Name>
+      <Number>48</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_DigitalInputProcessing" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_DigitalInputProcessing" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_DigitalInputProcessing" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_DigitalInputProcessing" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Part Name="Runtime" UId="27" />
+    <Call UId="28">
+      <CallInfo Name="DigitalInputProcessing" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="29">
+          <Component Name="DigitalInputProcessing_DB" />
+        </Instance>
+      </CallInfo>
+    </Call>
+    <Part Name="Runtime" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="mem" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="ret_val" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="35">
+      <OpenCon UId="31" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="mem" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="30" Name="ret_val" />
+      <IdentCon UId="26" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Digital inputs</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_AnalogInputProcessing" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_AnalogInputProcessing" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_AnalogInputProcessing" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_AnalogInputProcessing" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Part Name="Runtime" UId="27" />
+    <Call UId="28">
+      <CallInfo Name="AnalogInputProcessing" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="29">
+          <Component Name="AnalogInputProcessing_DB" />
+        </Instance>
+      </CallInfo>
+    </Call>
+    <Part Name="Runtime" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="mem" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="ret_val" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="35">
+      <OpenCon UId="31" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="mem" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="30" Name="ret_val" />
+      <IdentCon UId="26" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Analog inputs</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InverterDriveProcessing" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InverterDriveProcessing" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InverterDriveProcessing" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InverterDriveProcessing" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Part Name="Runtime" UId="27" />
+    <Call UId="28">
+      <CallInfo Name="InverterDriveProcessing" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="29">
+          <Component Name="InverterDriveProcessing_DB" />
+        </Instance>
+      </CallInfo>
+    </Call>
+    <Part Name="Runtime" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="mem" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="ret_val" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="35">
+      <OpenCon UId="31" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="mem" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="30" Name="ret_val" />
+      <IdentCon UId="26" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Inverter drives</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bTempOpenReq" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="bTempCloseReq" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="HBL_HV_640_X1" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="HBL_HV_640_X2" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Valves" />
+        <Component Name="HBL_HV_640" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="HBL_HV_640_Y1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="HBL_HV_640_Y2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="HBL_HV_670_X1" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="HBL_HV_670_X2" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB_Valves" />
+        <Component Name="HBL_HV_670" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="HBL_HV_670_Y1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="HBL_HV_670_Y2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="CPC_HV_852_X1" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="CPC_HV_852_X2" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB_Valves" />
+        <Component Name="CPC_HV_852" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="CPC_HV_852_Y1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="CPC_HV_852_Y2" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="HBL_HV_861_X1" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="HBL_HV_861_X2" />
+        <Component Name="bValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB_Valves" />
+        <Component Name="HBL_HV_861" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="41">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="HBL_HV_861_Y1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="DB_DO" />
+        <Component Name="HBL_HV_861_Y2" />
+      </Symbol>
+    </Access>
+    <Call UId="43">
+      <CallInfo Name="fbProcessValve2_V2" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="44">
+          <Component Name="HBL_HV_640" />
+        </Instance>
+        <Parameter Name="bOpenReq" Section="Input" Type="Bool" />
+        <Parameter Name="bCloseReq" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenStat" Section="Input" Type="Bool" />
+        <Parameter Name="bClosedStat" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenCmd" Section="Output" Type="Bool" />
+        <Parameter Name="bCloseCmd" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stProcessValve2&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="45">
+      <CallInfo Name="fbProcessValve2_V2" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="46">
+          <Component Name="HBL_HV_670" />
+        </Instance>
+        <Parameter Name="bOpenReq" Section="Input" Type="Bool" />
+        <Parameter Name="bCloseReq" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenStat" Section="Input" Type="Bool" />
+        <Parameter Name="bClosedStat" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenCmd" Section="Output" Type="Bool" />
+        <Parameter Name="bCloseCmd" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stProcessValve2&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="47">
+      <CallInfo Name="fbProcessValve2_V2" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="48">
+          <Component Name="CPC_HV_852" />
+        </Instance>
+        <Parameter Name="bOpenReq" Section="Input" Type="Bool" />
+        <Parameter Name="bCloseReq" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenStat" Section="Input" Type="Bool" />
+        <Parameter Name="bClosedStat" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenCmd" Section="Output" Type="Bool" />
+        <Parameter Name="bCloseCmd" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stProcessValve2&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="49">
+      <CallInfo Name="fbProcessValve2_V2" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="50">
+          <Component Name="HBL_HV_861" />
+        </Instance>
+        <Parameter Name="bOpenReq" Section="Input" Type="Bool" />
+        <Parameter Name="bCloseReq" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenStat" Section="Input" Type="Bool" />
+        <Parameter Name="bClosedStat" Section="Input" Type="Bool" />
+        <Parameter Name="bOpenCmd" Section="Output" Type="Bool" />
+        <Parameter Name="bCloseCmd" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stProcessValve2&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="61">
+      <OpenCon UId="51" />
+      <NameCon UId="43" Name="en" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="21" />
+      <NameCon UId="43" Name="bOpenReq" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="22" />
+      <NameCon UId="43" Name="bCloseReq" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="23" />
+      <NameCon UId="43" Name="bOpenStat" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="24" />
+      <NameCon UId="43" Name="bClosedStat" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="25" />
+      <NameCon UId="43" Name="sTag" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="43" Name="bOpenCmd" />
+      <IdentCon UId="26" />
+    </Wire>
+    <Wire UId="68">
+      <NameCon UId="43" Name="bCloseCmd" />
+      <IdentCon UId="27" />
+    </Wire>
+    <Wire UId="69">
+      <OpenCon UId="52" />
+      <NameCon UId="45" Name="en" />
+    </Wire>
+    <Wire UId="70">
+      <OpenCon UId="53" />
+      <NameCon UId="45" Name="bOpenReq" />
+    </Wire>
+    <Wire UId="71">
+      <OpenCon UId="54" />
+      <NameCon UId="45" Name="bCloseReq" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="28" />
+      <NameCon UId="45" Name="bOpenStat" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="29" />
+      <NameCon UId="45" Name="bClosedStat" />
+    </Wire>
+    <Wire UId="74">
+      <IdentCon UId="30" />
+      <NameCon UId="45" Name="sTag" />
+    </Wire>
+    <Wire UId="75">
+      <NameCon UId="45" Name="bOpenCmd" />
+      <IdentCon UId="31" />
+    </Wire>
+    <Wire UId="76">
+      <NameCon UId="45" Name="bCloseCmd" />
+      <IdentCon UId="32" />
+    </Wire>
+    <Wire UId="77">
+      <OpenCon UId="55" />
+      <NameCon UId="47" Name="en" />
+    </Wire>
+    <Wire UId="78">
+      <OpenCon UId="56" />
+      <NameCon UId="47" Name="bOpenReq" />
+    </Wire>
+    <Wire UId="79">
+      <OpenCon UId="57" />
+      <NameCon UId="47" Name="bCloseReq" />
+    </Wire>
+    <Wire UId="80">
+      <IdentCon UId="33" />
+      <NameCon UId="47" Name="bOpenStat" />
+    </Wire>
+    <Wire UId="81">
+      <IdentCon UId="34" />
+      <NameCon UId="47" Name="bClosedStat" />
+    </Wire>
+    <Wire UId="82">
+      <IdentCon UId="35" />
+      <NameCon UId="47" Name="sTag" />
+    </Wire>
+    <Wire UId="83">
+      <NameCon UId="47" Name="bOpenCmd" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="84">
+      <NameCon UId="47" Name="bCloseCmd" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="85">
+      <OpenCon UId="58" />
+      <NameCon UId="49" Name="en" />
+    </Wire>
+    <Wire UId="86">
+      <OpenCon UId="59" />
+      <NameCon UId="49" Name="bOpenReq" />
+    </Wire>
+    <Wire UId="87">
+      <OpenCon UId="60" />
+      <NameCon UId="49" Name="bCloseReq" />
+    </Wire>
+    <Wire UId="88">
+      <IdentCon UId="38" />
+      <NameCon UId="49" Name="bOpenStat" />
+    </Wire>
+    <Wire UId="89">
+      <IdentCon UId="39" />
+      <NameCon UId="49" Name="bClosedStat" />
+    </Wire>
+    <Wire UId="90">
+      <IdentCon UId="40" />
+      <NameCon UId="49" Name="sTag" />
+    </Wire>
+    <Wire UId="91">
+      <NameCon UId="49" Name="bOpenCmd" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="92">
+      <NameCon UId="49" Name="bCloseCmd" />
+      <IdentCon UId="42" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Own FB?</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Process valves</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bSimulation" />
+      </Symbol>
+    </Access>
+    <Call UId="22">
+      <CallInfo Name="Simulation" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="23">
+          <Component Name="Simulation_DB" />
+        </Instance>
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="24">
+      <IdentCon UId="21" />
+      <NameCon UId="22" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Simulation</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InputAlarmHandling" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InputAlarmHandling" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bProfiling" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InputAlarmHandling" />
+        <Component Name="lfMemory" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Profiling" />
+        <Component Name="Section10_InputAlarmHandling" />
+        <Component Name="lfElapsed" />
+      </Symbol>
+    </Access>
+    <Part Name="Runtime" UId="27" />
+    <Call UId="28">
+      <CallInfo Name="InputAlarmHandling" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="29">
+          <Component Name="InputAlarmHandling_DB" />
+        </Instance>
+      </CallInfo>
+    </Call>
+    <Part Name="Runtime" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="mem" />
+    </Wire>
+    <Wire UId="34">
+      <NameCon UId="27" Name="ret_val" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="35">
+      <OpenCon UId="31" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="25" />
+      <NameCon UId="30" Name="mem" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="30" Name="ret_val" />
+      <IdentCon UId="26" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Put this last so that any Simulation code doesn't have to fix up any alarms</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>I/O fault alarms</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="21" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="22" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

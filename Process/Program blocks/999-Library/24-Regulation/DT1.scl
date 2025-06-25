@@ -1,0 +1,34 @@
+﻿FUNCTION "DT1" : Real
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      u : Real;
+      T1 : Real;
+      fCycleTime : Real;
+   END_VAR
+
+   VAR_IN_OUT 
+      xh_merk : Real;
+   END_VAR
+
+   VAR_TEMP 
+      tt1 : Real;
+      Du : Real;
+   END_VAR
+
+
+BEGIN
+	// These is a discrete filtered derivative function. With the filter time T.
+	// With a constant increasing/decreasing value u the output y is the change rate per second.
+	// the step response is a decreasing exponential function that is proportional to the step size and almost zero (<1%) after 5*T. The surface (integral) over it is the step size from the input function.
+	// if the filter time T is zero, it’s an ideal descref integral (u-u_old)/cycle time
+	
+	//Reset if xh_merk is NaN
+	IF "isNaN"(#xh_merk ) THEN 
+	    #xh_merk := #u; 
+	END_IF;
+	
+	#DT1 := (#u - #xh_merk) / (#T1 + #fCycleTime);
+	#xh_merk := #xh_merk + #fCycleTime * #DT1;
+END_FUNCTION
+

@@ -1,0 +1,48 @@
+﻿FUNCTION "RefrigerantMassflow" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      fCompressorSpeed : Real;   // [rpm]
+      fPressureCompressorIn : Real;   // [kPa]
+      fSuperheatCompressorIn : Real;   // [C]
+      fPressureCompressorOut : Real;   // [kPa]
+      fPumpEfficiency : Real;   // [%]
+      fCompressionLostPerPressureRatio : Real;   // [%]
+      fCompressionVolume : Real;   // [L]
+   END_VAR
+
+   VAR_OUTPUT 
+      RefrigerantMassflow : Real;   // [kg/h]
+      VolumetricEfficiency : Real;   // [%]
+   END_VAR
+
+   VAR_TEMP 
+      DensityCompressorIn : Real;   // [kg/m^3]
+      VolEfficiency : Real;
+      PressureRatio : Real;   // [1]
+      "SystemVolumeFlow_m³/h" : Real;   // [m^3/h]
+   END_VAR
+
+
+BEGIN
+	// Volumetric efficiency
+	#PressureRatio := #fPressureCompressorOut / #fPressureCompressorIn;
+	IF ENO = 0 THEN
+	    #PressureRatio := 1.0;
+	    ENO := 1;
+	END_IF;
+	
+	#VolEfficiency := #fPumpEfficiency/100.0 - (#PressureRatio - 1.0) * #fCompressionLostPerPressureRatio/100.0;
+	#VolumetricEfficiency := #VolEfficiency * 100.0;
+	
+	// Mass flow
+	#"SystemVolumeFlow_m³/h" := #fCompressorSpeed * 60.0 * #fCompressionVolume * #VolEfficiency /1000.0;
+	
+	"DensityCompressorInlet"(fPressureCompressorIn:= #fPressureCompressorIn,
+	                         fSuperheatCompresorIn:= #fSuperheatCompressorIn,
+	                         fDensity=> #DensityCompressorIn);
+	
+	#RefrigerantMassflow := #"SystemVolumeFlow_m³/h" * #DensityCompressorIn;
+	
+END_FUNCTION
+

@@ -1,0 +1,84 @@
+﻿FUNCTION "fcCalcSelect" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      sInA : "stCalcValue";   // First value
+      sInB : "stCalcValue";   // Second value
+   END_VAR
+
+   VAR_OUTPUT 
+      sOut : "stCalcValue";   // Result value
+   END_VAR
+
+   VAR_IN_OUT 
+      sTag : "stCalcSelect";
+   END_VAR
+
+   VAR_TEMP 
+      Avg : Real;
+   END_VAR
+
+
+BEGIN
+	// fcCalcSelect - process two Calc values according to Mode.
+	// Falls back to "best effort" if one of the inputs has .bError set
+	
+	// Modes: 
+	// 0: none selected (off)
+	// 1: Select A
+	// 2: Select B
+	// 3: MIN value
+	// 4: MAX value
+	// 5: Average value
+	// 128: Error
+	
+	// Preprocessing in case of value error
+	IF #sInA.bError = TRUE AND #sInB.bError = TRUE THEN
+	    #sTag.nActualMode := 128;
+	    #sTag.bError := TRUE;
+	ELSIF #sInA.bError = FALSE AND #sInB.bError = TRUE THEN
+	    #sTag.nActualMode := 1;
+	    #sTag.bError := FALSE;
+	ELSIF #sInA.bError = TRUE AND #sInB.bError = FALSE THEN
+	    #sTag.nActualMode := 2;
+	    #sTag.bError := FALSE;
+	ELSE    
+	    #sTag.nActualMode := #sTag.nMode;
+	    #sTag.bError := FALSE;
+	END_IF;
+	
+	// Choose value
+	CASE #sTag.nActualMode OF
+	    0: // neither selected, output a null value
+	        #sOut.fMin := 0;
+	        #sOut.fMax := 0;
+	        "fcCalcAssign"(fValue := 0, sTag := #sOut);
+	    1: // Select A
+	        #sOut := #sInA;
+	    2: // Select B
+	        #sOut := #sInB;
+	    3: // Select MIN
+	        IF #sInA.fValue <= #sInB.fValue THEN
+	            #sOut := #sInA;
+	        ELSE
+	            #sOut := #sInB;
+	        END_IF;
+	    4: // Select MAX
+	        IF #sInA.fValue >= #sInB.fValue THEN
+	            #sOut := #sInA;
+	        ELSE
+	            #sOut := #sInB;
+	        END_IF;
+	    5: // Select AVG
+	         #Avg := (#sInA.fValue + #sInB.fValue)/2;
+	        "fcCalcAssign"(fValue := #Avg, sTag := #sOut);
+	    ELSE
+	        // both in error
+	        "fcCalcAssign"(fValue := "NaN"(), sTag := #sOut);
+	END_CASE;
+	
+	// Warning
+	#sTag.bWarning := (#sTag.nMode <> #sTag.nActualMode);
+	
+END_FUNCTION
+
