@@ -1,0 +1,23 @@
+﻿FUNCTION "ScaleIn" : Real
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      nIn : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      f : Real := 10.0;
+   END_VAR
+
+
+BEGIN
+	// ScaleIn
+	// Convert input values in scaled INT format to REAL
+	// Fixed scaling
+	// 
+	
+	// received value INT eg 32767 -> REAL value 3276.7
+	// 
+	#ScaleIn := INT_TO_REAL(#nIn) / #f;
+END_FUNCTION
+

@@ -1,0 +1,52 @@
+﻿FUNCTION_BLOCK "fbButterworthLPF1"
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Heaten
+VERSION : 0.1
+   VAR_INPUT 
+      fIn : Real;   // Value to be filtered (x[n])
+      fTs : Real;   // [s]
+      fCornerFrequency : Real;   // [Hz]
+   END_VAR
+
+   VAR_OUTPUT 
+      fOut : Real;   // Filtered value (y[n])
+   END_VAR
+
+   VAR 
+      fOutPrev : Real;   // y[n-1]
+      A : Real;   // [1] Filter coefficient
+   END_VAR
+
+   VAR_TEMP 
+      tau : Real;   // [s] Filter time constant
+      Ts : Real;   // [s] Sampling time
+   END_VAR
+
+   VAR CONSTANT 
+      PI : Real := 3.141529;
+   END_VAR
+
+
+BEGIN
+	// First-order Butterworth IIR filter
+	// y[n] = y[n-1] + A*(x[n] - y[n-1])
+	// A = Ts / (Ts + RC)
+	// Ts = 1/fs
+	// RC = 1/(2*pi*fc) = tau
+	// 
+	// Notes:
+	//  - can be used to simulate a first-order process like heating & cooling
+	//  - probably some limitation to the corner frequency with respect to the sampling frequency. 10:1 has been mentioned in the literature
+	
+	// For now, calculate the filter coefficient on every cycle, though it only needs to be done on change or with a bInit input pin
+	#tau := 1 / (2 * #PI * #fCornerFrequency);
+	#Ts := #fTs;
+	#A := #Ts / (#Ts + #tau);
+	
+	// Filter
+	#fOut := #fOutPrev + #A * (#fIn - #fOutPrev);
+	
+	#fOutPrev := #fOut;
+	
+END_FUNCTION_BLOCK
+

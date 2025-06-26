@@ -1,0 +1,47 @@
+﻿FUNCTION "fcCalcInput" : Void
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Heaten
+VERSION : 0.1
+   VAR_INPUT 
+      bValidData : Bool;
+      fIn : Real;
+      fOffset : Real;
+   END_VAR
+
+   VAR_OUTPUT 
+      fEngValue : Real;
+   END_VAR
+
+   VAR_IN_OUT 
+      sTag : "stCalcValue";
+   END_VAR
+
+   VAR_TEMP 
+      fSlope : Real;
+      fIntercept : Real;
+      fValue : Real;
+   END_VAR
+
+
+BEGIN
+	// Take an already-scaled value and convert it to a Calc value
+	// Difference over fcCalcAssign is that it has a bottom value, and allows adding an offset
+	
+	// Scaling
+	IF NOT #bValidData OR "isNaN"(#fValue) THEN
+	    // Error value
+	    #sTag.bError := TRUE;
+	    #sTag.fValue := "NaN"();
+	    #sTag.bLimited := FALSE;
+	ELSE
+	    #sTag.bError := FALSE;
+	    #fValue := #fIn + #fOffset;
+	    // Apply limiting, if enabled
+	    "fcCalcAssign"(fValue := #fValue, sTag := #sTag);
+	END_IF;
+	
+	// Local output
+	#fEngValue := #sTag.#fValue;
+	
+END_FUNCTION
+

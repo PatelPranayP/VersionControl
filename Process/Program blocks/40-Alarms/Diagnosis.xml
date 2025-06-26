@@ -1,0 +1,5515 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T06:49:14.1601154Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input" />
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="A0001" Datatype="&quot;fbHMIEvent&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A1002" Datatype="&quot;fbHMIEvent&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+    <Member Name="A1003" Datatype="&quot;fbHMIEvent&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp" />
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>Diagnosis</Name>
+      <Number>1</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="22">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="0001_WatchdogTimeoutOB1" />
+      </Symbol>
+    </Access>
+    <Call UId="24">
+      <CallInfo Name="fbHMIEvent" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="25">
+          <Component Name="A0001" />
+        </Instance>
+        <Parameter Name="bInput" Section="Input" Type="Bool" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stEvent&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="28">
+      <OpenCon UId="26" />
+      <NameCon UId="24" Name="en" />
+    </Wire>
+    <Wire UId="29">
+      <OpenCon UId="27" />
+      <NameCon UId="24" Name="bInput" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="bAckAll" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="22" />
+      <NameCon UId="24" Name="bEnable" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="23" />
+      <NameCon UId="24" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>"DB_Alarms"."0001_WatchdogTimeoutOB1".bInput is written by OB80, but alarm is processed here (OB80 is not cyclic)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>0001 Watchdog timeout OB1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="bEmergencyStop" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="1002_EmergencyStopActive" />
+      </Symbol>
+    </Access>
+    <Call UId="25">
+      <CallInfo Name="fbHMIEvent" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="26">
+          <Component Name="A1002" />
+        </Instance>
+        <Parameter Name="bInput" Section="Input" Type="Bool" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stEvent&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="28">
+      <OpenCon UId="27" />
+      <NameCon UId="25" Name="en" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="bInput" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="bAckAll" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="23" />
+      <NameCon UId="25" Name="bEnable" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="24" />
+      <NameCon UId="25" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>1002 Emergency stop active</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="SafetyRelay" />
+        <Component Name="bResetFailed" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="1003_EmergencyStopResetFailed" />
+      </Symbol>
+    </Access>
+    <Call UId="25">
+      <CallInfo Name="fbHMIEvent" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="26">
+          <Component Name="A1003" />
+        </Instance>
+        <Parameter Name="bInput" Section="Input" Type="Bool" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stEvent&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="28">
+      <OpenCon UId="27" />
+      <NameCon UId="25" Name="en" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="bInput" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="bAckAll" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="23" />
+      <NameCon UId="25" Name="bEnable" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="24" />
+      <NameCon UId="25" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>1003 Emergency stop reset failed</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="AlarmManagement" BlockType="FB">
+        <Instance Scope="GlobalVariable" UId="22">
+          <Component Name="AlarmManagement_DB" />
+        </Instance>
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="24">
+      <OpenCon UId="23" />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Housekeeping</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Call UId="21">
+      <CallInfo Name="WinCCAlarmHandling" BlockType="FC" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="23">
+      <OpenCon UId="22" />
+      <NameCon UId="21" Name="en" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Alarms in WinCC format</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> Group 0-System</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Access Scope="GlobalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="DB_Application" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="FromHB" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="Alarms" UId="30">
+        <Token Text="[" UId="31" />
+        <Access Scope="LiteralConstant" UId="32">
+          <Constant UId="33">
+            <ConstantValue UId="35">0</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="36" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="37" />
+  <Token Text=":=" UId="38" />
+  <Blank Num="1" UId="39" />
+  <Access Scope="GlobalVariable" UId="40">
+    <Symbol UId="41">
+      <Component Name="DB_WinCCAlarms" UId="42" />
+      <Token Text="." UId="43" />
+      <Component Name="0-System" UId="44" />
+      <Token Text="." UId="45" />
+      <Component Name="0001_WatchdogTimeoutOB1" UId="46" />
+      <Token Text="." UId="47" />
+      <Component Name="Memory" UId="48" />
+      <Token Text="." UId="49" />
+      <Token Text="%X0" UId="50" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="51" />
+  <NewLine Num="1" UId="52" />
+  <Access Scope="GlobalVariable" UId="53">
+    <Symbol UId="54">
+      <Component Name="DB_Application" UId="55" />
+      <Token Text="." UId="56" />
+      <Component Name="FromHB" UId="57" />
+      <Token Text="." UId="58" />
+      <Component Name="Alarms" UId="59">
+        <Token Text="[" UId="60" />
+        <Access Scope="LiteralConstant" UId="61">
+          <Constant UId="62">
+            <ConstantValue UId="64">1</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="65" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="66" />
+  <Token Text=":=" UId="67" />
+  <Blank Num="1" UId="68" />
+  <Access Scope="GlobalVariable" UId="69">
+    <Symbol UId="70">
+      <Component Name="DB_WinCCAlarms" UId="71" />
+      <Token Text="." UId="72" />
+      <Component Name="0-System" UId="73" />
+      <Token Text="." UId="74" />
+      <Component Name="0003_InitCurrenSettingsFailed" UId="75" />
+      <Token Text="." UId="76" />
+      <Component Name="Memory" UId="77" />
+      <Token Text="." UId="78" />
+      <Token Text="%X0" UId="79" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="80" />
+  <NewLine Num="1" UId="81" />
+  <Access Scope="GlobalVariable" UId="82">
+    <Symbol UId="83">
+      <Component Name="DB_Application" UId="84" />
+      <Token Text="." UId="85" />
+      <Component Name="FromHB" UId="86" />
+      <Token Text="." UId="87" />
+      <Component Name="Alarms" UId="88">
+        <Token Text="[" UId="89" />
+        <Access Scope="LiteralConstant" UId="90">
+          <Constant UId="91">
+            <ConstantValue UId="93">2</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="94" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="95" />
+  <Token Text=":=" UId="96" />
+  <Blank Num="1" UId="97" />
+  <Access Scope="GlobalVariable" UId="98">
+    <Symbol UId="99">
+      <Component Name="DB_WinCCAlarms" UId="100" />
+      <Token Text="." UId="101" />
+      <Component Name="0-System" UId="102" />
+      <Token Text="." UId="103" />
+      <Component Name="0006_CPUinErrorState" UId="104" />
+      <Token Text="." UId="105" />
+      <Component Name="Memory" UId="106" />
+      <Token Text="." UId="107" />
+      <Token Text="%X0" UId="108" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="109" />
+  <NewLine Num="2" UId="110" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="111">
+    <Text UId="112"> Group 1-IO</Text>
+  </LineComment>
+  <NewLine Num="1" UId="113" />
+  <Access Scope="GlobalVariable" UId="114">
+    <Symbol UId="115">
+      <Component Name="DB_Application" UId="116" />
+      <Token Text="." UId="117" />
+      <Component Name="FromHB" UId="118" />
+      <Token Text="." UId="119" />
+      <Component Name="Alarms" UId="120">
+        <Token Text="[" UId="121" />
+        <Access Scope="LiteralConstant" UId="122">
+          <Constant UId="123">
+            <ConstantValue UId="125">3</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="126" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="127" />
+  <Token Text=":=" UId="128" />
+  <Blank Num="1" UId="129" />
+  <Access Scope="GlobalVariable" UId="130">
+    <Symbol UId="131">
+      <Component Name="DB_WinCCAlarms" UId="132" />
+      <Token Text="." UId="133" />
+      <Component Name="1-IO" UId="134" />
+      <Token Text="." UId="135" />
+      <Component Name="1001_ConnectionToWinCClost" UId="136" />
+      <Token Text="." UId="137" />
+      <Component Name="Memory" UId="138" />
+      <Token Text="." UId="139" />
+      <Token Text="%X0" UId="140" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="141" />
+  <NewLine Num="1" UId="142" />
+  <Access Scope="GlobalVariable" UId="143">
+    <Symbol UId="144">
+      <Component Name="DB_Application" UId="145" />
+      <Token Text="." UId="146" />
+      <Component Name="FromHB" UId="147" />
+      <Token Text="." UId="148" />
+      <Component Name="Alarms" UId="149">
+        <Token Text="[" UId="150" />
+        <Access Scope="LiteralConstant" UId="151">
+          <Constant UId="152">
+            <ConstantValue UId="154">4</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="155" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="156" />
+  <Token Text=":=" UId="157" />
+  <Blank Num="1" UId="158" />
+  <Access Scope="GlobalVariable" UId="159">
+    <Symbol UId="160">
+      <Component Name="DB_WinCCAlarms" UId="161" />
+      <Token Text="." UId="162" />
+      <Component Name="1-IO" UId="163" />
+      <Token Text="." UId="164" />
+      <Component Name="1002_EmergencyStopActive" UId="165" />
+      <Token Text="." UId="166" />
+      <Component Name="Memory" UId="167" />
+      <Token Text="." UId="168" />
+      <Token Text="%X0" UId="169" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="170" />
+  <NewLine Num="1" UId="171" />
+  <Access Scope="GlobalVariable" UId="172">
+    <Symbol UId="173">
+      <Component Name="DB_Application" UId="174" />
+      <Token Text="." UId="175" />
+      <Component Name="FromHB" UId="176" />
+      <Token Text="." UId="177" />
+      <Component Name="Alarms" UId="178">
+        <Token Text="[" UId="179" />
+        <Access Scope="LiteralConstant" UId="180">
+          <Constant UId="181">
+            <ConstantValue UId="183">5</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="184" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="185" />
+  <Token Text=":=" UId="186" />
+  <Blank Num="1" UId="187" />
+  <Access Scope="GlobalVariable" UId="188">
+    <Symbol UId="189">
+      <Component Name="DB_WinCCAlarms" UId="190" />
+      <Token Text="." UId="191" />
+      <Component Name="1-IO" UId="192" />
+      <Token Text="." UId="193" />
+      <Component Name="1003_SafetyRelayResetFailed" UId="194" />
+      <Token Text="." UId="195" />
+      <Component Name="Memory" UId="196" />
+      <Token Text="." UId="197" />
+      <Token Text="%X0" UId="198" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="199" />
+  <NewLine Num="1" UId="200" />
+  <Access Scope="GlobalVariable" UId="201">
+    <Symbol UId="202">
+      <Component Name="DB_Application" UId="203" />
+      <Token Text="." UId="204" />
+      <Component Name="FromHB" UId="205" />
+      <Token Text="." UId="206" />
+      <Component Name="Alarms" UId="207">
+        <Token Text="[" UId="208" />
+        <Access Scope="LiteralConstant" UId="209">
+          <Constant UId="210">
+            <ConstantValue UId="212">6</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="213" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="214" />
+  <Token Text=":=" UId="215" />
+  <Blank Num="1" UId="216" />
+  <Access Scope="GlobalVariable" UId="217">
+    <Symbol UId="218">
+      <Component Name="DB_WinCCAlarms" UId="219" />
+      <Token Text="." UId="220" />
+      <Component Name="1-IO" UId="221" />
+      <Token Text="." UId="222" />
+      <Component Name="1004_HBL_PS_01_X2" UId="223" />
+      <Token Text="." UId="224" />
+      <Component Name="Memory" UId="225" />
+      <Token Text="." UId="226" />
+      <Token Text="%X0" UId="227" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="228" />
+  <NewLine Num="1" UId="229" />
+  <Access Scope="GlobalVariable" UId="230">
+    <Symbol UId="231">
+      <Component Name="DB_Application" UId="232" />
+      <Token Text="." UId="233" />
+      <Component Name="FromHB" UId="234" />
+      <Token Text="." UId="235" />
+      <Component Name="Alarms" UId="236">
+        <Token Text="[" UId="237" />
+        <Access Scope="LiteralConstant" UId="238">
+          <Constant UId="239">
+            <ConstantValue UId="241">7</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="242" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="243" />
+  <Token Text=":=" UId="244" />
+  <Blank Num="1" UId="245" />
+  <Access Scope="GlobalVariable" UId="246">
+    <Symbol UId="247">
+      <Component Name="DB_WinCCAlarms" UId="248" />
+      <Token Text="." UId="249" />
+      <Component Name="1-IO" UId="250" />
+      <Token Text="." UId="251" />
+      <Component Name="1101_HBL_SC_01_CommError" UId="252" />
+      <Token Text="." UId="253" />
+      <Component Name="Memory" UId="254" />
+      <Token Text="." UId="255" />
+      <Token Text="%X0" UId="256" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="257" />
+  <NewLine Num="1" UId="258" />
+  <Access Scope="GlobalVariable" UId="259">
+    <Symbol UId="260">
+      <Component Name="DB_Application" UId="261" />
+      <Token Text="." UId="262" />
+      <Component Name="FromHB" UId="263" />
+      <Token Text="." UId="264" />
+      <Component Name="Alarms" UId="265">
+        <Token Text="[" UId="266" />
+        <Access Scope="LiteralConstant" UId="267">
+          <Constant UId="268">
+            <ConstantValue UId="270">8</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="271" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="272" />
+  <Token Text=":=" UId="273" />
+  <Blank Num="1" UId="274" />
+  <Access Scope="GlobalVariable" UId="275">
+    <Symbol UId="276">
+      <Component Name="DB_WinCCAlarms" UId="277" />
+      <Token Text="." UId="278" />
+      <Component Name="1-IO" UId="279" />
+      <Token Text="." UId="280" />
+      <Component Name="1102_HBL_SC_02_CommError" UId="281" />
+      <Token Text="." UId="282" />
+      <Component Name="Memory" UId="283" />
+      <Token Text="." UId="284" />
+      <Token Text="%X0" UId="285" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="286" />
+  <NewLine Num="1" UId="287" />
+  <Access Scope="GlobalVariable" UId="288">
+    <Symbol UId="289">
+      <Component Name="DB_Application" UId="290" />
+      <Token Text="." UId="291" />
+      <Component Name="FromHB" UId="292" />
+      <Token Text="." UId="293" />
+      <Component Name="Alarms" UId="294">
+        <Token Text="[" UId="295" />
+        <Access Scope="LiteralConstant" UId="296">
+          <Constant UId="297">
+            <ConstantValue UId="299">9</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="300" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="2" UId="301" />
+  <Token Text=":=" UId="302" />
+  <Blank Num="1" UId="303" />
+  <Access Scope="GlobalVariable" UId="304">
+    <Symbol UId="305">
+      <Component Name="DB_WinCCAlarms" UId="306" />
+      <Token Text="." UId="307" />
+      <Component Name="1-IO" UId="308" />
+      <Token Text="." UId="309" />
+      <Component Name="1110_HBL_SC_10_CommError" UId="310" />
+      <Token Text="." UId="311" />
+      <Component Name="Memory" UId="312" />
+      <Token Text="." UId="313" />
+      <Token Text="%X0" UId="314" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="315" />
+  <NewLine Num="1" UId="316" />
+  <Access Scope="GlobalVariable" UId="317">
+    <Symbol UId="318">
+      <Component Name="DB_Application" UId="319" />
+      <Token Text="." UId="320" />
+      <Component Name="FromHB" UId="321" />
+      <Token Text="." UId="322" />
+      <Component Name="Alarms" UId="323">
+        <Token Text="[" UId="324" />
+        <Access Scope="LiteralConstant" UId="325">
+          <Constant UId="326">
+            <ConstantValue UId="328">10</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="329" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="330" />
+  <Token Text=":=" UId="331" />
+  <Blank Num="1" UId="332" />
+  <Access Scope="GlobalVariable" UId="333">
+    <Symbol UId="334">
+      <Component Name="DB_WinCCAlarms" UId="335" />
+      <Token Text="." UId="336" />
+      <Component Name="1-IO" UId="337" />
+      <Token Text="." UId="338" />
+      <Component Name="1121_HBL_SC_01_Tripped" UId="339" />
+      <Token Text="." UId="340" />
+      <Component Name="Memory" UId="341" />
+      <Token Text="." UId="342" />
+      <Token Text="%X0" UId="343" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="344" />
+  <NewLine Num="1" UId="345" />
+  <Access Scope="GlobalVariable" UId="346">
+    <Symbol UId="347">
+      <Component Name="DB_Application" UId="348" />
+      <Token Text="." UId="349" />
+      <Component Name="FromHB" UId="350" />
+      <Token Text="." UId="351" />
+      <Component Name="Alarms" UId="352">
+        <Token Text="[" UId="353" />
+        <Access Scope="LiteralConstant" UId="354">
+          <Constant UId="355">
+            <ConstantValue UId="357">11</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="358" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="359" />
+  <Token Text=":=" UId="360" />
+  <Blank Num="1" UId="361" />
+  <Access Scope="GlobalVariable" UId="362">
+    <Symbol UId="363">
+      <Component Name="DB_WinCCAlarms" UId="364" />
+      <Token Text="." UId="365" />
+      <Component Name="1-IO" UId="366" />
+      <Token Text="." UId="367" />
+      <Component Name="1122_HBL_SC_02_Tripped" UId="368" />
+      <Token Text="." UId="369" />
+      <Component Name="Memory" UId="370" />
+      <Token Text="." UId="371" />
+      <Token Text="%X0" UId="372" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="373" />
+  <NewLine Num="1" UId="374" />
+  <Access Scope="GlobalVariable" UId="375">
+    <Symbol UId="376">
+      <Component Name="DB_Application" UId="377" />
+      <Token Text="." UId="378" />
+      <Component Name="FromHB" UId="379" />
+      <Token Text="." UId="380" />
+      <Component Name="Alarms" UId="381">
+        <Token Text="[" UId="382" />
+        <Access Scope="LiteralConstant" UId="383">
+          <Constant UId="384">
+            <ConstantValue UId="386">12</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="387" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="388" />
+  <Token Text=":=" UId="389" />
+  <Blank Num="1" UId="390" />
+  <Access Scope="GlobalVariable" UId="391">
+    <Symbol UId="392">
+      <Component Name="DB_WinCCAlarms" UId="393" />
+      <Token Text="." UId="394" />
+      <Component Name="1-IO" UId="395" />
+      <Token Text="." UId="396" />
+      <Component Name="1130_HBL_SC_10_Tripped" UId="397" />
+      <Token Text="." UId="398" />
+      <Component Name="Memory" UId="399" />
+      <Token Text="." UId="400" />
+      <Token Text="%X0" UId="401" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="402" />
+  <NewLine Num="1" UId="403" />
+  <Access Scope="GlobalVariable" UId="404">
+    <Symbol UId="405">
+      <Component Name="DB_Application" UId="406" />
+      <Token Text="." UId="407" />
+      <Component Name="FromHB" UId="408" />
+      <Token Text="." UId="409" />
+      <Component Name="Alarms" UId="410">
+        <Token Text="[" UId="411" />
+        <Access Scope="LiteralConstant" UId="412">
+          <Constant UId="413">
+            <ConstantValue UId="415">13</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="416" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="417" />
+  <Token Text=":=" UId="418" />
+  <Blank Num="1" UId="419" />
+  <Access Scope="GlobalVariable" UId="420">
+    <Symbol UId="421">
+      <Component Name="DB_WinCCAlarms" UId="422" />
+      <Token Text="." UId="423" />
+      <Component Name="1-IO" UId="424" />
+      <Token Text="." UId="425" />
+      <Component Name="1140_HBL_SC_01_RunFailure" UId="426" />
+      <Token Text="." UId="427" />
+      <Component Name="Memory" UId="428" />
+      <Token Text="." UId="429" />
+      <Token Text="%X0" UId="430" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="431" />
+  <NewLine Num="1" UId="432" />
+  <Access Scope="GlobalVariable" UId="433">
+    <Symbol UId="434">
+      <Component Name="DB_Application" UId="435" />
+      <Token Text="." UId="436" />
+      <Component Name="FromHB" UId="437" />
+      <Token Text="." UId="438" />
+      <Component Name="Alarms" UId="439">
+        <Token Text="[" UId="440" />
+        <Access Scope="LiteralConstant" UId="441">
+          <Constant UId="442">
+            <ConstantValue UId="444">14</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="445" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="446" />
+  <Token Text=":=" UId="447" />
+  <Blank Num="1" UId="448" />
+  <Access Scope="GlobalVariable" UId="449">
+    <Symbol UId="450">
+      <Component Name="DB_WinCCAlarms" UId="451" />
+      <Token Text="." UId="452" />
+      <Component Name="1-IO" UId="453" />
+      <Token Text="." UId="454" />
+      <Component Name="1142_HBL_SC_02_RunFailure" UId="455" />
+      <Token Text="." UId="456" />
+      <Component Name="Memory" UId="457" />
+      <Token Text="." UId="458" />
+      <Token Text="%X0" UId="459" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="460" />
+  <NewLine Num="1" UId="461" />
+  <Access Scope="GlobalVariable" UId="462">
+    <Symbol UId="463">
+      <Component Name="DB_Application" UId="464" />
+      <Token Text="." UId="465" />
+      <Component Name="FromHB" UId="466" />
+      <Token Text="." UId="467" />
+      <Component Name="Alarms" UId="468">
+        <Token Text="[" UId="469" />
+        <Access Scope="LiteralConstant" UId="470">
+          <Constant UId="471">
+            <ConstantValue UId="473">15</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="474" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="475" />
+  <Token Text=":=" UId="476" />
+  <Blank Num="1" UId="477" />
+  <Access Scope="GlobalVariable" UId="478">
+    <Symbol UId="479">
+      <Component Name="DB_WinCCAlarms" UId="480" />
+      <Token Text="." UId="481" />
+      <Component Name="1-IO" UId="482" />
+      <Token Text="." UId="483" />
+      <Component Name="1150_HBL_SC_10_RunFailure" UId="484" />
+      <Token Text="." UId="485" />
+      <Component Name="Memory" UId="486" />
+      <Token Text="." UId="487" />
+      <Token Text="%X0" UId="488" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="489" />
+  <NewLine Num="2" UId="490" />
+  <Access Scope="GlobalVariable" UId="491">
+    <Symbol UId="492">
+      <Component Name="DB_Application" UId="493" />
+      <Token Text="." UId="494" />
+      <Component Name="FromHB" UId="495" />
+      <Token Text="." UId="496" />
+      <Component Name="Alarms" UId="497">
+        <Token Text="[" UId="498" />
+        <Access Scope="LiteralConstant" UId="499">
+          <Constant UId="500">
+            <ConstantValue UId="502">16</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="503" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="504" />
+  <Token Text=":=" UId="505" />
+  <Blank Num="1" UId="506" />
+  <Access Scope="GlobalVariable" UId="507">
+    <Symbol UId="508">
+      <Component Name="DB_WinCCAlarms" UId="509" />
+      <Token Text="." UId="510" />
+      <Component Name="1-IO" UId="511" />
+      <Token Text="." UId="512" />
+      <Component Name="1201_HBL_PT_01_Fault" UId="513" />
+      <Token Text="." UId="514" />
+      <Component Name="Memory" UId="515" />
+      <Token Text="." UId="516" />
+      <Token Text="%X0" UId="517" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="518" />
+  <NewLine Num="1" UId="519" />
+  <Access Scope="GlobalVariable" UId="520">
+    <Symbol UId="521">
+      <Component Name="DB_Application" UId="522" />
+      <Token Text="." UId="523" />
+      <Component Name="FromHB" UId="524" />
+      <Token Text="." UId="525" />
+      <Component Name="Alarms" UId="526">
+        <Token Text="[" UId="527" />
+        <Access Scope="LiteralConstant" UId="528">
+          <Constant UId="529">
+            <ConstantValue UId="531">17</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="532" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="533" />
+  <Token Text=":=" UId="534" />
+  <Blank Num="1" UId="535" />
+  <Access Scope="GlobalVariable" UId="536">
+    <Symbol UId="537">
+      <Component Name="DB_WinCCAlarms" UId="538" />
+      <Token Text="." UId="539" />
+      <Component Name="1-IO" UId="540" />
+      <Token Text="." UId="541" />
+      <Component Name="1202_HBL_PT_02_Fault" UId="542" />
+      <Token Text="." UId="543" />
+      <Component Name="Memory" UId="544" />
+      <Token Text="." UId="545" />
+      <Token Text="%X0" UId="546" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="547" />
+  <NewLine Num="1" UId="548" />
+  <Access Scope="GlobalVariable" UId="549">
+    <Symbol UId="550">
+      <Component Name="DB_Application" UId="551" />
+      <Token Text="." UId="552" />
+      <Component Name="FromHB" UId="553" />
+      <Token Text="." UId="554" />
+      <Component Name="Alarms" UId="555">
+        <Token Text="[" UId="556" />
+        <Access Scope="LiteralConstant" UId="557">
+          <Constant UId="558">
+            <ConstantValue UId="560">18</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="561" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="562" />
+  <Token Text=":=" UId="563" />
+  <Blank Num="1" UId="564" />
+  <Access Scope="GlobalVariable" UId="565">
+    <Symbol UId="566">
+      <Component Name="DB_WinCCAlarms" UId="567" />
+      <Token Text="." UId="568" />
+      <Component Name="1-IO" UId="569" />
+      <Token Text="." UId="570" />
+      <Component Name="1203_HBL_PT_03_Fault" UId="571" />
+      <Token Text="." UId="572" />
+      <Component Name="Memory" UId="573" />
+      <Token Text="." UId="574" />
+      <Token Text="%X0" UId="575" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="576" />
+  <NewLine Num="1" UId="577" />
+  <Access Scope="GlobalVariable" UId="578">
+    <Symbol UId="579">
+      <Component Name="DB_Application" UId="580" />
+      <Token Text="." UId="581" />
+      <Component Name="FromHB" UId="582" />
+      <Token Text="." UId="583" />
+      <Component Name="Alarms" UId="584">
+        <Token Text="[" UId="585" />
+        <Access Scope="LiteralConstant" UId="586">
+          <Constant UId="587">
+            <ConstantValue UId="589">19</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="590" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="591" />
+  <Token Text=":=" UId="592" />
+  <Blank Num="1" UId="593" />
+  <Access Scope="GlobalVariable" UId="594">
+    <Symbol UId="595">
+      <Component Name="DB_WinCCAlarms" UId="596" />
+      <Token Text="." UId="597" />
+      <Component Name="1-IO" UId="598" />
+      <Token Text="." UId="599" />
+      <Component Name="1204_HBL_PT_04_Fault" UId="600" />
+      <Token Text="." UId="601" />
+      <Component Name="Memory" UId="602" />
+      <Token Text="." UId="603" />
+      <Token Text="%X0" UId="604" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="605" />
+  <NewLine Num="1" UId="606" />
+  <Access Scope="GlobalVariable" UId="607">
+    <Symbol UId="608">
+      <Component Name="DB_Application" UId="609" />
+      <Token Text="." UId="610" />
+      <Component Name="FromHB" UId="611" />
+      <Token Text="." UId="612" />
+      <Component Name="Alarms" UId="613">
+        <Token Text="[" UId="614" />
+        <Access Scope="LiteralConstant" UId="615">
+          <Constant UId="616">
+            <ConstantValue UId="618">20</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="619" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="620" />
+  <Token Text=":=" UId="621" />
+  <Blank Num="1" UId="622" />
+  <Access Scope="GlobalVariable" UId="623">
+    <Symbol UId="624">
+      <Component Name="DB_WinCCAlarms" UId="625" />
+      <Token Text="." UId="626" />
+      <Component Name="1-IO" UId="627" />
+      <Token Text="." UId="628" />
+      <Component Name="1205_HBL_TT_05_Fault" UId="629" />
+      <Token Text="." UId="630" />
+      <Component Name="Memory" UId="631" />
+      <Token Text="." UId="632" />
+      <Token Text="%X0" UId="633" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="634" />
+  <NewLine Num="1" UId="635" />
+  <Access Scope="GlobalVariable" UId="636">
+    <Symbol UId="637">
+      <Component Name="DB_Application" UId="638" />
+      <Token Text="." UId="639" />
+      <Component Name="FromHB" UId="640" />
+      <Token Text="." UId="641" />
+      <Component Name="Alarms" UId="642">
+        <Token Text="[" UId="643" />
+        <Access Scope="LiteralConstant" UId="644">
+          <Constant UId="645">
+            <ConstantValue UId="647">21</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="648" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="649" />
+  <Token Text=":=" UId="650" />
+  <Blank Num="1" UId="651" />
+  <Access Scope="GlobalVariable" UId="652">
+    <Symbol UId="653">
+      <Component Name="DB_WinCCAlarms" UId="654" />
+      <Token Text="." UId="655" />
+      <Component Name="1-IO" UId="656" />
+      <Token Text="." UId="657" />
+      <Component Name="1206_HBL_TT_06_Fault" UId="658" />
+      <Token Text="." UId="659" />
+      <Component Name="Memory" UId="660" />
+      <Token Text="." UId="661" />
+      <Token Text="%X0" UId="662" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="663" />
+  <NewLine Num="1" UId="664" />
+  <Access Scope="GlobalVariable" UId="665">
+    <Symbol UId="666">
+      <Component Name="DB_Application" UId="667" />
+      <Token Text="." UId="668" />
+      <Component Name="FromHB" UId="669" />
+      <Token Text="." UId="670" />
+      <Component Name="Alarms" UId="671">
+        <Token Text="[" UId="672" />
+        <Access Scope="LiteralConstant" UId="673">
+          <Constant UId="674">
+            <ConstantValue UId="676">22</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="677" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="678" />
+  <Token Text=":=" UId="679" />
+  <Blank Num="1" UId="680" />
+  <Access Scope="GlobalVariable" UId="681">
+    <Symbol UId="682">
+      <Component Name="DB_WinCCAlarms" UId="683" />
+      <Token Text="." UId="684" />
+      <Component Name="1-IO" UId="685" />
+      <Token Text="." UId="686" />
+      <Component Name="1207_HBL_TT_07_Fault" UId="687" />
+      <Token Text="." UId="688" />
+      <Component Name="Memory" UId="689" />
+      <Token Text="." UId="690" />
+      <Token Text="%X0" UId="691" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="692" />
+  <NewLine Num="1" UId="693" />
+  <Access Scope="GlobalVariable" UId="694">
+    <Symbol UId="695">
+      <Component Name="DB_Application" UId="696" />
+      <Token Text="." UId="697" />
+      <Component Name="FromHB" UId="698" />
+      <Token Text="." UId="699" />
+      <Component Name="Alarms" UId="700">
+        <Token Text="[" UId="701" />
+        <Access Scope="LiteralConstant" UId="702">
+          <Constant UId="703">
+            <ConstantValue UId="705">23</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="706" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="707" />
+  <Token Text=":=" UId="708" />
+  <Blank Num="1" UId="709" />
+  <Access Scope="GlobalVariable" UId="710">
+    <Symbol UId="711">
+      <Component Name="DB_WinCCAlarms" UId="712" />
+      <Token Text="." UId="713" />
+      <Component Name="1-IO" UId="714" />
+      <Token Text="." UId="715" />
+      <Component Name="1208_HBL_TT_08_Fault" UId="716" />
+      <Token Text="." UId="717" />
+      <Component Name="Memory" UId="718" />
+      <Token Text="." UId="719" />
+      <Token Text="%X0" UId="720" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="721" />
+  <NewLine Num="1" UId="722" />
+  <Access Scope="GlobalVariable" UId="723">
+    <Symbol UId="724">
+      <Component Name="DB_Application" UId="725" />
+      <Token Text="." UId="726" />
+      <Component Name="FromHB" UId="727" />
+      <Token Text="." UId="728" />
+      <Component Name="Alarms" UId="729">
+        <Token Text="[" UId="730" />
+        <Access Scope="LiteralConstant" UId="731">
+          <Constant UId="732">
+            <ConstantValue UId="734">24</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="735" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="736" />
+  <Token Text=":=" UId="737" />
+  <Blank Num="1" UId="738" />
+  <Access Scope="GlobalVariable" UId="739">
+    <Symbol UId="740">
+      <Component Name="DB_WinCCAlarms" UId="741" />
+      <Token Text="." UId="742" />
+      <Component Name="1-IO" UId="743" />
+      <Token Text="." UId="744" />
+      <Component Name="1209_HBL_HCV_01_A1_Fault" UId="745" />
+      <Token Text="." UId="746" />
+      <Component Name="Memory" UId="747" />
+      <Token Text="." UId="748" />
+      <Token Text="%X0" UId="749" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="750" />
+  <NewLine Num="1" UId="751" />
+  <Access Scope="GlobalVariable" UId="752">
+    <Symbol UId="753">
+      <Component Name="DB_Application" UId="754" />
+      <Token Text="." UId="755" />
+      <Component Name="FromHB" UId="756" />
+      <Token Text="." UId="757" />
+      <Component Name="Alarms" UId="758">
+        <Token Text="[" UId="759" />
+        <Access Scope="LiteralConstant" UId="760">
+          <Constant UId="761">
+            <ConstantValue UId="763">25</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="764" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="765" />
+  <Token Text=":=" UId="766" />
+  <Blank Num="1" UId="767" />
+  <Access Scope="GlobalVariable" UId="768">
+    <Symbol UId="769">
+      <Component Name="DB_WinCCAlarms" UId="770" />
+      <Token Text="." UId="771" />
+      <Component Name="1-IO" UId="772" />
+      <Token Text="." UId="773" />
+      <Component Name="1210_HBL_TT_10_Fault" UId="774" />
+      <Token Text="." UId="775" />
+      <Component Name="Memory" UId="776" />
+      <Token Text="." UId="777" />
+      <Token Text="%X0" UId="778" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="779" />
+  <NewLine Num="1" UId="780" />
+  <Access Scope="GlobalVariable" UId="781">
+    <Symbol UId="782">
+      <Component Name="DB_Application" UId="783" />
+      <Token Text="." UId="784" />
+      <Component Name="FromHB" UId="785" />
+      <Token Text="." UId="786" />
+      <Component Name="Alarms" UId="787">
+        <Token Text="[" UId="788" />
+        <Access Scope="LiteralConstant" UId="789">
+          <Constant UId="790">
+            <ConstantValue UId="792">26</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="793" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="794" />
+  <Token Text=":=" UId="795" />
+  <Blank Num="1" UId="796" />
+  <Access Scope="GlobalVariable" UId="797">
+    <Symbol UId="798">
+      <Component Name="DB_WinCCAlarms" UId="799" />
+      <Token Text="." UId="800" />
+      <Component Name="1-IO" UId="801" />
+      <Token Text="." UId="802" />
+      <Component Name="1212_HBL_TT_12_Fault" UId="803" />
+      <Token Text="." UId="804" />
+      <Component Name="Memory" UId="805" />
+      <Token Text="." UId="806" />
+      <Token Text="%X0" UId="807" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="808" />
+  <NewLine Num="1" UId="809" />
+  <Access Scope="GlobalVariable" UId="810">
+    <Symbol UId="811">
+      <Component Name="DB_Application" UId="812" />
+      <Token Text="." UId="813" />
+      <Component Name="FromHB" UId="814" />
+      <Token Text="." UId="815" />
+      <Component Name="Alarms" UId="816">
+        <Token Text="[" UId="817" />
+        <Access Scope="LiteralConstant" UId="818">
+          <Constant UId="819">
+            <ConstantValue UId="821">27</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="822" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="823" />
+  <Token Text=":=" UId="824" />
+  <Blank Num="1" UId="825" />
+  <Access Scope="GlobalVariable" UId="826">
+    <Symbol UId="827">
+      <Component Name="DB_WinCCAlarms" UId="828" />
+      <Token Text="." UId="829" />
+      <Component Name="1-IO" UId="830" />
+      <Token Text="." UId="831" />
+      <Component Name="1213_HBL_TT_13_Fault" UId="832" />
+      <Token Text="." UId="833" />
+      <Component Name="Memory" UId="834" />
+      <Token Text="." UId="835" />
+      <Token Text="%X0" UId="836" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="837" />
+  <NewLine Num="1" UId="838" />
+  <Access Scope="GlobalVariable" UId="839">
+    <Symbol UId="840">
+      <Component Name="DB_Application" UId="841" />
+      <Token Text="." UId="842" />
+      <Component Name="FromHB" UId="843" />
+      <Token Text="." UId="844" />
+      <Component Name="Alarms" UId="845">
+        <Token Text="[" UId="846" />
+        <Access Scope="LiteralConstant" UId="847">
+          <Constant UId="848">
+            <ConstantValue UId="850">28</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="851" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="852" />
+  <Token Text=":=" UId="853" />
+  <Blank Num="1" UId="854" />
+  <Access Scope="GlobalVariable" UId="855">
+    <Symbol UId="856">
+      <Component Name="DB_WinCCAlarms" UId="857" />
+      <Token Text="." UId="858" />
+      <Component Name="1-IO" UId="859" />
+      <Token Text="." UId="860" />
+      <Component Name="1214_HBL_TT_14_Fault" UId="861" />
+      <Token Text="." UId="862" />
+      <Component Name="Memory" UId="863" />
+      <Token Text="." UId="864" />
+      <Token Text="%X0" UId="865" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="866" />
+  <NewLine Num="1" UId="867" />
+  <Access Scope="GlobalVariable" UId="868">
+    <Symbol UId="869">
+      <Component Name="DB_Application" UId="870" />
+      <Token Text="." UId="871" />
+      <Component Name="FromHB" UId="872" />
+      <Token Text="." UId="873" />
+      <Component Name="Alarms" UId="874">
+        <Token Text="[" UId="875" />
+        <Access Scope="LiteralConstant" UId="876">
+          <Constant UId="877">
+            <ConstantValue UId="879">29</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="880" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="881" />
+  <Token Text=":=" UId="882" />
+  <Blank Num="1" UId="883" />
+  <Access Scope="GlobalVariable" UId="884">
+    <Symbol UId="885">
+      <Component Name="DB_WinCCAlarms" UId="886" />
+      <Token Text="." UId="887" />
+      <Component Name="1-IO" UId="888" />
+      <Token Text="." UId="889" />
+      <Component Name="1215_HBL_TT_15_Fault" UId="890" />
+      <Token Text="." UId="891" />
+      <Component Name="Memory" UId="892" />
+      <Token Text="." UId="893" />
+      <Token Text="%X0" UId="894" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="895" />
+  <NewLine Num="1" UId="896" />
+  <Access Scope="GlobalVariable" UId="897">
+    <Symbol UId="898">
+      <Component Name="DB_Application" UId="899" />
+      <Token Text="." UId="900" />
+      <Component Name="FromHB" UId="901" />
+      <Token Text="." UId="902" />
+      <Component Name="Alarms" UId="903">
+        <Token Text="[" UId="904" />
+        <Access Scope="LiteralConstant" UId="905">
+          <Constant UId="906">
+            <ConstantValue UId="908">30</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="909" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="910" />
+  <Token Text=":=" UId="911" />
+  <Blank Num="1" UId="912" />
+  <Access Scope="GlobalVariable" UId="913">
+    <Symbol UId="914">
+      <Component Name="DB_WinCCAlarms" UId="915" />
+      <Token Text="." UId="916" />
+      <Component Name="1-IO" UId="917" />
+      <Token Text="." UId="918" />
+      <Component Name="1216_HBL_TT_16_Fault" UId="919" />
+      <Token Text="." UId="920" />
+      <Component Name="Memory" UId="921" />
+      <Token Text="." UId="922" />
+      <Token Text="%X0" UId="923" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="924" />
+  <NewLine Num="1" UId="925" />
+  <Access Scope="GlobalVariable" UId="926">
+    <Symbol UId="927">
+      <Component Name="DB_Application" UId="928" />
+      <Token Text="." UId="929" />
+      <Component Name="FromHB" UId="930" />
+      <Token Text="." UId="931" />
+      <Component Name="Alarms" UId="932">
+        <Token Text="[" UId="933" />
+        <Access Scope="LiteralConstant" UId="934">
+          <Constant UId="935">
+            <ConstantValue UId="937">31</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="938" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="939" />
+  <Token Text=":=" UId="940" />
+  <Blank Num="1" UId="941" />
+  <Access Scope="GlobalVariable" UId="942">
+    <Symbol UId="943">
+      <Component Name="DB_WinCCAlarms" UId="944" />
+      <Token Text="." UId="945" />
+      <Component Name="1-IO" UId="946" />
+      <Token Text="." UId="947" />
+      <Component Name="1217_HBL_TT_17_Fault" UId="948" />
+      <Token Text="." UId="949" />
+      <Component Name="Memory" UId="950" />
+      <Token Text="." UId="951" />
+      <Token Text="%X0" UId="952" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="953" />
+  <NewLine Num="1" UId="954" />
+  <Access Scope="GlobalVariable" UId="955">
+    <Symbol UId="956">
+      <Component Name="DB_Application" UId="957" />
+      <Token Text="." UId="958" />
+      <Component Name="FromHB" UId="959" />
+      <Token Text="." UId="960" />
+      <Component Name="Alarms" UId="961">
+        <Token Text="[" UId="962" />
+        <Access Scope="LiteralConstant" UId="963">
+          <Constant UId="964">
+            <ConstantValue UId="966">32</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="967" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="968" />
+  <Token Text=":=" UId="969" />
+  <Blank Num="1" UId="970" />
+  <Access Scope="GlobalVariable" UId="971">
+    <Symbol UId="972">
+      <Component Name="DB_WinCCAlarms" UId="973" />
+      <Token Text="." UId="974" />
+      <Component Name="1-IO" UId="975" />
+      <Token Text="." UId="976" />
+      <Component Name="1218_HBL_TT_18_Fault" UId="977" />
+      <Token Text="." UId="978" />
+      <Component Name="Memory" UId="979" />
+      <Token Text="." UId="980" />
+      <Token Text="%X0" UId="981" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="982" />
+  <NewLine Num="1" UId="983" />
+  <Access Scope="GlobalVariable" UId="984">
+    <Symbol UId="985">
+      <Component Name="DB_Application" UId="986" />
+      <Token Text="." UId="987" />
+      <Component Name="FromHB" UId="988" />
+      <Token Text="." UId="989" />
+      <Component Name="Alarms" UId="990">
+        <Token Text="[" UId="991" />
+        <Access Scope="LiteralConstant" UId="992">
+          <Constant UId="993">
+            <ConstantValue UId="995">33</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="996" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="997" />
+  <Token Text=":=" UId="998" />
+  <Blank Num="1" UId="999" />
+  <Access Scope="GlobalVariable" UId="1000">
+    <Symbol UId="1001">
+      <Component Name="DB_WinCCAlarms" UId="1002" />
+      <Token Text="." UId="1003" />
+      <Component Name="1-IO" UId="1004" />
+      <Token Text="." UId="1005" />
+      <Component Name="1220_HBL_PT_960_Fault" UId="1006" />
+      <Token Text="." UId="1007" />
+      <Component Name="Memory" UId="1008" />
+      <Token Text="." UId="1009" />
+      <Token Text="%X0" UId="1010" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1011" />
+  <NewLine Num="1" UId="1012" />
+  <Access Scope="GlobalVariable" UId="1013">
+    <Symbol UId="1014">
+      <Component Name="DB_Application" UId="1015" />
+      <Token Text="." UId="1016" />
+      <Component Name="FromHB" UId="1017" />
+      <Token Text="." UId="1018" />
+      <Component Name="Alarms" UId="1019">
+        <Token Text="[" UId="1020" />
+        <Access Scope="LiteralConstant" UId="1021">
+          <Constant UId="1022">
+            <ConstantValue UId="1024">34</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1025" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1026" />
+  <Token Text=":=" UId="1027" />
+  <Blank Num="1" UId="1028" />
+  <Access Scope="GlobalVariable" UId="1029">
+    <Symbol UId="1030">
+      <Component Name="DB_WinCCAlarms" UId="1031" />
+      <Token Text="." UId="1032" />
+      <Component Name="1-IO" UId="1033" />
+      <Token Text="." UId="1034" />
+      <Component Name="1221_HBL_PT_05_Fault" UId="1035" />
+      <Token Text="." UId="1036" />
+      <Component Name="Memory" UId="1037" />
+      <Token Text="." UId="1038" />
+      <Token Text="%X0" UId="1039" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1040" />
+  <NewLine Num="1" UId="1041" />
+  <Access Scope="GlobalVariable" UId="1042">
+    <Symbol UId="1043">
+      <Component Name="DB_Application" UId="1044" />
+      <Token Text="." UId="1045" />
+      <Component Name="FromHB" UId="1046" />
+      <Token Text="." UId="1047" />
+      <Component Name="Alarms" UId="1048">
+        <Token Text="[" UId="1049" />
+        <Access Scope="LiteralConstant" UId="1050">
+          <Constant UId="1051">
+            <ConstantValue UId="1053">35</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1054" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1055" />
+  <Token Text=":=" UId="1056" />
+  <Blank Num="1" UId="1057" />
+  <Access Scope="GlobalVariable" UId="1058">
+    <Symbol UId="1059">
+      <Component Name="DB_WinCCAlarms" UId="1060" />
+      <Token Text="." UId="1061" />
+      <Component Name="1-IO" UId="1062" />
+      <Token Text="." UId="1063" />
+      <Component Name="1223_HBL_TT_03_Fault" UId="1064" />
+      <Token Text="." UId="1065" />
+      <Component Name="Memory" UId="1066" />
+      <Token Text="." UId="1067" />
+      <Token Text="%X0" UId="1068" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1069" />
+  <NewLine Num="1" UId="1070" />
+  <Access Scope="GlobalVariable" UId="1071">
+    <Symbol UId="1072">
+      <Component Name="DB_Application" UId="1073" />
+      <Token Text="." UId="1074" />
+      <Component Name="FromHB" UId="1075" />
+      <Token Text="." UId="1076" />
+      <Component Name="Alarms" UId="1077">
+        <Token Text="[" UId="1078" />
+        <Access Scope="LiteralConstant" UId="1079">
+          <Constant UId="1080">
+            <ConstantValue UId="1082">36</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1083" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1084" />
+  <Token Text=":=" UId="1085" />
+  <Blank Num="1" UId="1086" />
+  <Access Scope="GlobalVariable" UId="1087">
+    <Symbol UId="1088">
+      <Component Name="DB_WinCCAlarms" UId="1089" />
+      <Token Text="." UId="1090" />
+      <Component Name="1-IO" UId="1091" />
+      <Token Text="." UId="1092" />
+      <Component Name="1224_HBL_TT_23_Fault" UId="1093" />
+      <Token Text="." UId="1094" />
+      <Component Name="Memory" UId="1095" />
+      <Token Text="." UId="1096" />
+      <Token Text="%X0" UId="1097" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1098" />
+  <NewLine Num="1" UId="1099" />
+  <Access Scope="GlobalVariable" UId="1100">
+    <Symbol UId="1101">
+      <Component Name="DB_Application" UId="1102" />
+      <Token Text="." UId="1103" />
+      <Component Name="FromHB" UId="1104" />
+      <Token Text="." UId="1105" />
+      <Component Name="Alarms" UId="1106">
+        <Token Text="[" UId="1107" />
+        <Access Scope="LiteralConstant" UId="1108">
+          <Constant UId="1109">
+            <ConstantValue UId="1111">37</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1112" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1113" />
+  <Token Text=":=" UId="1114" />
+  <Blank Num="1" UId="1115" />
+  <Access Scope="GlobalVariable" UId="1116">
+    <Symbol UId="1117">
+      <Component Name="DB_WinCCAlarms" UId="1118" />
+      <Token Text="." UId="1119" />
+      <Component Name="1-IO" UId="1120" />
+      <Token Text="." UId="1121" />
+      <Component Name="1225_HBL_TT_24_Fault" UId="1122" />
+      <Token Text="." UId="1123" />
+      <Component Name="Memory" UId="1124" />
+      <Token Text="." UId="1125" />
+      <Token Text="%X0" UId="1126" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1127" />
+  <NewLine Num="1" UId="1128" />
+  <Access Scope="GlobalVariable" UId="1129">
+    <Symbol UId="1130">
+      <Component Name="DB_Application" UId="1131" />
+      <Token Text="." UId="1132" />
+      <Component Name="FromHB" UId="1133" />
+      <Token Text="." UId="1134" />
+      <Component Name="Alarms" UId="1135">
+        <Token Text="[" UId="1136" />
+        <Access Scope="LiteralConstant" UId="1137">
+          <Constant UId="1138">
+            <ConstantValue UId="1140">38</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1141" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1142" />
+  <Token Text=":=" UId="1143" />
+  <Blank Num="1" UId="1144" />
+  <Access Scope="GlobalVariable" UId="1145">
+    <Symbol UId="1146">
+      <Component Name="DB_WinCCAlarms" UId="1147" />
+      <Token Text="." UId="1148" />
+      <Component Name="1-IO" UId="1149" />
+      <Token Text="." UId="1150" />
+      <Component Name="1226_HBL_TT_25_Fault" UId="1151" />
+      <Token Text="." UId="1152" />
+      <Component Name="Memory" UId="1153" />
+      <Token Text="." UId="1154" />
+      <Token Text="%X0" UId="1155" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1156" />
+  <NewLine Num="1" UId="1157" />
+  <Access Scope="GlobalVariable" UId="1158">
+    <Symbol UId="1159">
+      <Component Name="DB_Application" UId="1160" />
+      <Token Text="." UId="1161" />
+      <Component Name="FromHB" UId="1162" />
+      <Token Text="." UId="1163" />
+      <Component Name="Alarms" UId="1164">
+        <Token Text="[" UId="1165" />
+        <Access Scope="LiteralConstant" UId="1166">
+          <Constant UId="1167">
+            <ConstantValue UId="1169">39</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1170" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1171" />
+  <Token Text=":=" UId="1172" />
+  <Blank Num="1" UId="1173" />
+  <Access Scope="GlobalVariable" UId="1174">
+    <Symbol UId="1175">
+      <Component Name="DB_WinCCAlarms" UId="1176" />
+      <Token Text="." UId="1177" />
+      <Component Name="1-IO" UId="1178" />
+      <Token Text="." UId="1179" />
+      <Component Name="1227_HBL_LT_01_Fault" UId="1180" />
+      <Token Text="." UId="1181" />
+      <Component Name="Memory" UId="1182" />
+      <Token Text="." UId="1183" />
+      <Token Text="%X0" UId="1184" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1185" />
+  <NewLine Num="1" UId="1186" />
+  <Access Scope="GlobalVariable" UId="1187">
+    <Symbol UId="1188">
+      <Component Name="DB_Application" UId="1189" />
+      <Token Text="." UId="1190" />
+      <Component Name="FromHB" UId="1191" />
+      <Token Text="." UId="1192" />
+      <Component Name="Alarms" UId="1193">
+        <Token Text="[" UId="1194" />
+        <Access Scope="LiteralConstant" UId="1195">
+          <Constant UId="1196">
+            <ConstantValue UId="1198">40</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1199" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1200" />
+  <Token Text=":=" UId="1201" />
+  <Blank Num="1" UId="1202" />
+  <Access Scope="GlobalVariable" UId="1203">
+    <Symbol UId="1204">
+      <Component Name="DB_WinCCAlarms" UId="1205" />
+      <Token Text="." UId="1206" />
+      <Component Name="1-IO" UId="1207" />
+      <Token Text="." UId="1208" />
+      <Component Name="1228_HBL_TT_21_Fault" UId="1209" />
+      <Token Text="." UId="1210" />
+      <Component Name="Memory" UId="1211" />
+      <Token Text="." UId="1212" />
+      <Token Text="%X0" UId="1213" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1214" />
+  <NewLine Num="1" UId="1215" />
+  <Access Scope="GlobalVariable" UId="1216">
+    <Symbol UId="1217">
+      <Component Name="DB_Application" UId="1218" />
+      <Token Text="." UId="1219" />
+      <Component Name="FromHB" UId="1220" />
+      <Token Text="." UId="1221" />
+      <Component Name="Alarms" UId="1222">
+        <Token Text="[" UId="1223" />
+        <Access Scope="LiteralConstant" UId="1224">
+          <Constant UId="1225">
+            <ConstantValue UId="1227">41</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1228" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1229" />
+  <Token Text=":=" UId="1230" />
+  <Blank Num="1" UId="1231" />
+  <Access Scope="GlobalVariable" UId="1232">
+    <Symbol UId="1233">
+      <Component Name="DB_WinCCAlarms" UId="1234" />
+      <Token Text="." UId="1235" />
+      <Component Name="1-IO" UId="1236" />
+      <Token Text="." UId="1237" />
+      <Component Name="1229_HBL_TT_22_Fault" UId="1238" />
+      <Token Text="." UId="1239" />
+      <Component Name="Memory" UId="1240" />
+      <Token Text="." UId="1241" />
+      <Token Text="%X0" UId="1242" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1243" />
+  <NewLine Num="1" UId="1244" />
+  <Access Scope="GlobalVariable" UId="1245">
+    <Symbol UId="1246">
+      <Component Name="DB_Application" UId="1247" />
+      <Token Text="." UId="1248" />
+      <Component Name="FromHB" UId="1249" />
+      <Token Text="." UId="1250" />
+      <Component Name="Alarms" UId="1251">
+        <Token Text="[" UId="1252" />
+        <Access Scope="LiteralConstant" UId="1253">
+          <Constant UId="1254">
+            <ConstantValue UId="1256">42</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1257" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1258" />
+  <Token Text=":=" UId="1259" />
+  <Blank Num="1" UId="1260" />
+  <Access Scope="GlobalVariable" UId="1261">
+    <Symbol UId="1262">
+      <Component Name="DB_WinCCAlarms" UId="1263" />
+      <Token Text="." UId="1264" />
+      <Component Name="1-IO" UId="1265" />
+      <Token Text="." UId="1266" />
+      <Component Name="1230_HBL_LT_02_Fault" UId="1267" />
+      <Token Text="." UId="1268" />
+      <Component Name="Memory" UId="1269" />
+      <Token Text="." UId="1270" />
+      <Token Text="%X0" UId="1271" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1272" />
+  <NewLine Num="1" UId="1273" />
+  <Access Scope="GlobalVariable" UId="1274">
+    <Symbol UId="1275">
+      <Component Name="DB_Application" UId="1276" />
+      <Token Text="." UId="1277" />
+      <Component Name="FromHB" UId="1278" />
+      <Token Text="." UId="1279" />
+      <Component Name="Alarms" UId="1280">
+        <Token Text="[" UId="1281" />
+        <Access Scope="LiteralConstant" UId="1282">
+          <Constant UId="1283">
+            <ConstantValue UId="1285">43</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1286" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1287" />
+  <Token Text=":=" UId="1288" />
+  <Blank Num="1" UId="1289" />
+  <Access Scope="GlobalVariable" UId="1290">
+    <Symbol UId="1291">
+      <Component Name="DB_WinCCAlarms" UId="1292" />
+      <Token Text="." UId="1293" />
+      <Component Name="1-IO" UId="1294" />
+      <Token Text="." UId="1295" />
+      <Component Name="1231_HBL_HCV_02_A1_Fault" UId="1296" />
+      <Token Text="." UId="1297" />
+      <Component Name="Memory" UId="1298" />
+      <Token Text="." UId="1299" />
+      <Token Text="%X0" UId="1300" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1301" />
+  <NewLine Num="1" UId="1302" />
+  <Access Scope="GlobalVariable" UId="1303">
+    <Symbol UId="1304">
+      <Component Name="DB_Application" UId="1305" />
+      <Token Text="." UId="1306" />
+      <Component Name="FromHB" UId="1307" />
+      <Token Text="." UId="1308" />
+      <Component Name="Alarms" UId="1309">
+        <Token Text="[" UId="1310" />
+        <Access Scope="LiteralConstant" UId="1311">
+          <Constant UId="1312">
+            <ConstantValue UId="1314">44</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1315" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1316" />
+  <Token Text=":=" UId="1317" />
+  <Blank Num="1" UId="1318" />
+  <Access Scope="GlobalVariable" UId="1319">
+    <Symbol UId="1320">
+      <Component Name="DB_WinCCAlarms" UId="1321" />
+      <Token Text="." UId="1322" />
+      <Component Name="1-IO" UId="1323" />
+      <Token Text="." UId="1324" />
+      <Component Name="1232_HBL_PT_13_Fault" UId="1325" />
+      <Token Text="." UId="1326" />
+      <Component Name="Memory" UId="1327" />
+      <Token Text="." UId="1328" />
+      <Token Text="%X0" UId="1329" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1330" />
+  <NewLine Num="1" UId="1331" />
+  <Access Scope="GlobalVariable" UId="1332">
+    <Symbol UId="1333">
+      <Component Name="DB_Application" UId="1334" />
+      <Token Text="." UId="1335" />
+      <Component Name="FromHB" UId="1336" />
+      <Token Text="." UId="1337" />
+      <Component Name="Alarms" UId="1338">
+        <Token Text="[" UId="1339" />
+        <Access Scope="LiteralConstant" UId="1340">
+          <Constant UId="1341">
+            <ConstantValue UId="1343">45</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1344" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1345" />
+  <Token Text=":=" UId="1346" />
+  <Blank Num="1" UId="1347" />
+  <Access Scope="GlobalVariable" UId="1348">
+    <Symbol UId="1349">
+      <Component Name="DB_WinCCAlarms" UId="1350" />
+      <Token Text="." UId="1351" />
+      <Component Name="1-IO" UId="1352" />
+      <Token Text="." UId="1353" />
+      <Component Name="1233_HBL_TT_20_Fault" UId="1354" />
+      <Token Text="." UId="1355" />
+      <Component Name="Memory" UId="1356" />
+      <Token Text="." UId="1357" />
+      <Token Text="%X0" UId="1358" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1359" />
+  <NewLine Num="1" UId="1360" />
+  <Access Scope="GlobalVariable" UId="1361">
+    <Symbol UId="1362">
+      <Component Name="DB_Application" UId="1363" />
+      <Token Text="." UId="1364" />
+      <Component Name="FromHB" UId="1365" />
+      <Token Text="." UId="1366" />
+      <Component Name="Alarms" UId="1367">
+        <Token Text="[" UId="1368" />
+        <Access Scope="LiteralConstant" UId="1369">
+          <Constant UId="1370">
+            <ConstantValue UId="1372">46</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1373" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1374" />
+  <Token Text=":=" UId="1375" />
+  <Blank Num="1" UId="1376" />
+  <Access Scope="GlobalVariable" UId="1377">
+    <Symbol UId="1378">
+      <Component Name="DB_WinCCAlarms" UId="1379" />
+      <Token Text="." UId="1380" />
+      <Component Name="1-IO" UId="1381" />
+      <Token Text="." UId="1382" />
+      <Component Name="1234_HBL_PT_14_Fault" UId="1383" />
+      <Token Text="." UId="1384" />
+      <Component Name="Memory" UId="1385" />
+      <Token Text="." UId="1386" />
+      <Token Text="%X0" UId="1387" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1388" />
+  <NewLine Num="1" UId="1389" />
+  <Access Scope="GlobalVariable" UId="1390">
+    <Symbol UId="1391">
+      <Component Name="DB_Application" UId="1392" />
+      <Token Text="." UId="1393" />
+      <Component Name="FromHB" UId="1394" />
+      <Token Text="." UId="1395" />
+      <Component Name="Alarms" UId="1396">
+        <Token Text="[" UId="1397" />
+        <Access Scope="LiteralConstant" UId="1398">
+          <Constant UId="1399">
+            <ConstantValue UId="1401">47</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1402" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1403" />
+  <Token Text=":=" UId="1404" />
+  <Blank Num="1" UId="1405" />
+  <Access Scope="GlobalVariable" UId="1406">
+    <Symbol UId="1407">
+      <Component Name="DB_WinCCAlarms" UId="1408" />
+      <Token Text="." UId="1409" />
+      <Component Name="1-IO" UId="1410" />
+      <Token Text="." UId="1411" />
+      <Component Name="1235_HBL_PT_18_Fault" UId="1412" />
+      <Token Text="." UId="1413" />
+      <Component Name="Memory" UId="1414" />
+      <Token Text="." UId="1415" />
+      <Token Text="%X0" UId="1416" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1417" />
+  <NewLine Num="1" UId="1418" />
+  <Access Scope="GlobalVariable" UId="1419">
+    <Symbol UId="1420">
+      <Component Name="DB_Application" UId="1421" />
+      <Token Text="." UId="1422" />
+      <Component Name="FromHB" UId="1423" />
+      <Token Text="." UId="1424" />
+      <Component Name="Alarms" UId="1425">
+        <Token Text="[" UId="1426" />
+        <Access Scope="LiteralConstant" UId="1427">
+          <Constant UId="1428">
+            <ConstantValue UId="1430">48</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1431" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1432" />
+  <Token Text=":=" UId="1433" />
+  <Blank Num="1" UId="1434" />
+  <Access Scope="GlobalVariable" UId="1435">
+    <Symbol UId="1436">
+      <Component Name="DB_WinCCAlarms" UId="1437" />
+      <Token Text="." UId="1438" />
+      <Component Name="1-IO" UId="1439" />
+      <Token Text="." UId="1440" />
+      <Component Name="1236_HBL_PT_19_Fault" UId="1441" />
+      <Token Text="." UId="1442" />
+      <Component Name="Memory" UId="1443" />
+      <Token Text="." UId="1444" />
+      <Token Text="%X0" UId="1445" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1446" />
+  <NewLine Num="1" UId="1447" />
+  <Access Scope="GlobalVariable" UId="1448">
+    <Symbol UId="1449">
+      <Component Name="DB_Application" UId="1450" />
+      <Token Text="." UId="1451" />
+      <Component Name="FromHB" UId="1452" />
+      <Token Text="." UId="1453" />
+      <Component Name="Alarms" UId="1454">
+        <Token Text="[" UId="1455" />
+        <Access Scope="LiteralConstant" UId="1456">
+          <Constant UId="1457">
+            <ConstantValue UId="1459">49</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1460" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1461" />
+  <Token Text=":=" UId="1462" />
+  <Blank Num="1" UId="1463" />
+  <Access Scope="GlobalVariable" UId="1464">
+    <Symbol UId="1465">
+      <Component Name="DB_WinCCAlarms" UId="1466" />
+      <Token Text="." UId="1467" />
+      <Component Name="1-IO" UId="1468" />
+      <Token Text="." UId="1469" />
+      <Component Name="1237_HBL_PT_25_Fault" UId="1470" />
+      <Token Text="." UId="1471" />
+      <Component Name="Memory" UId="1472" />
+      <Token Text="." UId="1473" />
+      <Token Text="%X0" UId="1474" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1475" />
+  <NewLine Num="1" UId="1476" />
+  <Access Scope="GlobalVariable" UId="1477">
+    <Symbol UId="1478">
+      <Component Name="DB_Application" UId="1479" />
+      <Token Text="." UId="1480" />
+      <Component Name="FromHB" UId="1481" />
+      <Token Text="." UId="1482" />
+      <Component Name="Alarms" UId="1483">
+        <Token Text="[" UId="1484" />
+        <Access Scope="LiteralConstant" UId="1485">
+          <Constant UId="1486">
+            <ConstantValue UId="1488">50</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1489" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1490" />
+  <Token Text=":=" UId="1491" />
+  <Blank Num="1" UId="1492" />
+  <Access Scope="GlobalVariable" UId="1493">
+    <Symbol UId="1494">
+      <Component Name="DB_WinCCAlarms" UId="1495" />
+      <Token Text="." UId="1496" />
+      <Component Name="1-IO" UId="1497" />
+      <Token Text="." UId="1498" />
+      <Component Name="1238_HBL_TT_31_Fault" UId="1499" />
+      <Token Text="." UId="1500" />
+      <Component Name="Memory" UId="1501" />
+      <Token Text="." UId="1502" />
+      <Token Text="%X0" UId="1503" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1504" />
+  <NewLine Num="1" UId="1505" />
+  <Access Scope="GlobalVariable" UId="1506">
+    <Symbol UId="1507">
+      <Component Name="DB_Application" UId="1508" />
+      <Token Text="." UId="1509" />
+      <Component Name="FromHB" UId="1510" />
+      <Token Text="." UId="1511" />
+      <Component Name="Alarms" UId="1512">
+        <Token Text="[" UId="1513" />
+        <Access Scope="LiteralConstant" UId="1514">
+          <Constant UId="1515">
+            <ConstantValue UId="1517">51</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1518" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1519" />
+  <Token Text=":=" UId="1520" />
+  <Blank Num="1" UId="1521" />
+  <Access Scope="GlobalVariable" UId="1522">
+    <Symbol UId="1523">
+      <Component Name="DB_WinCCAlarms" UId="1524" />
+      <Token Text="." UId="1525" />
+      <Component Name="1-IO" UId="1526" />
+      <Token Text="." UId="1527" />
+      <Component Name="1239_HBL_TT_33_Fault" UId="1528" />
+      <Token Text="." UId="1529" />
+      <Component Name="Memory" UId="1530" />
+      <Token Text="." UId="1531" />
+      <Token Text="%X0" UId="1532" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1533" />
+  <NewLine Num="1" UId="1534" />
+  <Access Scope="GlobalVariable" UId="1535">
+    <Symbol UId="1536">
+      <Component Name="DB_Application" UId="1537" />
+      <Token Text="." UId="1538" />
+      <Component Name="FromHB" UId="1539" />
+      <Token Text="." UId="1540" />
+      <Component Name="Alarms" UId="1541">
+        <Token Text="[" UId="1542" />
+        <Access Scope="LiteralConstant" UId="1543">
+          <Constant UId="1544">
+            <ConstantValue UId="1546">52</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1547" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1548" />
+  <Token Text=":=" UId="1549" />
+  <Blank Num="1" UId="1550" />
+  <Access Scope="GlobalVariable" UId="1551">
+    <Symbol UId="1552">
+      <Component Name="DB_WinCCAlarms" UId="1553" />
+      <Token Text="." UId="1554" />
+      <Component Name="1-IO" UId="1555" />
+      <Token Text="." UId="1556" />
+      <Component Name="1240_HBL_TT_35_Fault" UId="1557" />
+      <Token Text="." UId="1558" />
+      <Component Name="Memory" UId="1559" />
+      <Token Text="." UId="1560" />
+      <Token Text="%X0" UId="1561" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1562" />
+  <NewLine Num="1" UId="1563" />
+  <Access Scope="GlobalVariable" UId="1564">
+    <Symbol UId="1565">
+      <Component Name="DB_Application" UId="1566" />
+      <Token Text="." UId="1567" />
+      <Component Name="FromHB" UId="1568" />
+      <Token Text="." UId="1569" />
+      <Component Name="Alarms" UId="1570">
+        <Token Text="[" UId="1571" />
+        <Access Scope="LiteralConstant" UId="1572">
+          <Constant UId="1573">
+            <ConstantValue UId="1575">53</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1576" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1577" />
+  <Token Text=":=" UId="1578" />
+  <Blank Num="1" UId="1579" />
+  <Access Scope="GlobalVariable" UId="1580">
+    <Symbol UId="1581">
+      <Component Name="DB_WinCCAlarms" UId="1582" />
+      <Token Text="." UId="1583" />
+      <Component Name="1-IO" UId="1584" />
+      <Token Text="." UId="1585" />
+      <Component Name="1241_HBL_HCV_01_Fault" UId="1586" />
+      <Token Text="." UId="1587" />
+      <Component Name="Memory" UId="1588" />
+      <Token Text="." UId="1589" />
+      <Token Text="%X0" UId="1590" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1591" />
+  <NewLine Num="1" UId="1592" />
+  <Access Scope="GlobalVariable" UId="1593">
+    <Symbol UId="1594">
+      <Component Name="DB_Application" UId="1595" />
+      <Token Text="." UId="1596" />
+      <Component Name="FromHB" UId="1597" />
+      <Token Text="." UId="1598" />
+      <Component Name="Alarms" UId="1599">
+        <Token Text="[" UId="1600" />
+        <Access Scope="LiteralConstant" UId="1601">
+          <Constant UId="1602">
+            <ConstantValue UId="1604">54</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1605" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1606" />
+  <Token Text=":=" UId="1607" />
+  <Blank Num="1" UId="1608" />
+  <Access Scope="GlobalVariable" UId="1609">
+    <Symbol UId="1610">
+      <Component Name="DB_WinCCAlarms" UId="1611" />
+      <Token Text="." UId="1612" />
+      <Component Name="1-IO" UId="1613" />
+      <Token Text="." UId="1614" />
+      <Component Name="1242_HBL_HCV_02_Fault" UId="1615" />
+      <Token Text="." UId="1616" />
+      <Component Name="Memory" UId="1617" />
+      <Token Text="." UId="1618" />
+      <Token Text="%X0" UId="1619" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1620" />
+  <NewLine Num="1" UId="1621" />
+  <Access Scope="GlobalVariable" UId="1622">
+    <Symbol UId="1623">
+      <Component Name="DB_Application" UId="1624" />
+      <Token Text="." UId="1625" />
+      <Component Name="FromHB" UId="1626" />
+      <Token Text="." UId="1627" />
+      <Component Name="Alarms" UId="1628">
+        <Token Text="[" UId="1629" />
+        <Access Scope="LiteralConstant" UId="1630">
+          <Constant UId="1631">
+            <ConstantValue UId="1633">55</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1634" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1635" />
+  <Token Text=":=" UId="1636" />
+  <Blank Num="1" UId="1637" />
+  <Access Scope="GlobalVariable" UId="1638">
+    <Symbol UId="1639">
+      <Component Name="DB_WinCCAlarms" UId="1640" />
+      <Token Text="." UId="1641" />
+      <Component Name="1-IO" UId="1642" />
+      <Token Text="." UId="1643" />
+      <Component Name="1243_HBL_PT_07_Fault" UId="1644" />
+      <Token Text="." UId="1645" />
+      <Component Name="Memory" UId="1646" />
+      <Token Text="." UId="1647" />
+      <Token Text="%X0" UId="1648" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1649" />
+  <NewLine Num="1" UId="1650" />
+  <Access Scope="GlobalVariable" UId="1651">
+    <Symbol UId="1652">
+      <Component Name="DB_Application" UId="1653" />
+      <Token Text="." UId="1654" />
+      <Component Name="FromHB" UId="1655" />
+      <Token Text="." UId="1656" />
+      <Component Name="Alarms" UId="1657">
+        <Token Text="[" UId="1658" />
+        <Access Scope="LiteralConstant" UId="1659">
+          <Constant UId="1660">
+            <ConstantValue UId="1662">56</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1663" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1664" />
+  <Token Text=":=" UId="1665" />
+  <Blank Num="1" UId="1666" />
+  <Access Scope="GlobalVariable" UId="1667">
+    <Symbol UId="1668">
+      <Component Name="DB_WinCCAlarms" UId="1669" />
+      <Token Text="." UId="1670" />
+      <Component Name="1-IO" UId="1671" />
+      <Token Text="." UId="1672" />
+      <Component Name="1244_HBL_PT_08_Fault" UId="1673" />
+      <Token Text="." UId="1674" />
+      <Component Name="Memory" UId="1675" />
+      <Token Text="." UId="1676" />
+      <Token Text="%X0" UId="1677" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1678" />
+  <NewLine Num="1" UId="1679" />
+  <Access Scope="GlobalVariable" UId="1680">
+    <Symbol UId="1681">
+      <Component Name="DB_Application" UId="1682" />
+      <Token Text="." UId="1683" />
+      <Component Name="FromHB" UId="1684" />
+      <Token Text="." UId="1685" />
+      <Component Name="Alarms" UId="1686">
+        <Token Text="[" UId="1687" />
+        <Access Scope="LiteralConstant" UId="1688">
+          <Constant UId="1689">
+            <ConstantValue UId="1691">57</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1692" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1693" />
+  <Token Text=":=" UId="1694" />
+  <Blank Num="1" UId="1695" />
+  <Access Scope="GlobalVariable" UId="1696">
+    <Symbol UId="1697">
+      <Component Name="DB_WinCCAlarms" UId="1698" />
+      <Token Text="." UId="1699" />
+      <Component Name="1-IO" UId="1700" />
+      <Token Text="." UId="1701" />
+      <Component Name="1245_HBL_PT_09_Fault" UId="1702" />
+      <Token Text="." UId="1703" />
+      <Component Name="Memory" UId="1704" />
+      <Token Text="." UId="1705" />
+      <Token Text="%X0" UId="1706" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1707" />
+  <NewLine Num="1" UId="1708" />
+  <Access Scope="GlobalVariable" UId="1709">
+    <Symbol UId="1710">
+      <Component Name="DB_Application" UId="1711" />
+      <Token Text="." UId="1712" />
+      <Component Name="FromHB" UId="1713" />
+      <Token Text="." UId="1714" />
+      <Component Name="Alarms" UId="1715">
+        <Token Text="[" UId="1716" />
+        <Access Scope="LiteralConstant" UId="1717">
+          <Constant UId="1718">
+            <ConstantValue UId="1720">58</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1721" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1722" />
+  <Token Text=":=" UId="1723" />
+  <Blank Num="1" UId="1724" />
+  <Access Scope="GlobalVariable" UId="1725">
+    <Symbol UId="1726">
+      <Component Name="DB_WinCCAlarms" UId="1727" />
+      <Token Text="." UId="1728" />
+      <Component Name="1-IO" UId="1729" />
+      <Token Text="." UId="1730" />
+      <Component Name="1246_HBL_PT_10_Fault" UId="1731" />
+      <Token Text="." UId="1732" />
+      <Component Name="Memory" UId="1733" />
+      <Token Text="." UId="1734" />
+      <Token Text="%X0" UId="1735" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1736" />
+  <NewLine Num="1" UId="1737" />
+  <Access Scope="GlobalVariable" UId="1738">
+    <Symbol UId="1739">
+      <Component Name="DB_Application" UId="1740" />
+      <Token Text="." UId="1741" />
+      <Component Name="FromHB" UId="1742" />
+      <Token Text="." UId="1743" />
+      <Component Name="Alarms" UId="1744">
+        <Token Text="[" UId="1745" />
+        <Access Scope="LiteralConstant" UId="1746">
+          <Constant UId="1747">
+            <ConstantValue UId="1749">59</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1750" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1751" />
+  <Token Text=":=" UId="1752" />
+  <Blank Num="1" UId="1753" />
+  <Access Scope="GlobalVariable" UId="1754">
+    <Symbol UId="1755">
+      <Component Name="DB_WinCCAlarms" UId="1756" />
+      <Token Text="." UId="1757" />
+      <Component Name="1-IO" UId="1758" />
+      <Token Text="." UId="1759" />
+      <Component Name="1247_HBL_PT_11_Fault" UId="1760" />
+      <Token Text="." UId="1761" />
+      <Component Name="Memory" UId="1762" />
+      <Token Text="." UId="1763" />
+      <Token Text="%X0" UId="1764" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1765" />
+  <NewLine Num="1" UId="1766" />
+  <Access Scope="GlobalVariable" UId="1767">
+    <Symbol UId="1768">
+      <Component Name="DB_Application" UId="1769" />
+      <Token Text="." UId="1770" />
+      <Component Name="FromHB" UId="1771" />
+      <Token Text="." UId="1772" />
+      <Component Name="Alarms" UId="1773">
+        <Token Text="[" UId="1774" />
+        <Access Scope="LiteralConstant" UId="1775">
+          <Constant UId="1776">
+            <ConstantValue UId="1778">60</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1779" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1780" />
+  <Token Text=":=" UId="1781" />
+  <Blank Num="1" UId="1782" />
+  <Access Scope="GlobalVariable" UId="1783">
+    <Symbol UId="1784">
+      <Component Name="DB_WinCCAlarms" UId="1785" />
+      <Token Text="." UId="1786" />
+      <Component Name="1-IO" UId="1787" />
+      <Token Text="." UId="1788" />
+      <Component Name="1248_HBL_PT_12_Fault" UId="1789" />
+      <Token Text="." UId="1790" />
+      <Component Name="Memory" UId="1791" />
+      <Token Text="." UId="1792" />
+      <Token Text="%X0" UId="1793" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1794" />
+  <NewLine Num="1" UId="1795" />
+  <Access Scope="GlobalVariable" UId="1796">
+    <Symbol UId="1797">
+      <Component Name="DB_Application" UId="1798" />
+      <Token Text="." UId="1799" />
+      <Component Name="FromHB" UId="1800" />
+      <Token Text="." UId="1801" />
+      <Component Name="Alarms" UId="1802">
+        <Token Text="[" UId="1803" />
+        <Access Scope="LiteralConstant" UId="1804">
+          <Constant UId="1805">
+            <ConstantValue UId="1807">61</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1808" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1809" />
+  <Token Text=":=" UId="1810" />
+  <Blank Num="1" UId="1811" />
+  <Access Scope="GlobalVariable" UId="1812">
+    <Symbol UId="1813">
+      <Component Name="DB_WinCCAlarms" UId="1814" />
+      <Token Text="." UId="1815" />
+      <Component Name="1-IO" UId="1816" />
+      <Token Text="." UId="1817" />
+      <Component Name="1249_HBL_PT_15_Fault" UId="1818" />
+      <Token Text="." UId="1819" />
+      <Component Name="Memory" UId="1820" />
+      <Token Text="." UId="1821" />
+      <Token Text="%X0" UId="1822" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1823" />
+  <NewLine Num="1" UId="1824" />
+  <Access Scope="GlobalVariable" UId="1825">
+    <Symbol UId="1826">
+      <Component Name="DB_Application" UId="1827" />
+      <Token Text="." UId="1828" />
+      <Component Name="FromHB" UId="1829" />
+      <Token Text="." UId="1830" />
+      <Component Name="Alarms" UId="1831">
+        <Token Text="[" UId="1832" />
+        <Access Scope="LiteralConstant" UId="1833">
+          <Constant UId="1834">
+            <ConstantValue UId="1836">62</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1837" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1838" />
+  <Token Text=":=" UId="1839" />
+  <Blank Num="1" UId="1840" />
+  <Access Scope="LiteralConstant" UId="1841">
+    <Constant UId="1842">
+      <ConstantValue UId="1844">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="1845" />
+  <NewLine Num="1" UId="1846" />
+  <Access Scope="GlobalVariable" UId="1847">
+    <Symbol UId="1848">
+      <Component Name="DB_Application" UId="1849" />
+      <Token Text="." UId="1850" />
+      <Component Name="FromHB" UId="1851" />
+      <Token Text="." UId="1852" />
+      <Component Name="Alarms" UId="1853">
+        <Token Text="[" UId="1854" />
+        <Access Scope="LiteralConstant" UId="1855">
+          <Constant UId="1856">
+            <ConstantValue UId="1858">63</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1859" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1860" />
+  <Token Text=":=" UId="1861" />
+  <Blank Num="1" UId="1862" />
+  <Access Scope="GlobalVariable" UId="1863">
+    <Symbol UId="1864">
+      <Component Name="DB_WinCCAlarms" UId="1865" />
+      <Token Text="." UId="1866" />
+      <Component Name="1-IO" UId="1867" />
+      <Token Text="." UId="1868" />
+      <Component Name="1251_HBL_PT_24_Fault" UId="1869" />
+      <Token Text="." UId="1870" />
+      <Component Name="Memory" UId="1871" />
+      <Token Text="." UId="1872" />
+      <Token Text="%X0" UId="1873" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1874" />
+  <NewLine Num="1" UId="1875" />
+  <Access Scope="GlobalVariable" UId="1876">
+    <Symbol UId="1877">
+      <Component Name="DB_Application" UId="1878" />
+      <Token Text="." UId="1879" />
+      <Component Name="FromHB" UId="1880" />
+      <Token Text="." UId="1881" />
+      <Component Name="Alarms" UId="1882">
+        <Token Text="[" UId="1883" />
+        <Access Scope="LiteralConstant" UId="1884">
+          <Constant UId="1885">
+            <ConstantValue UId="1887">64</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1888" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1889" />
+  <Token Text=":=" UId="1890" />
+  <Blank Num="1" UId="1891" />
+  <Access Scope="GlobalVariable" UId="1892">
+    <Symbol UId="1893">
+      <Component Name="DB_WinCCAlarms" UId="1894" />
+      <Token Text="." UId="1895" />
+      <Component Name="1-IO" UId="1896" />
+      <Token Text="." UId="1897" />
+      <Component Name="1252_HBL_TT_28_Fault" UId="1898" />
+      <Token Text="." UId="1899" />
+      <Component Name="Memory" UId="1900" />
+      <Token Text="." UId="1901" />
+      <Token Text="%X0" UId="1902" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1903" />
+  <NewLine Num="1" UId="1904" />
+  <Access Scope="GlobalVariable" UId="1905">
+    <Symbol UId="1906">
+      <Component Name="DB_Application" UId="1907" />
+      <Token Text="." UId="1908" />
+      <Component Name="FromHB" UId="1909" />
+      <Token Text="." UId="1910" />
+      <Component Name="Alarms" UId="1911">
+        <Token Text="[" UId="1912" />
+        <Access Scope="LiteralConstant" UId="1913">
+          <Constant UId="1914">
+            <ConstantValue UId="1916">65</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1917" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1918" />
+  <Token Text=":=" UId="1919" />
+  <Blank Num="1" UId="1920" />
+  <Access Scope="GlobalVariable" UId="1921">
+    <Symbol UId="1922">
+      <Component Name="DB_WinCCAlarms" UId="1923" />
+      <Token Text="." UId="1924" />
+      <Component Name="1-IO" UId="1925" />
+      <Token Text="." UId="1926" />
+      <Component Name="1253_HBL_TT_29_Fault" UId="1927" />
+      <Token Text="." UId="1928" />
+      <Component Name="Memory" UId="1929" />
+      <Token Text="." UId="1930" />
+      <Token Text="%X0" UId="1931" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1932" />
+  <NewLine Num="1" UId="1933" />
+  <Access Scope="GlobalVariable" UId="1934">
+    <Symbol UId="1935">
+      <Component Name="DB_Application" UId="1936" />
+      <Token Text="." UId="1937" />
+      <Component Name="FromHB" UId="1938" />
+      <Token Text="." UId="1939" />
+      <Component Name="Alarms" UId="1940">
+        <Token Text="[" UId="1941" />
+        <Access Scope="LiteralConstant" UId="1942">
+          <Constant UId="1943">
+            <ConstantValue UId="1945">66</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1946" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1947" />
+  <Token Text=":=" UId="1948" />
+  <Blank Num="1" UId="1949" />
+  <Access Scope="GlobalVariable" UId="1950">
+    <Symbol UId="1951">
+      <Component Name="DB_WinCCAlarms" UId="1952" />
+      <Token Text="." UId="1953" />
+      <Component Name="1-IO" UId="1954" />
+      <Token Text="." UId="1955" />
+      <Component Name="1254_HBL_TT_32_Fault" UId="1956" />
+      <Token Text="." UId="1957" />
+      <Component Name="Memory" UId="1958" />
+      <Token Text="." UId="1959" />
+      <Token Text="%X0" UId="1960" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1961" />
+  <NewLine Num="1" UId="1962" />
+  <Access Scope="GlobalVariable" UId="1963">
+    <Symbol UId="1964">
+      <Component Name="DB_Application" UId="1965" />
+      <Token Text="." UId="1966" />
+      <Component Name="FromHB" UId="1967" />
+      <Token Text="." UId="1968" />
+      <Component Name="Alarms" UId="1969">
+        <Token Text="[" UId="1970" />
+        <Access Scope="LiteralConstant" UId="1971">
+          <Constant UId="1972">
+            <ConstantValue UId="1974">67</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1975" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1976" />
+  <Token Text=":=" UId="1977" />
+  <Blank Num="1" UId="1978" />
+  <Access Scope="GlobalVariable" UId="1979">
+    <Symbol UId="1980">
+      <Component Name="DB_WinCCAlarms" UId="1981" />
+      <Token Text="." UId="1982" />
+      <Component Name="1-IO" UId="1983" />
+      <Token Text="." UId="1984" />
+      <Component Name="1255_HBL_CT_01_Fault" UId="1985" />
+      <Token Text="." UId="1986" />
+      <Component Name="Memory" UId="1987" />
+      <Token Text="." UId="1988" />
+      <Token Text="%X0" UId="1989" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1990" />
+  <NewLine Num="1" UId="1991" />
+  <Access Scope="GlobalVariable" UId="1992">
+    <Symbol UId="1993">
+      <Component Name="DB_Application" UId="1994" />
+      <Token Text="." UId="1995" />
+      <Component Name="FromHB" UId="1996" />
+      <Token Text="." UId="1997" />
+      <Component Name="Alarms" UId="1998">
+        <Token Text="[" UId="1999" />
+        <Access Scope="LiteralConstant" UId="2000">
+          <Constant UId="2001">
+            <ConstantValue UId="2003">68</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2004" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2005" />
+  <Token Text=":=" UId="2006" />
+  <Blank Num="1" UId="2007" />
+  <Access Scope="GlobalVariable" UId="2008">
+    <Symbol UId="2009">
+      <Component Name="DB_WinCCAlarms" UId="2010" />
+      <Token Text="." UId="2011" />
+      <Component Name="1-IO" UId="2012" />
+      <Token Text="." UId="2013" />
+      <Component Name="1256_HBL_CT_02_Fault" UId="2014" />
+      <Token Text="." UId="2015" />
+      <Component Name="Memory" UId="2016" />
+      <Token Text="." UId="2017" />
+      <Token Text="%X0" UId="2018" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2019" />
+  <NewLine Num="1" UId="2020" />
+  <Access Scope="GlobalVariable" UId="2021">
+    <Symbol UId="2022">
+      <Component Name="DB_Application" UId="2023" />
+      <Token Text="." UId="2024" />
+      <Component Name="FromHB" UId="2025" />
+      <Token Text="." UId="2026" />
+      <Component Name="Alarms" UId="2027">
+        <Token Text="[" UId="2028" />
+        <Access Scope="LiteralConstant" UId="2029">
+          <Constant UId="2030">
+            <ConstantValue UId="2032">69</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2033" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2034" />
+  <Token Text=":=" UId="2035" />
+  <Blank Num="1" UId="2036" />
+  <Access Scope="LiteralConstant" UId="2037">
+    <Constant UId="2038">
+      <ConstantValue UId="2040">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="2041" />
+  <NewLine Num="1" UId="2042" />
+  <Access Scope="GlobalVariable" UId="2043">
+    <Symbol UId="2044">
+      <Component Name="DB_Application" UId="2045" />
+      <Token Text="." UId="2046" />
+      <Component Name="FromHB" UId="2047" />
+      <Token Text="." UId="2048" />
+      <Component Name="Alarms" UId="2049">
+        <Token Text="[" UId="2050" />
+        <Access Scope="LiteralConstant" UId="2051">
+          <Constant UId="2052">
+            <ConstantValue UId="2054">70</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2055" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2056" />
+  <Token Text=":=" UId="2057" />
+  <Blank Num="1" UId="2058" />
+  <Access Scope="GlobalVariable" UId="2059">
+    <Symbol UId="2060">
+      <Component Name="DB_WinCCAlarms" UId="2061" />
+      <Token Text="." UId="2062" />
+      <Component Name="1-IO" UId="2063" />
+      <Token Text="." UId="2064" />
+      <Component Name="1258_HBL_TT_26_Fault" UId="2065" />
+      <Token Text="." UId="2066" />
+      <Component Name="Memory" UId="2067" />
+      <Token Text="." UId="2068" />
+      <Token Text="%X0" UId="2069" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2070" />
+  <NewLine Num="1" UId="2071" />
+  <Access Scope="GlobalVariable" UId="2072">
+    <Symbol UId="2073">
+      <Component Name="DB_Application" UId="2074" />
+      <Token Text="." UId="2075" />
+      <Component Name="FromHB" UId="2076" />
+      <Token Text="." UId="2077" />
+      <Component Name="Alarms" UId="2078">
+        <Token Text="[" UId="2079" />
+        <Access Scope="LiteralConstant" UId="2080">
+          <Constant UId="2081">
+            <ConstantValue UId="2083">71</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2084" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2085" />
+  <Token Text=":=" UId="2086" />
+  <Blank Num="1" UId="2087" />
+  <Access Scope="GlobalVariable" UId="2088">
+    <Symbol UId="2089">
+      <Component Name="DB_WinCCAlarms" UId="2090" />
+      <Token Text="." UId="2091" />
+      <Component Name="1-IO" UId="2092" />
+      <Token Text="." UId="2093" />
+      <Component Name="1259_HBL_TT_27_Fault" UId="2094" />
+      <Token Text="." UId="2095" />
+      <Component Name="Memory" UId="2096" />
+      <Token Text="." UId="2097" />
+      <Token Text="%X0" UId="2098" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2099" />
+  <NewLine Num="1" UId="2100" />
+  <Access Scope="GlobalVariable" UId="2101">
+    <Symbol UId="2102">
+      <Component Name="DB_Application" UId="2103" />
+      <Token Text="." UId="2104" />
+      <Component Name="FromHB" UId="2105" />
+      <Token Text="." UId="2106" />
+      <Component Name="Alarms" UId="2107">
+        <Token Text="[" UId="2108" />
+        <Access Scope="LiteralConstant" UId="2109">
+          <Constant UId="2110">
+            <ConstantValue UId="2112">72</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2113" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2114" />
+  <Token Text=":=" UId="2115" />
+  <Blank Num="1" UId="2116" />
+  <Access Scope="GlobalVariable" UId="2117">
+    <Symbol UId="2118">
+      <Component Name="DB_WinCCAlarms" UId="2119" />
+      <Token Text="." UId="2120" />
+      <Component Name="1-IO" UId="2121" />
+      <Token Text="." UId="2122" />
+      <Component Name="1260_HBL_FT_01_Fault" UId="2123" />
+      <Token Text="." UId="2124" />
+      <Component Name="Memory" UId="2125" />
+      <Token Text="." UId="2126" />
+      <Token Text="%X0" UId="2127" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2128" />
+  <NewLine Num="1" UId="2129" />
+  <Access Scope="GlobalVariable" UId="2130">
+    <Symbol UId="2131">
+      <Component Name="DB_Application" UId="2132" />
+      <Token Text="." UId="2133" />
+      <Component Name="FromHB" UId="2134" />
+      <Token Text="." UId="2135" />
+      <Component Name="Alarms" UId="2136">
+        <Token Text="[" UId="2137" />
+        <Access Scope="LiteralConstant" UId="2138">
+          <Constant UId="2139">
+            <ConstantValue UId="2141">73</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2142" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2143" />
+  <Token Text=":=" UId="2144" />
+  <Blank Num="1" UId="2145" />
+  <Access Scope="LiteralConstant" UId="2146">
+    <Constant UId="2147">
+      <ConstantValue UId="2149">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="2150" />
+  <NewLine Num="1" UId="2151" />
+  <Access Scope="GlobalVariable" UId="2152">
+    <Symbol UId="2153">
+      <Component Name="DB_Application" UId="2154" />
+      <Token Text="." UId="2155" />
+      <Component Name="FromHB" UId="2156" />
+      <Token Text="." UId="2157" />
+      <Component Name="Alarms" UId="2158">
+        <Token Text="[" UId="2159" />
+        <Access Scope="LiteralConstant" UId="2160">
+          <Constant UId="2161">
+            <ConstantValue UId="2163">74</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2164" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2165" />
+  <Token Text=":=" UId="2166" />
+  <Blank Num="1" UId="2167" />
+  <Access Scope="GlobalVariable" UId="2168">
+    <Symbol UId="2169">
+      <Component Name="DB_WinCCAlarms" UId="2170" />
+      <Token Text="." UId="2171" />
+      <Component Name="1-IO" UId="2172" />
+      <Token Text="." UId="2173" />
+      <Component Name="1262_HBL_TT_30_Fault" UId="2174" />
+      <Token Text="." UId="2175" />
+      <Component Name="Memory" UId="2176" />
+      <Token Text="." UId="2177" />
+      <Token Text="%X0" UId="2178" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2179" />
+  <NewLine Num="1" UId="2180" />
+  <Access Scope="GlobalVariable" UId="2181">
+    <Symbol UId="2182">
+      <Component Name="DB_Application" UId="2183" />
+      <Token Text="." UId="2184" />
+      <Component Name="FromHB" UId="2185" />
+      <Token Text="." UId="2186" />
+      <Component Name="Alarms" UId="2187">
+        <Token Text="[" UId="2188" />
+        <Access Scope="LiteralConstant" UId="2189">
+          <Constant UId="2190">
+            <ConstantValue UId="2192">75</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2193" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2194" />
+  <Token Text=":=" UId="2195" />
+  <Blank Num="1" UId="2196" />
+  <Access Scope="GlobalVariable" UId="2197">
+    <Symbol UId="2198">
+      <Component Name="DB_WinCCAlarms" UId="2199" />
+      <Token Text="." UId="2200" />
+      <Component Name="1-IO" UId="2201" />
+      <Token Text="." UId="2202" />
+      <Component Name="1263_HBL_TT_34_Fault" UId="2203" />
+      <Token Text="." UId="2204" />
+      <Component Name="Memory" UId="2205" />
+      <Token Text="." UId="2206" />
+      <Token Text="%X0" UId="2207" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2208" />
+  <NewLine Num="1" UId="2209" />
+  <Access Scope="GlobalVariable" UId="2210">
+    <Symbol UId="2211">
+      <Component Name="DB_Application" UId="2212" />
+      <Token Text="." UId="2213" />
+      <Component Name="FromHB" UId="2214" />
+      <Token Text="." UId="2215" />
+      <Component Name="Alarms" UId="2216">
+        <Token Text="[" UId="2217" />
+        <Access Scope="LiteralConstant" UId="2218">
+          <Constant UId="2219">
+            <ConstantValue UId="2221">76</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="2222" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="2223" />
+  <Token Text=":=" UId="2224" />
+  <Blank Num="1" UId="2225" />
+  <Access Scope="GlobalVariable" UId="2226">
+    <Symbol UId="2227">
+      <Component Name="DB_WinCCAlarms" UId="2228" />
+      <Token Text="." UId="2229" />
+      <Component Name="1-IO" UId="2230" />
+      <Token Text="." UId="2231" />
+      <Component Name="1264" UId="2232" />
+      <Token Text="." UId="2233" />
+      <Component Name="Memory" UId="2234" />
+      <Token Text="." UId="2235" />
+      <Token Text="%X0" UId="2236" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="2237" />
+  <NewLine Num="1" UId="2238" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Alarms to App PLC - Group 0 &amp; 1</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="DB_Application" UId="23" />
+      <Token Text="." UId="24" />
+      <Component Name="FromHB" UId="25" />
+      <Token Text="." UId="26" />
+      <Component Name="Alarms" UId="27">
+        <Token Text="[" UId="28" />
+        <Access Scope="LiteralConstant" UId="29">
+          <Constant UId="30">
+            <ConstantValue UId="32">77</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="33" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="34" />
+  <Token Text=":=" UId="35" />
+  <Blank Num="1" UId="36" />
+  <Access Scope="GlobalVariable" UId="37">
+    <Symbol UId="38">
+      <Component Name="DB_WinCCAlarms" UId="39" />
+      <Token Text="." UId="40" />
+      <Component Name="2-ProcessValues" UId="41" />
+      <Token Text="." UId="42" />
+      <Component Name="2018" UId="43" />
+      <Token Text="." UId="44" />
+      <Component Name="Memory" UId="45" />
+      <Token Text="." UId="46" />
+      <Token Text="%X0" UId="47" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="48" />
+  <NewLine Num="1" UId="49" />
+  <Access Scope="GlobalVariable" UId="50">
+    <Symbol UId="51">
+      <Component Name="DB_Application" UId="52" />
+      <Token Text="." UId="53" />
+      <Component Name="FromHB" UId="54" />
+      <Token Text="." UId="55" />
+      <Component Name="Alarms" UId="56">
+        <Token Text="[" UId="57" />
+        <Access Scope="LiteralConstant" UId="58">
+          <Constant UId="59">
+            <ConstantValue UId="61">78</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="62" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="63" />
+  <Token Text=":=" UId="64" />
+  <Blank Num="1" UId="65" />
+  <Access Scope="GlobalVariable" UId="66">
+    <Symbol UId="67">
+      <Component Name="DB_WinCCAlarms" UId="68" />
+      <Token Text="." UId="69" />
+      <Component Name="2-ProcessValues" UId="70" />
+      <Token Text="." UId="71" />
+      <Component Name="2028" UId="72" />
+      <Token Text="." UId="73" />
+      <Component Name="Memory" UId="74" />
+      <Token Text="." UId="75" />
+      <Token Text="%X0" UId="76" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="77" />
+  <NewLine Num="1" UId="78" />
+  <Access Scope="GlobalVariable" UId="79">
+    <Symbol UId="80">
+      <Component Name="DB_Application" UId="81" />
+      <Token Text="." UId="82" />
+      <Component Name="FromHB" UId="83" />
+      <Token Text="." UId="84" />
+      <Component Name="Alarms" UId="85">
+        <Token Text="[" UId="86" />
+        <Access Scope="LiteralConstant" UId="87">
+          <Constant UId="88">
+            <ConstantValue UId="90">79</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="91" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="92" />
+  <Token Text=":=" UId="93" />
+  <Blank Num="1" UId="94" />
+  <Access Scope="GlobalVariable" UId="95">
+    <Symbol UId="96">
+      <Component Name="DB_WinCCAlarms" UId="97" />
+      <Token Text="." UId="98" />
+      <Component Name="2-ProcessValues" UId="99" />
+      <Token Text="." UId="100" />
+      <Component Name="2058" UId="101" />
+      <Token Text="." UId="102" />
+      <Component Name="Memory" UId="103" />
+      <Token Text="." UId="104" />
+      <Token Text="%X0" UId="105" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="106" />
+  <NewLine Num="1" UId="107" />
+  <Access Scope="GlobalVariable" UId="108">
+    <Symbol UId="109">
+      <Component Name="DB_Application" UId="110" />
+      <Token Text="." UId="111" />
+      <Component Name="FromHB" UId="112" />
+      <Token Text="." UId="113" />
+      <Component Name="Alarms" UId="114">
+        <Token Text="[" UId="115" />
+        <Access Scope="LiteralConstant" UId="116">
+          <Constant UId="117">
+            <ConstantValue UId="119">80</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="120" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="121" />
+  <Token Text=":=" UId="122" />
+  <Blank Num="1" UId="123" />
+  <Access Scope="GlobalVariable" UId="124">
+    <Symbol UId="125">
+      <Component Name="DB_WinCCAlarms" UId="126" />
+      <Token Text="." UId="127" />
+      <Component Name="2-ProcessValues" UId="128" />
+      <Token Text="." UId="129" />
+      <Component Name="2100" UId="130" />
+      <Token Text="." UId="131" />
+      <Component Name="Memory" UId="132" />
+      <Token Text="." UId="133" />
+      <Token Text="%X0" UId="134" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="135" />
+  <NewLine Num="1" UId="136" />
+  <Access Scope="GlobalVariable" UId="137">
+    <Symbol UId="138">
+      <Component Name="DB_Application" UId="139" />
+      <Token Text="." UId="140" />
+      <Component Name="FromHB" UId="141" />
+      <Token Text="." UId="142" />
+      <Component Name="Alarms" UId="143">
+        <Token Text="[" UId="144" />
+        <Access Scope="LiteralConstant" UId="145">
+          <Constant UId="146">
+            <ConstantValue UId="148">81</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="149" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="150" />
+  <Token Text=":=" UId="151" />
+  <Blank Num="1" UId="152" />
+  <Access Scope="GlobalVariable" UId="153">
+    <Symbol UId="154">
+      <Component Name="DB_WinCCAlarms" UId="155" />
+      <Token Text="." UId="156" />
+      <Component Name="2-ProcessValues" UId="157" />
+      <Token Text="." UId="158" />
+      <Component Name="2101" UId="159" />
+      <Token Text="." UId="160" />
+      <Component Name="Memory" UId="161" />
+      <Token Text="." UId="162" />
+      <Token Text="%X0" UId="163" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="164" />
+  <NewLine Num="1" UId="165" />
+  <Access Scope="GlobalVariable" UId="166">
+    <Symbol UId="167">
+      <Component Name="DB_Application" UId="168" />
+      <Token Text="." UId="169" />
+      <Component Name="FromHB" UId="170" />
+      <Token Text="." UId="171" />
+      <Component Name="Alarms" UId="172">
+        <Token Text="[" UId="173" />
+        <Access Scope="LiteralConstant" UId="174">
+          <Constant UId="175">
+            <ConstantValue UId="177">82</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="178" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="179" />
+  <Token Text=":=" UId="180" />
+  <Blank Num="1" UId="181" />
+  <Access Scope="GlobalVariable" UId="182">
+    <Symbol UId="183">
+      <Component Name="DB_WinCCAlarms" UId="184" />
+      <Token Text="." UId="185" />
+      <Component Name="2-ProcessValues" UId="186" />
+      <Token Text="." UId="187" />
+      <Component Name="2102" UId="188" />
+      <Token Text="." UId="189" />
+      <Component Name="Memory" UId="190" />
+      <Token Text="." UId="191" />
+      <Token Text="%X0" UId="192" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="193" />
+  <NewLine Num="1" UId="194" />
+  <Access Scope="GlobalVariable" UId="195">
+    <Symbol UId="196">
+      <Component Name="DB_Application" UId="197" />
+      <Token Text="." UId="198" />
+      <Component Name="FromHB" UId="199" />
+      <Token Text="." UId="200" />
+      <Component Name="Alarms" UId="201">
+        <Token Text="[" UId="202" />
+        <Access Scope="LiteralConstant" UId="203">
+          <Constant UId="204">
+            <ConstantValue UId="206">83</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="207" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="208" />
+  <Token Text=":=" UId="209" />
+  <Blank Num="1" UId="210" />
+  <Access Scope="GlobalVariable" UId="211">
+    <Symbol UId="212">
+      <Component Name="DB_WinCCAlarms" UId="213" />
+      <Token Text="." UId="214" />
+      <Component Name="2-ProcessValues" UId="215" />
+      <Token Text="." UId="216" />
+      <Component Name="2103" UId="217" />
+      <Token Text="." UId="218" />
+      <Component Name="Memory" UId="219" />
+      <Token Text="." UId="220" />
+      <Token Text="%X0" UId="221" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="222" />
+  <NewLine Num="1" UId="223" />
+  <Access Scope="GlobalVariable" UId="224">
+    <Symbol UId="225">
+      <Component Name="DB_Application" UId="226" />
+      <Token Text="." UId="227" />
+      <Component Name="FromHB" UId="228" />
+      <Token Text="." UId="229" />
+      <Component Name="Alarms" UId="230">
+        <Token Text="[" UId="231" />
+        <Access Scope="LiteralConstant" UId="232">
+          <Constant UId="233">
+            <ConstantValue UId="235">84</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="236" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="237" />
+  <Token Text=":=" UId="238" />
+  <Blank Num="1" UId="239" />
+  <Access Scope="GlobalVariable" UId="240">
+    <Symbol UId="241">
+      <Component Name="DB_WinCCAlarms" UId="242" />
+      <Token Text="." UId="243" />
+      <Component Name="2-ProcessValues" UId="244" />
+      <Token Text="." UId="245" />
+      <Component Name="2105" UId="246" />
+      <Token Text="." UId="247" />
+      <Component Name="Memory" UId="248" />
+      <Token Text="." UId="249" />
+      <Token Text="%X0" UId="250" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="251" />
+  <NewLine Num="1" UId="252" />
+  <Access Scope="GlobalVariable" UId="253">
+    <Symbol UId="254">
+      <Component Name="DB_Application" UId="255" />
+      <Token Text="." UId="256" />
+      <Component Name="FromHB" UId="257" />
+      <Token Text="." UId="258" />
+      <Component Name="Alarms" UId="259">
+        <Token Text="[" UId="260" />
+        <Access Scope="LiteralConstant" UId="261">
+          <Constant UId="262">
+            <ConstantValue UId="264">85</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="265" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="266" />
+  <Token Text=":=" UId="267" />
+  <Blank Num="1" UId="268" />
+  <Access Scope="GlobalVariable" UId="269">
+    <Symbol UId="270">
+      <Component Name="DB_WinCCAlarms" UId="271" />
+      <Token Text="." UId="272" />
+      <Component Name="2-ProcessValues" UId="273" />
+      <Token Text="." UId="274" />
+      <Component Name="2106" UId="275" />
+      <Token Text="." UId="276" />
+      <Component Name="Memory" UId="277" />
+      <Token Text="." UId="278" />
+      <Token Text="%X0" UId="279" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="280" />
+  <NewLine Num="1" UId="281" />
+  <Access Scope="GlobalVariable" UId="282">
+    <Symbol UId="283">
+      <Component Name="DB_Application" UId="284" />
+      <Token Text="." UId="285" />
+      <Component Name="FromHB" UId="286" />
+      <Token Text="." UId="287" />
+      <Component Name="Alarms" UId="288">
+        <Token Text="[" UId="289" />
+        <Access Scope="LiteralConstant" UId="290">
+          <Constant UId="291">
+            <ConstantValue UId="293">86</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="294" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="295" />
+  <Token Text=":=" UId="296" />
+  <Blank Num="1" UId="297" />
+  <Access Scope="GlobalVariable" UId="298">
+    <Symbol UId="299">
+      <Component Name="DB_WinCCAlarms" UId="300" />
+      <Token Text="." UId="301" />
+      <Component Name="2-ProcessValues" UId="302" />
+      <Token Text="." UId="303" />
+      <Component Name="2107" UId="304" />
+      <Token Text="." UId="305" />
+      <Component Name="Memory" UId="306" />
+      <Token Text="." UId="307" />
+      <Token Text="%X0" UId="308" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="309" />
+  <NewLine Num="1" UId="310" />
+  <Access Scope="GlobalVariable" UId="311">
+    <Symbol UId="312">
+      <Component Name="DB_Application" UId="313" />
+      <Token Text="." UId="314" />
+      <Component Name="FromHB" UId="315" />
+      <Token Text="." UId="316" />
+      <Component Name="Alarms" UId="317">
+        <Token Text="[" UId="318" />
+        <Access Scope="LiteralConstant" UId="319">
+          <Constant UId="320">
+            <ConstantValue UId="322">87</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="323" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="324" />
+  <Token Text=":=" UId="325" />
+  <Blank Num="1" UId="326" />
+  <Access Scope="GlobalVariable" UId="327">
+    <Symbol UId="328">
+      <Component Name="DB_WinCCAlarms" UId="329" />
+      <Token Text="." UId="330" />
+      <Component Name="2-ProcessValues" UId="331" />
+      <Token Text="." UId="332" />
+      <Component Name="2108" UId="333" />
+      <Token Text="." UId="334" />
+      <Component Name="Memory" UId="335" />
+      <Token Text="." UId="336" />
+      <Token Text="%X0" UId="337" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="338" />
+  <NewLine Num="1" UId="339" />
+  <Access Scope="GlobalVariable" UId="340">
+    <Symbol UId="341">
+      <Component Name="DB_Application" UId="342" />
+      <Token Text="." UId="343" />
+      <Component Name="FromHB" UId="344" />
+      <Token Text="." UId="345" />
+      <Component Name="Alarms" UId="346">
+        <Token Text="[" UId="347" />
+        <Access Scope="LiteralConstant" UId="348">
+          <Constant UId="349">
+            <ConstantValue UId="351">88</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="352" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="353" />
+  <Token Text=":=" UId="354" />
+  <Blank Num="1" UId="355" />
+  <Access Scope="GlobalVariable" UId="356">
+    <Symbol UId="357">
+      <Component Name="DB_WinCCAlarms" UId="358" />
+      <Token Text="." UId="359" />
+      <Component Name="2-ProcessValues" UId="360" />
+      <Token Text="." UId="361" />
+      <Component Name="2109" UId="362" />
+      <Token Text="." UId="363" />
+      <Component Name="Memory" UId="364" />
+      <Token Text="." UId="365" />
+      <Token Text="%X0" UId="366" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="367" />
+  <NewLine Num="1" UId="368" />
+  <Access Scope="GlobalVariable" UId="369">
+    <Symbol UId="370">
+      <Component Name="DB_Application" UId="371" />
+      <Token Text="." UId="372" />
+      <Component Name="FromHB" UId="373" />
+      <Token Text="." UId="374" />
+      <Component Name="Alarms" UId="375">
+        <Token Text="[" UId="376" />
+        <Access Scope="LiteralConstant" UId="377">
+          <Constant UId="378">
+            <ConstantValue UId="380">89</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="381" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="382" />
+  <Token Text=":=" UId="383" />
+  <Blank Num="1" UId="384" />
+  <Access Scope="GlobalVariable" UId="385">
+    <Symbol UId="386">
+      <Component Name="DB_WinCCAlarms" UId="387" />
+      <Token Text="." UId="388" />
+      <Component Name="2-ProcessValues" UId="389" />
+      <Token Text="." UId="390" />
+      <Component Name="2110" UId="391" />
+      <Token Text="." UId="392" />
+      <Component Name="Memory" UId="393" />
+      <Token Text="." UId="394" />
+      <Token Text="%X0" UId="395" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="396" />
+  <NewLine Num="1" UId="397" />
+  <Access Scope="GlobalVariable" UId="398">
+    <Symbol UId="399">
+      <Component Name="DB_Application" UId="400" />
+      <Token Text="." UId="401" />
+      <Component Name="FromHB" UId="402" />
+      <Token Text="." UId="403" />
+      <Component Name="Alarms" UId="404">
+        <Token Text="[" UId="405" />
+        <Access Scope="LiteralConstant" UId="406">
+          <Constant UId="407">
+            <ConstantValue UId="409">90</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="410" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="411" />
+  <Token Text=":=" UId="412" />
+  <Blank Num="1" UId="413" />
+  <Access Scope="GlobalVariable" UId="414">
+    <Symbol UId="415">
+      <Component Name="DB_WinCCAlarms" UId="416" />
+      <Token Text="." UId="417" />
+      <Component Name="2-ProcessValues" UId="418" />
+      <Token Text="." UId="419" />
+      <Component Name="2111" UId="420" />
+      <Token Text="." UId="421" />
+      <Component Name="Memory" UId="422" />
+      <Token Text="." UId="423" />
+      <Token Text="%X0" UId="424" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="425" />
+  <NewLine Num="1" UId="426" />
+  <Access Scope="GlobalVariable" UId="427">
+    <Symbol UId="428">
+      <Component Name="DB_Application" UId="429" />
+      <Token Text="." UId="430" />
+      <Component Name="FromHB" UId="431" />
+      <Token Text="." UId="432" />
+      <Component Name="Alarms" UId="433">
+        <Token Text="[" UId="434" />
+        <Access Scope="LiteralConstant" UId="435">
+          <Constant UId="436">
+            <ConstantValue UId="438">91</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="439" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="440" />
+  <Token Text=":=" UId="441" />
+  <Blank Num="1" UId="442" />
+  <Access Scope="GlobalVariable" UId="443">
+    <Symbol UId="444">
+      <Component Name="DB_WinCCAlarms" UId="445" />
+      <Token Text="." UId="446" />
+      <Component Name="2-ProcessValues" UId="447" />
+      <Token Text="." UId="448" />
+      <Component Name="2112" UId="449" />
+      <Token Text="." UId="450" />
+      <Component Name="Memory" UId="451" />
+      <Token Text="." UId="452" />
+      <Token Text="%X0" UId="453" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="454" />
+  <NewLine Num="1" UId="455" />
+  <Access Scope="GlobalVariable" UId="456">
+    <Symbol UId="457">
+      <Component Name="DB_Application" UId="458" />
+      <Token Text="." UId="459" />
+      <Component Name="FromHB" UId="460" />
+      <Token Text="." UId="461" />
+      <Component Name="Alarms" UId="462">
+        <Token Text="[" UId="463" />
+        <Access Scope="LiteralConstant" UId="464">
+          <Constant UId="465">
+            <ConstantValue UId="467">92</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="468" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="469" />
+  <Token Text=":=" UId="470" />
+  <Blank Num="1" UId="471" />
+  <Access Scope="GlobalVariable" UId="472">
+    <Symbol UId="473">
+      <Component Name="DB_WinCCAlarms" UId="474" />
+      <Token Text="." UId="475" />
+      <Component Name="2-ProcessValues" UId="476" />
+      <Token Text="." UId="477" />
+      <Component Name="2113" UId="478" />
+      <Token Text="." UId="479" />
+      <Component Name="Memory" UId="480" />
+      <Token Text="." UId="481" />
+      <Token Text="%X0" UId="482" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="483" />
+  <NewLine Num="1" UId="484" />
+  <Access Scope="GlobalVariable" UId="485">
+    <Symbol UId="486">
+      <Component Name="DB_Application" UId="487" />
+      <Token Text="." UId="488" />
+      <Component Name="FromHB" UId="489" />
+      <Token Text="." UId="490" />
+      <Component Name="Alarms" UId="491">
+        <Token Text="[" UId="492" />
+        <Access Scope="LiteralConstant" UId="493">
+          <Constant UId="494">
+            <ConstantValue UId="496">93</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="497" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="498" />
+  <Token Text=":=" UId="499" />
+  <Blank Num="1" UId="500" />
+  <Access Scope="GlobalVariable" UId="501">
+    <Symbol UId="502">
+      <Component Name="DB_WinCCAlarms" UId="503" />
+      <Token Text="." UId="504" />
+      <Component Name="2-ProcessValues" UId="505" />
+      <Token Text="." UId="506" />
+      <Component Name="2114" UId="507" />
+      <Token Text="." UId="508" />
+      <Component Name="Memory" UId="509" />
+      <Token Text="." UId="510" />
+      <Token Text="%X0" UId="511" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="512" />
+  <NewLine Num="1" UId="513" />
+  <Access Scope="GlobalVariable" UId="514">
+    <Symbol UId="515">
+      <Component Name="DB_Application" UId="516" />
+      <Token Text="." UId="517" />
+      <Component Name="FromHB" UId="518" />
+      <Token Text="." UId="519" />
+      <Component Name="Alarms" UId="520">
+        <Token Text="[" UId="521" />
+        <Access Scope="LiteralConstant" UId="522">
+          <Constant UId="523">
+            <ConstantValue UId="525">94</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="526" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="527" />
+  <Token Text=":=" UId="528" />
+  <Blank Num="1" UId="529" />
+  <Access Scope="GlobalVariable" UId="530">
+    <Symbol UId="531">
+      <Component Name="DB_WinCCAlarms" UId="532" />
+      <Token Text="." UId="533" />
+      <Component Name="2-ProcessValues" UId="534" />
+      <Token Text="." UId="535" />
+      <Component Name="2115" UId="536" />
+      <Token Text="." UId="537" />
+      <Component Name="Memory" UId="538" />
+      <Token Text="." UId="539" />
+      <Token Text="%X0" UId="540" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="541" />
+  <NewLine Num="1" UId="542" />
+  <Access Scope="GlobalVariable" UId="543">
+    <Symbol UId="544">
+      <Component Name="DB_Application" UId="545" />
+      <Token Text="." UId="546" />
+      <Component Name="FromHB" UId="547" />
+      <Token Text="." UId="548" />
+      <Component Name="Alarms" UId="549">
+        <Token Text="[" UId="550" />
+        <Access Scope="LiteralConstant" UId="551">
+          <Constant UId="552">
+            <ConstantValue UId="554">95</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="555" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="556" />
+  <Token Text=":=" UId="557" />
+  <Blank Num="1" UId="558" />
+  <Access Scope="GlobalVariable" UId="559">
+    <Symbol UId="560">
+      <Component Name="DB_WinCCAlarms" UId="561" />
+      <Token Text="." UId="562" />
+      <Component Name="2-ProcessValues" UId="563" />
+      <Token Text="." UId="564" />
+      <Component Name="2116" UId="565" />
+      <Token Text="." UId="566" />
+      <Component Name="Memory" UId="567" />
+      <Token Text="." UId="568" />
+      <Token Text="%X0" UId="569" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="570" />
+  <NewLine Num="1" UId="571" />
+  <Access Scope="GlobalVariable" UId="572">
+    <Symbol UId="573">
+      <Component Name="DB_Application" UId="574" />
+      <Token Text="." UId="575" />
+      <Component Name="FromHB" UId="576" />
+      <Token Text="." UId="577" />
+      <Component Name="Alarms" UId="578">
+        <Token Text="[" UId="579" />
+        <Access Scope="LiteralConstant" UId="580">
+          <Constant UId="581">
+            <ConstantValue UId="583">96</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="584" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="585" />
+  <Token Text=":=" UId="586" />
+  <Blank Num="1" UId="587" />
+  <Access Scope="GlobalVariable" UId="588">
+    <Symbol UId="589">
+      <Component Name="DB_WinCCAlarms" UId="590" />
+      <Token Text="." UId="591" />
+      <Component Name="2-ProcessValues" UId="592" />
+      <Token Text="." UId="593" />
+      <Component Name="2117" UId="594" />
+      <Token Text="." UId="595" />
+      <Component Name="Memory" UId="596" />
+      <Token Text="." UId="597" />
+      <Token Text="%X0" UId="598" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="599" />
+  <NewLine Num="1" UId="600" />
+  <Access Scope="GlobalVariable" UId="601">
+    <Symbol UId="602">
+      <Component Name="DB_Application" UId="603" />
+      <Token Text="." UId="604" />
+      <Component Name="FromHB" UId="605" />
+      <Token Text="." UId="606" />
+      <Component Name="Alarms" UId="607">
+        <Token Text="[" UId="608" />
+        <Access Scope="LiteralConstant" UId="609">
+          <Constant UId="610">
+            <ConstantValue UId="612">97</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="613" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="614" />
+  <Token Text=":=" UId="615" />
+  <Blank Num="1" UId="616" />
+  <Access Scope="GlobalVariable" UId="617">
+    <Symbol UId="618">
+      <Component Name="DB_WinCCAlarms" UId="619" />
+      <Token Text="." UId="620" />
+      <Component Name="2-ProcessValues" UId="621" />
+      <Token Text="." UId="622" />
+      <Component Name="2301_HeatSourceTempDropCritical" UId="623" />
+      <Token Text="." UId="624" />
+      <Component Name="Memory" UId="625" />
+      <Token Text="." UId="626" />
+      <Token Text="%X0" UId="627" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="628" />
+  <NewLine Num="1" UId="629" />
+  <Access Scope="GlobalVariable" UId="630">
+    <Symbol UId="631">
+      <Component Name="DB_Application" UId="632" />
+      <Token Text="." UId="633" />
+      <Component Name="FromHB" UId="634" />
+      <Token Text="." UId="635" />
+      <Component Name="Alarms" UId="636">
+        <Token Text="[" UId="637" />
+        <Access Scope="LiteralConstant" UId="638">
+          <Constant UId="639">
+            <ConstantValue UId="641">98</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="642" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="643" />
+  <Token Text=":=" UId="644" />
+  <Blank Num="1" UId="645" />
+  <Access Scope="GlobalVariable" UId="646">
+    <Symbol UId="647">
+      <Component Name="DB_WinCCAlarms" UId="648" />
+      <Token Text="." UId="649" />
+      <Component Name="2-ProcessValues" UId="650" />
+      <Token Text="." UId="651" />
+      <Component Name="2302_HeatSourceTempRiseCritical" UId="652" />
+      <Token Text="." UId="653" />
+      <Component Name="Memory" UId="654" />
+      <Token Text="." UId="655" />
+      <Token Text="%X0" UId="656" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="657" />
+  <NewLine Num="1" UId="658" />
+  <Access Scope="GlobalVariable" UId="659">
+    <Symbol UId="660">
+      <Component Name="DB_Application" UId="661" />
+      <Token Text="." UId="662" />
+      <Component Name="FromHB" UId="663" />
+      <Token Text="." UId="664" />
+      <Component Name="Alarms" UId="665">
+        <Token Text="[" UId="666" />
+        <Access Scope="LiteralConstant" UId="667">
+          <Constant UId="668">
+            <ConstantValue UId="670">99</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="671" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="672" />
+  <Token Text=":=" UId="673" />
+  <Blank Num="1" UId="674" />
+  <Access Scope="GlobalVariable" UId="675">
+    <Symbol UId="676">
+      <Component Name="DB_WinCCAlarms" UId="677" />
+      <Token Text="." UId="678" />
+      <Component Name="2-ProcessValues" UId="679" />
+      <Token Text="." UId="680" />
+      <Component Name="2303_SuperheatCompressorHigh" UId="681" />
+      <Token Text="." UId="682" />
+      <Component Name="Memory" UId="683" />
+      <Token Text="." UId="684" />
+      <Token Text="%X0" UId="685" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="686" />
+  <NewLine Num="1" UId="687" />
+  <Access Scope="GlobalVariable" UId="688">
+    <Symbol UId="689">
+      <Component Name="DB_Application" UId="690" />
+      <Token Text="." UId="691" />
+      <Component Name="FromHB" UId="692" />
+      <Token Text="." UId="693" />
+      <Component Name="Alarms" UId="694">
+        <Token Text="[" UId="695" />
+        <Access Scope="LiteralConstant" UId="696">
+          <Constant UId="697">
+            <ConstantValue UId="699">100</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="700" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="701" />
+  <Token Text=":=" UId="702" />
+  <Blank Num="1" UId="703" />
+  <Access Scope="GlobalVariable" UId="704">
+    <Symbol UId="705">
+      <Component Name="DB_WinCCAlarms" UId="706" />
+      <Token Text="." UId="707" />
+      <Component Name="2-ProcessValues" UId="708" />
+      <Token Text="." UId="709" />
+      <Component Name="2304_SuperheatCompressorLow" UId="710" />
+      <Token Text="." UId="711" />
+      <Component Name="Memory" UId="712" />
+      <Token Text="." UId="713" />
+      <Token Text="%X0" UId="714" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="715" />
+  <NewLine Num="1" UId="716" />
+  <Access Scope="GlobalVariable" UId="717">
+    <Symbol UId="718">
+      <Component Name="DB_Application" UId="719" />
+      <Token Text="." UId="720" />
+      <Component Name="FromHB" UId="721" />
+      <Token Text="." UId="722" />
+      <Component Name="Alarms" UId="723">
+        <Token Text="[" UId="724" />
+        <Access Scope="LiteralConstant" UId="725">
+          <Constant UId="726">
+            <ConstantValue UId="728">101</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="729" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="730" />
+  <Token Text=":=" UId="731" />
+  <Blank Num="1" UId="732" />
+  <Access Scope="GlobalVariable" UId="733">
+    <Symbol UId="734">
+      <Component Name="DB_WinCCAlarms" UId="735" />
+      <Token Text="." UId="736" />
+      <Component Name="2-ProcessValues" UId="737" />
+      <Token Text="." UId="738" />
+      <Component Name="2305_OilFilterDeltaPHigh" UId="739" />
+      <Token Text="." UId="740" />
+      <Component Name="Memory" UId="741" />
+      <Token Text="." UId="742" />
+      <Token Text="%X0" UId="743" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="744" />
+  <NewLine Num="1" UId="745" />
+  <Access Scope="GlobalVariable" UId="746">
+    <Symbol UId="747">
+      <Component Name="DB_Application" UId="748" />
+      <Token Text="." UId="749" />
+      <Component Name="FromHB" UId="750" />
+      <Token Text="." UId="751" />
+      <Component Name="Alarms" UId="752">
+        <Token Text="[" UId="753" />
+        <Access Scope="LiteralConstant" UId="754">
+          <Constant UId="755">
+            <ConstantValue UId="757">102</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="758" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="759" />
+  <Token Text=":=" UId="760" />
+  <Blank Num="1" UId="761" />
+  <Access Scope="GlobalVariable" UId="762">
+    <Symbol UId="763">
+      <Component Name="DB_WinCCAlarms" UId="764" />
+      <Token Text="." UId="765" />
+      <Component Name="2-ProcessValues" UId="766" />
+      <Token Text="." UId="767" />
+      <Component Name="2306_OilFilterDeltaPHighHigh" UId="768" />
+      <Token Text="." UId="769" />
+      <Component Name="Memory" UId="770" />
+      <Token Text="." UId="771" />
+      <Token Text="%X0" UId="772" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="773" />
+  <NewLine Num="1" UId="774" />
+  <Access Scope="GlobalVariable" UId="775">
+    <Symbol UId="776">
+      <Component Name="DB_Application" UId="777" />
+      <Token Text="." UId="778" />
+      <Component Name="FromHB" UId="779" />
+      <Token Text="." UId="780" />
+      <Component Name="Alarms" UId="781">
+        <Token Text="[" UId="782" />
+        <Access Scope="LiteralConstant" UId="783">
+          <Constant UId="784">
+            <ConstantValue UId="786">103</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="787" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="788" />
+  <Token Text=":=" UId="789" />
+  <Blank Num="1" UId="790" />
+  <Access Scope="GlobalVariable" UId="791">
+    <Symbol UId="792">
+      <Component Name="DB_WinCCAlarms" UId="793" />
+      <Token Text="." UId="794" />
+      <Component Name="2-ProcessValues" UId="795" />
+      <Token Text="." UId="796" />
+      <Component Name="2307_EvaporatorDischargePressureMeanValue" UId="797" />
+      <Token Text="." UId="798" />
+      <Component Name="Memory" UId="799" />
+      <Token Text="." UId="800" />
+      <Token Text="%X0" UId="801" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="802" />
+  <NewLine Num="1" UId="803" />
+  <Access Scope="GlobalVariable" UId="804">
+    <Symbol UId="805">
+      <Component Name="DB_Application" UId="806" />
+      <Token Text="." UId="807" />
+      <Component Name="FromHB" UId="808" />
+      <Token Text="." UId="809" />
+      <Component Name="Alarms" UId="810">
+        <Token Text="[" UId="811" />
+        <Access Scope="LiteralConstant" UId="812">
+          <Constant UId="813">
+            <ConstantValue UId="815">104</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="816" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="817" />
+  <Token Text=":=" UId="818" />
+  <Blank Num="1" UId="819" />
+  <Access Scope="GlobalVariable" UId="820">
+    <Symbol UId="821">
+      <Component Name="DB_WinCCAlarms" UId="822" />
+      <Token Text="." UId="823" />
+      <Component Name="2-ProcessValues" UId="824" />
+      <Token Text="." UId="825" />
+      <Component Name="2308_EvaporatorDischargePressureHigh" UId="826" />
+      <Token Text="." UId="827" />
+      <Component Name="Memory" UId="828" />
+      <Token Text="." UId="829" />
+      <Token Text="%X0" UId="830" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="831" />
+  <NewLine Num="1" UId="832" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Alarms to App PLC - Group 2</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> Group 3-Control</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Access Scope="GlobalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="DB_Application" UId="26" />
+      <Token Text="." UId="27" />
+      <Component Name="FromHB" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="Alarms" UId="30">
+        <Token Text="[" UId="31" />
+        <Access Scope="LiteralConstant" UId="32">
+          <Constant UId="33">
+            <ConstantValue UId="35">105</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="36" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="37" />
+  <Token Text=":=" UId="38" />
+  <Blank Num="1" UId="39" />
+  <Access Scope="LiteralConstant" UId="40">
+    <Constant UId="41">
+      <ConstantValue UId="43">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="44" />
+  <Blank Num="1" UId="45" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="46">
+    <Text UId="47"> 3000</Text>
+  </LineComment>
+  <NewLine Num="1" UId="48" />
+  <Access Scope="GlobalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="DB_Application" UId="51" />
+      <Token Text="." UId="52" />
+      <Component Name="FromHB" UId="53" />
+      <Token Text="." UId="54" />
+      <Component Name="Alarms" UId="55">
+        <Token Text="[" UId="56" />
+        <Access Scope="LiteralConstant" UId="57">
+          <Constant UId="58">
+            <ConstantValue UId="60">106</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="61" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="62" />
+  <Token Text=":=" UId="63" />
+  <Blank Num="1" UId="64" />
+  <Access Scope="GlobalVariable" UId="65">
+    <Symbol UId="66">
+      <Component Name="DB_WinCCAlarms" UId="67" />
+      <Token Text="." UId="68" />
+      <Component Name="3-Control" UId="69" />
+      <Token Text="." UId="70" />
+      <Component Name="3020" UId="71" />
+      <Token Text="." UId="72" />
+      <Component Name="Memory" UId="73" />
+      <Token Text="." UId="74" />
+      <Token Text="%X0" UId="75" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="76" />
+  <NewLine Num="1" UId="77" />
+  <Access Scope="GlobalVariable" UId="78">
+    <Symbol UId="79">
+      <Component Name="DB_Application" UId="80" />
+      <Token Text="." UId="81" />
+      <Component Name="FromHB" UId="82" />
+      <Token Text="." UId="83" />
+      <Component Name="Alarms" UId="84">
+        <Token Text="[" UId="85" />
+        <Access Scope="LiteralConstant" UId="86">
+          <Constant UId="87">
+            <ConstantValue UId="89">107</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="90" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="91" />
+  <Token Text=":=" UId="92" />
+  <Blank Num="1" UId="93" />
+  <Access Scope="LiteralConstant" UId="94">
+    <Constant UId="95">
+      <ConstantValue UId="97">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="98" />
+  <Blank Num="1" UId="99" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="100">
+    <Text UId="101"> 3030</Text>
+  </LineComment>
+  <NewLine Num="1" UId="102" />
+  <Access Scope="GlobalVariable" UId="103">
+    <Symbol UId="104">
+      <Component Name="DB_Application" UId="105" />
+      <Token Text="." UId="106" />
+      <Component Name="FromHB" UId="107" />
+      <Token Text="." UId="108" />
+      <Component Name="Alarms" UId="109">
+        <Token Text="[" UId="110" />
+        <Access Scope="LiteralConstant" UId="111">
+          <Constant UId="112">
+            <ConstantValue UId="114">108</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="115" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="116" />
+  <Token Text=":=" UId="117" />
+  <Blank Num="1" UId="118" />
+  <Access Scope="LiteralConstant" UId="119">
+    <Constant UId="120">
+      <ConstantValue UId="122">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="123" />
+  <Blank Num="1" UId="124" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="125">
+    <Text UId="126"> 3040</Text>
+  </LineComment>
+  <NewLine Num="1" UId="127" />
+  <Access Scope="GlobalVariable" UId="128">
+    <Symbol UId="129">
+      <Component Name="DB_Application" UId="130" />
+      <Token Text="." UId="131" />
+      <Component Name="FromHB" UId="132" />
+      <Token Text="." UId="133" />
+      <Component Name="Alarms" UId="134">
+        <Token Text="[" UId="135" />
+        <Access Scope="LiteralConstant" UId="136">
+          <Constant UId="137">
+            <ConstantValue UId="139">109</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="140" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="141" />
+  <Token Text=":=" UId="142" />
+  <Blank Num="1" UId="143" />
+  <Access Scope="LiteralConstant" UId="144">
+    <Constant UId="145">
+      <ConstantValue UId="147">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="148" />
+  <Blank Num="1" UId="149" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="150">
+    <Text UId="151"> 3050</Text>
+  </LineComment>
+  <NewLine Num="1" UId="152" />
+  <Access Scope="GlobalVariable" UId="153">
+    <Symbol UId="154">
+      <Component Name="DB_Application" UId="155" />
+      <Token Text="." UId="156" />
+      <Component Name="FromHB" UId="157" />
+      <Token Text="." UId="158" />
+      <Component Name="Alarms" UId="159">
+        <Token Text="[" UId="160" />
+        <Access Scope="LiteralConstant" UId="161">
+          <Constant UId="162">
+            <ConstantValue UId="164">110</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="165" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="166" />
+  <Token Text=":=" UId="167" />
+  <Blank Num="1" UId="168" />
+  <Access Scope="LiteralConstant" UId="169">
+    <Constant UId="170">
+      <ConstantValue UId="172">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="173" />
+  <Blank Num="1" UId="174" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="175">
+    <Text UId="176"> 3060</Text>
+  </LineComment>
+  <NewLine Num="1" UId="177" />
+  <Access Scope="GlobalVariable" UId="178">
+    <Symbol UId="179">
+      <Component Name="DB_Application" UId="180" />
+      <Token Text="." UId="181" />
+      <Component Name="FromHB" UId="182" />
+      <Token Text="." UId="183" />
+      <Component Name="Alarms" UId="184">
+        <Token Text="[" UId="185" />
+        <Access Scope="LiteralConstant" UId="186">
+          <Constant UId="187">
+            <ConstantValue UId="189">111</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="190" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="191" />
+  <Token Text=":=" UId="192" />
+  <Blank Num="1" UId="193" />
+  <Access Scope="LiteralConstant" UId="194">
+    <Constant UId="195">
+      <ConstantValue UId="197">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="198" />
+  <Blank Num="1" UId="199" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="200">
+    <Text UId="201"> 3070</Text>
+  </LineComment>
+  <NewLine Num="1" UId="202" />
+  <Access Scope="GlobalVariable" UId="203">
+    <Symbol UId="204">
+      <Component Name="DB_Application" UId="205" />
+      <Token Text="." UId="206" />
+      <Component Name="FromHB" UId="207" />
+      <Token Text="." UId="208" />
+      <Component Name="Alarms" UId="209">
+        <Token Text="[" UId="210" />
+        <Access Scope="LiteralConstant" UId="211">
+          <Constant UId="212">
+            <ConstantValue UId="214">112</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="215" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="216" />
+  <Token Text=":=" UId="217" />
+  <Blank Num="1" UId="218" />
+  <Access Scope="LiteralConstant" UId="219">
+    <Constant UId="220">
+      <ConstantValue UId="222">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="223" />
+  <Blank Num="1" UId="224" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="225">
+    <Text UId="226"> 3080</Text>
+  </LineComment>
+  <NewLine Num="1" UId="227" />
+  <Access Scope="GlobalVariable" UId="228">
+    <Symbol UId="229">
+      <Component Name="DB_Application" UId="230" />
+      <Token Text="." UId="231" />
+      <Component Name="FromHB" UId="232" />
+      <Token Text="." UId="233" />
+      <Component Name="Alarms" UId="234">
+        <Token Text="[" UId="235" />
+        <Access Scope="LiteralConstant" UId="236">
+          <Constant UId="237">
+            <ConstantValue UId="239">113</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="240" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="241" />
+  <Token Text=":=" UId="242" />
+  <Blank Num="1" UId="243" />
+  <Access Scope="LiteralConstant" UId="244">
+    <Constant UId="245">
+      <ConstantValue UId="247">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="248" />
+  <Blank Num="1" UId="249" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="250">
+    <Text UId="251"> 3090</Text>
+  </LineComment>
+  <NewLine Num="1" UId="252" />
+  <Access Scope="GlobalVariable" UId="253">
+    <Symbol UId="254">
+      <Component Name="DB_Application" UId="255" />
+      <Token Text="." UId="256" />
+      <Component Name="FromHB" UId="257" />
+      <Token Text="." UId="258" />
+      <Component Name="Alarms" UId="259">
+        <Token Text="[" UId="260" />
+        <Access Scope="LiteralConstant" UId="261">
+          <Constant UId="262">
+            <ConstantValue UId="264">114</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="265" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="266" />
+  <Token Text=":=" UId="267" />
+  <Blank Num="1" UId="268" />
+  <Access Scope="LiteralConstant" UId="269">
+    <Constant UId="270">
+      <ConstantValue UId="272">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="273" />
+  <Blank Num="1" UId="274" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="275">
+    <Text UId="276"> 3100</Text>
+  </LineComment>
+  <NewLine Num="1" UId="277" />
+  <Access Scope="GlobalVariable" UId="278">
+    <Symbol UId="279">
+      <Component Name="DB_Application" UId="280" />
+      <Token Text="." UId="281" />
+      <Component Name="FromHB" UId="282" />
+      <Token Text="." UId="283" />
+      <Component Name="Alarms" UId="284">
+        <Token Text="[" UId="285" />
+        <Access Scope="LiteralConstant" UId="286">
+          <Constant UId="287">
+            <ConstantValue UId="289">115</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="290" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="291" />
+  <Token Text=":=" UId="292" />
+  <Blank Num="1" UId="293" />
+  <Access Scope="LiteralConstant" UId="294">
+    <Constant UId="295">
+      <ConstantValue UId="297">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="298" />
+  <Blank Num="1" UId="299" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="300">
+    <Text UId="301"> 3110</Text>
+  </LineComment>
+  <NewLine Num="1" UId="302" />
+  <Access Scope="GlobalVariable" UId="303">
+    <Symbol UId="304">
+      <Component Name="DB_Application" UId="305" />
+      <Token Text="." UId="306" />
+      <Component Name="FromHB" UId="307" />
+      <Token Text="." UId="308" />
+      <Component Name="Alarms" UId="309">
+        <Token Text="[" UId="310" />
+        <Access Scope="LiteralConstant" UId="311">
+          <Constant UId="312">
+            <ConstantValue UId="314">116</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="315" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="316" />
+  <Token Text=":=" UId="317" />
+  <Blank Num="1" UId="318" />
+  <Access Scope="GlobalVariable" UId="319">
+    <Symbol UId="320">
+      <Component Name="DB_WinCCAlarms" UId="321" />
+      <Token Text="." UId="322" />
+      <Component Name="3-Control" UId="323" />
+      <Token Text="." UId="324" />
+      <Component Name="3400_HydrolockProtectionActive" UId="325" />
+      <Token Text="." UId="326" />
+      <Component Name="Memory" UId="327" />
+      <Token Text="." UId="328" />
+      <Token Text="%X0" UId="329" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="330" />
+  <NewLine Num="1" UId="331" />
+  <Access Scope="GlobalVariable" UId="332">
+    <Symbol UId="333">
+      <Component Name="DB_Application" UId="334" />
+      <Token Text="." UId="335" />
+      <Component Name="FromHB" UId="336" />
+      <Token Text="." UId="337" />
+      <Component Name="Alarms" UId="338">
+        <Token Text="[" UId="339" />
+        <Access Scope="LiteralConstant" UId="340">
+          <Constant UId="341">
+            <ConstantValue UId="343">158</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="344" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="345" />
+  <Token Text=":=" UId="346" />
+  <Blank Num="1" UId="347" />
+  <Access Scope="GlobalVariable" UId="348">
+    <Symbol UId="349">
+      <Component Name="DB_WinCCAlarms" UId="350" />
+      <Token Text="." UId="351" />
+      <Component Name="3-Control" UId="352" />
+      <Token Text="." UId="353" />
+      <Component Name="3401_DripPanLevelHigh" UId="354" />
+      <Token Text="." UId="355" />
+      <Component Name="Memory" UId="356" />
+      <Token Text="." UId="357" />
+      <Token Text="%X0" UId="358" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="359" />
+  <NewLine Num="2" UId="360" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="361">
+    <Text UId="362"> Group 5-Auxiliaries</Text>
+  </LineComment>
+  <NewLine Num="1" UId="363" />
+  <Access Scope="GlobalVariable" UId="364">
+    <Symbol UId="365">
+      <Component Name="DB_Application" UId="366" />
+      <Token Text="." UId="367" />
+      <Component Name="FromHB" UId="368" />
+      <Token Text="." UId="369" />
+      <Component Name="Alarms" UId="370">
+        <Token Text="[" UId="371" />
+        <Access Scope="LiteralConstant" UId="372">
+          <Constant UId="373">
+            <ConstantValue UId="375">117</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="376" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="377" />
+  <Token Text=":=" UId="378" />
+  <Blank Num="1" UId="379" />
+  <Access Scope="GlobalVariable" UId="380">
+    <Symbol UId="381">
+      <Component Name="DB_WinCCAlarms" UId="382" />
+      <Token Text="." UId="383" />
+      <Component Name="5-Auxiliaries" UId="384" />
+      <Token Text="." UId="385" />
+      <Component Name="5000_OilHeatingActivationFailure" UId="386" />
+      <Token Text="." UId="387" />
+      <Component Name="Memory" UId="388" />
+      <Token Text="." UId="389" />
+      <Token Text="%X0" UId="390" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="391" />
+  <NewLine Num="1" UId="392" />
+  <Access Scope="GlobalVariable" UId="393">
+    <Symbol UId="394">
+      <Component Name="DB_Application" UId="395" />
+      <Token Text="." UId="396" />
+      <Component Name="FromHB" UId="397" />
+      <Token Text="." UId="398" />
+      <Component Name="Alarms" UId="399">
+        <Token Text="[" UId="400" />
+        <Access Scope="LiteralConstant" UId="401">
+          <Constant UId="402">
+            <ConstantValue UId="404">118</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="405" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="406" />
+  <Token Text=":=" UId="407" />
+  <Blank Num="1" UId="408" />
+  <Access Scope="GlobalVariable" UId="409">
+    <Symbol UId="410">
+      <Component Name="DB_WinCCAlarms" UId="411" />
+      <Token Text="." UId="412" />
+      <Component Name="5-Auxiliaries" UId="413" />
+      <Token Text="." UId="414" />
+      <Component Name="5001_OilHeatingDeactivationFailure" UId="415" />
+      <Token Text="." UId="416" />
+      <Component Name="Memory" UId="417" />
+      <Token Text="." UId="418" />
+      <Token Text="%X0" UId="419" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="420" />
+  <NewLine Num="1" UId="421" />
+  <Access Scope="GlobalVariable" UId="422">
+    <Symbol UId="423">
+      <Component Name="DB_Application" UId="424" />
+      <Token Text="." UId="425" />
+      <Component Name="FromHB" UId="426" />
+      <Token Text="." UId="427" />
+      <Component Name="Alarms" UId="428">
+        <Token Text="[" UId="429" />
+        <Access Scope="LiteralConstant" UId="430">
+          <Constant UId="431">
+            <ConstantValue UId="433">119</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="434" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="435" />
+  <Token Text=":=" UId="436" />
+  <Blank Num="1" UId="437" />
+  <Access Scope="GlobalVariable" UId="438">
+    <Symbol UId="439">
+      <Component Name="DB_WinCCAlarms" UId="440" />
+      <Token Text="." UId="441" />
+      <Component Name="5-Auxiliaries" UId="442" />
+      <Token Text="." UId="443" />
+      <Component Name="5200" UId="444" />
+      <Token Text="." UId="445" />
+      <Component Name="Memory" UId="446" />
+      <Token Text="." UId="447" />
+      <Token Text="%X0" UId="448" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="449" />
+  <NewLine Num="1" UId="450" />
+  <Access Scope="GlobalVariable" UId="451">
+    <Symbol UId="452">
+      <Component Name="DB_Application" UId="453" />
+      <Token Text="." UId="454" />
+      <Component Name="FromHB" UId="455" />
+      <Token Text="." UId="456" />
+      <Component Name="Alarms" UId="457">
+        <Token Text="[" UId="458" />
+        <Access Scope="LiteralConstant" UId="459">
+          <Constant UId="460">
+            <ConstantValue UId="462">120</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="463" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="464" />
+  <Token Text=":=" UId="465" />
+  <Blank Num="1" UId="466" />
+  <Access Scope="GlobalVariable" UId="467">
+    <Symbol UId="468">
+      <Component Name="DB_WinCCAlarms" UId="469" />
+      <Token Text="." UId="470" />
+      <Component Name="5-Auxiliaries" UId="471" />
+      <Token Text="." UId="472" />
+      <Component Name="5201" UId="473" />
+      <Token Text="." UId="474" />
+      <Component Name="Memory" UId="475" />
+      <Token Text="." UId="476" />
+      <Token Text="%X0" UId="477" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="478" />
+  <NewLine Num="1" UId="479" />
+  <Access Scope="GlobalVariable" UId="480">
+    <Symbol UId="481">
+      <Component Name="DB_Application" UId="482" />
+      <Token Text="." UId="483" />
+      <Component Name="FromHB" UId="484" />
+      <Token Text="." UId="485" />
+      <Component Name="Alarms" UId="486">
+        <Token Text="[" UId="487" />
+        <Access Scope="LiteralConstant" UId="488">
+          <Constant UId="489">
+            <ConstantValue UId="491">121</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="492" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="493" />
+  <Token Text=":=" UId="494" />
+  <Blank Num="1" UId="495" />
+  <Access Scope="GlobalVariable" UId="496">
+    <Symbol UId="497">
+      <Component Name="DB_WinCCAlarms" UId="498" />
+      <Token Text="." UId="499" />
+      <Component Name="5-Auxiliaries" UId="500" />
+      <Token Text="." UId="501" />
+      <Component Name="5202" UId="502" />
+      <Token Text="." UId="503" />
+      <Component Name="Memory" UId="504" />
+      <Token Text="." UId="505" />
+      <Token Text="%X0" UId="506" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="507" />
+  <NewLine Num="1" UId="508" />
+  <Access Scope="GlobalVariable" UId="509">
+    <Symbol UId="510">
+      <Component Name="DB_Application" UId="511" />
+      <Token Text="." UId="512" />
+      <Component Name="FromHB" UId="513" />
+      <Token Text="." UId="514" />
+      <Component Name="Alarms" UId="515">
+        <Token Text="[" UId="516" />
+        <Access Scope="LiteralConstant" UId="517">
+          <Constant UId="518">
+            <ConstantValue UId="520">122</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="521" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="522" />
+  <Token Text=":=" UId="523" />
+  <Blank Num="1" UId="524" />
+  <Access Scope="GlobalVariable" UId="525">
+    <Symbol UId="526">
+      <Component Name="DB_WinCCAlarms" UId="527" />
+      <Token Text="." UId="528" />
+      <Component Name="5-Auxiliaries" UId="529" />
+      <Token Text="." UId="530" />
+      <Component Name="5203_CPC_SC_01_CommError" UId="531" />
+      <Token Text="." UId="532" />
+      <Component Name="Memory" UId="533" />
+      <Token Text="." UId="534" />
+      <Token Text="%X0" UId="535" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="536" />
+  <NewLine Num="1" UId="537" />
+  <Access Scope="GlobalVariable" UId="538">
+    <Symbol UId="539">
+      <Component Name="DB_Application" UId="540" />
+      <Token Text="." UId="541" />
+      <Component Name="FromHB" UId="542" />
+      <Token Text="." UId="543" />
+      <Component Name="Alarms" UId="544">
+        <Token Text="[" UId="545" />
+        <Access Scope="LiteralConstant" UId="546">
+          <Constant UId="547">
+            <ConstantValue UId="549">123</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="550" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="551" />
+  <Token Text=":=" UId="552" />
+  <Blank Num="1" UId="553" />
+  <Access Scope="GlobalVariable" UId="554">
+    <Symbol UId="555">
+      <Component Name="DB_WinCCAlarms" UId="556" />
+      <Token Text="." UId="557" />
+      <Component Name="5-Auxiliaries" UId="558" />
+      <Token Text="." UId="559" />
+      <Component Name="5204_CPC_SC_01_Tripped" UId="560" />
+      <Token Text="." UId="561" />
+      <Component Name="Memory" UId="562" />
+      <Token Text="." UId="563" />
+      <Token Text="%X0" UId="564" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="565" />
+  <NewLine Num="1" UId="566" />
+  <Access Scope="GlobalVariable" UId="567">
+    <Symbol UId="568">
+      <Component Name="DB_Application" UId="569" />
+      <Token Text="." UId="570" />
+      <Component Name="FromHB" UId="571" />
+      <Token Text="." UId="572" />
+      <Component Name="Alarms" UId="573">
+        <Token Text="[" UId="574" />
+        <Access Scope="LiteralConstant" UId="575">
+          <Constant UId="576">
+            <ConstantValue UId="578">124</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="579" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="580" />
+  <Token Text=":=" UId="581" />
+  <Blank Num="1" UId="582" />
+  <Access Scope="GlobalVariable" UId="583">
+    <Symbol UId="584">
+      <Component Name="DB_WinCCAlarms" UId="585" />
+      <Token Text="." UId="586" />
+      <Component Name="5-Auxiliaries" UId="587" />
+      <Token Text="." UId="588" />
+      <Component Name="5205" UId="589" />
+      <Token Text="." UId="590" />
+      <Component Name="Memory" UId="591" />
+      <Token Text="." UId="592" />
+      <Token Text="%X0" UId="593" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="594" />
+  <NewLine Num="1" UId="595" />
+  <Access Scope="GlobalVariable" UId="596">
+    <Symbol UId="597">
+      <Component Name="DB_Application" UId="598" />
+      <Token Text="." UId="599" />
+      <Component Name="FromHB" UId="600" />
+      <Token Text="." UId="601" />
+      <Component Name="Alarms" UId="602">
+        <Token Text="[" UId="603" />
+        <Access Scope="LiteralConstant" UId="604">
+          <Constant UId="605">
+            <ConstantValue UId="607">125</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="608" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="609" />
+  <Token Text=":=" UId="610" />
+  <Blank Num="1" UId="611" />
+  <Access Scope="GlobalVariable" UId="612">
+    <Symbol UId="613">
+      <Component Name="DB_WinCCAlarms" UId="614" />
+      <Token Text="." UId="615" />
+      <Component Name="5-Auxiliaries" UId="616" />
+      <Token Text="." UId="617" />
+      <Component Name="5206" UId="618" />
+      <Token Text="." UId="619" />
+      <Component Name="Memory" UId="620" />
+      <Token Text="." UId="621" />
+      <Token Text="%X0" UId="622" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="623" />
+  <NewLine Num="1" UId="624" />
+  <Access Scope="GlobalVariable" UId="625">
+    <Symbol UId="626">
+      <Component Name="DB_Application" UId="627" />
+      <Token Text="." UId="628" />
+      <Component Name="FromHB" UId="629" />
+      <Token Text="." UId="630" />
+      <Component Name="Alarms" UId="631">
+        <Token Text="[" UId="632" />
+        <Access Scope="LiteralConstant" UId="633">
+          <Constant UId="634">
+            <ConstantValue UId="636">126</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="637" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="638" />
+  <Token Text=":=" UId="639" />
+  <Blank Num="1" UId="640" />
+  <Access Scope="GlobalVariable" UId="641">
+    <Symbol UId="642">
+      <Component Name="DB_WinCCAlarms" UId="643" />
+      <Token Text="." UId="644" />
+      <Component Name="5-Auxiliaries" UId="645" />
+      <Token Text="." UId="646" />
+      <Component Name="5250_SSC_TT_01_Fault" UId="647" />
+      <Token Text="." UId="648" />
+      <Component Name="Memory" UId="649" />
+      <Token Text="." UId="650" />
+      <Token Text="%X0" UId="651" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="652" />
+  <NewLine Num="1" UId="653" />
+  <Access Scope="GlobalVariable" UId="654">
+    <Symbol UId="655">
+      <Component Name="DB_Application" UId="656" />
+      <Token Text="." UId="657" />
+      <Component Name="FromHB" UId="658" />
+      <Token Text="." UId="659" />
+      <Component Name="Alarms" UId="660">
+        <Token Text="[" UId="661" />
+        <Access Scope="LiteralConstant" UId="662">
+          <Constant UId="663">
+            <ConstantValue UId="665">127</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="666" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="667" />
+  <Token Text=":=" UId="668" />
+  <Blank Num="1" UId="669" />
+  <Access Scope="GlobalVariable" UId="670">
+    <Symbol UId="671">
+      <Component Name="DB_WinCCAlarms" UId="672" />
+      <Token Text="." UId="673" />
+      <Component Name="5-Auxiliaries" UId="674" />
+      <Token Text="." UId="675" />
+      <Component Name="5251_SSC_TT_02_Fault" UId="676" />
+      <Token Text="." UId="677" />
+      <Component Name="Memory" UId="678" />
+      <Token Text="." UId="679" />
+      <Token Text="%X0" UId="680" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="681" />
+  <NewLine Num="1" UId="682" />
+  <Access Scope="GlobalVariable" UId="683">
+    <Symbol UId="684">
+      <Component Name="DB_Application" UId="685" />
+      <Token Text="." UId="686" />
+      <Component Name="FromHB" UId="687" />
+      <Token Text="." UId="688" />
+      <Component Name="Alarms" UId="689">
+        <Token Text="[" UId="690" />
+        <Access Scope="LiteralConstant" UId="691">
+          <Constant UId="692">
+            <ConstantValue UId="694">128</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="695" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="696" />
+  <Token Text=":=" UId="697" />
+  <Blank Num="1" UId="698" />
+  <Access Scope="GlobalVariable" UId="699">
+    <Symbol UId="700">
+      <Component Name="DB_WinCCAlarms" UId="701" />
+      <Token Text="." UId="702" />
+      <Component Name="5-Auxiliaries" UId="703" />
+      <Token Text="." UId="704" />
+      <Component Name="5252_SSC_TT_03_Fault" UId="705" />
+      <Token Text="." UId="706" />
+      <Component Name="Memory" UId="707" />
+      <Token Text="." UId="708" />
+      <Token Text="%X0" UId="709" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="710" />
+  <NewLine Num="1" UId="711" />
+  <Access Scope="GlobalVariable" UId="712">
+    <Symbol UId="713">
+      <Component Name="DB_Application" UId="714" />
+      <Token Text="." UId="715" />
+      <Component Name="FromHB" UId="716" />
+      <Token Text="." UId="717" />
+      <Component Name="Alarms" UId="718">
+        <Token Text="[" UId="719" />
+        <Access Scope="LiteralConstant" UId="720">
+          <Constant UId="721">
+            <ConstantValue UId="723">129</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="724" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="725" />
+  <Token Text=":=" UId="726" />
+  <Blank Num="1" UId="727" />
+  <Access Scope="GlobalVariable" UId="728">
+    <Symbol UId="729">
+      <Component Name="DB_WinCCAlarms" UId="730" />
+      <Token Text="." UId="731" />
+      <Component Name="5-Auxiliaries" UId="732" />
+      <Token Text="." UId="733" />
+      <Component Name="5253_SSC_TT_04_Fault" UId="734" />
+      <Token Text="." UId="735" />
+      <Component Name="Memory" UId="736" />
+      <Token Text="." UId="737" />
+      <Token Text="%X0" UId="738" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="739" />
+  <NewLine Num="1" UId="740" />
+  <Access Scope="GlobalVariable" UId="741">
+    <Symbol UId="742">
+      <Component Name="DB_Application" UId="743" />
+      <Token Text="." UId="744" />
+      <Component Name="FromHB" UId="745" />
+      <Token Text="." UId="746" />
+      <Component Name="Alarms" UId="747">
+        <Token Text="[" UId="748" />
+        <Access Scope="LiteralConstant" UId="749">
+          <Constant UId="750">
+            <ConstantValue UId="752">130</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="753" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="754" />
+  <Token Text=":=" UId="755" />
+  <Blank Num="1" UId="756" />
+  <Access Scope="GlobalVariable" UId="757">
+    <Symbol UId="758">
+      <Component Name="DB_WinCCAlarms" UId="759" />
+      <Token Text="." UId="760" />
+      <Component Name="5-Auxiliaries" UId="761" />
+      <Token Text="." UId="762" />
+      <Component Name="5254_SSC_PIT_01_Fault" UId="763" />
+      <Token Text="." UId="764" />
+      <Component Name="Memory" UId="765" />
+      <Token Text="." UId="766" />
+      <Token Text="%X0" UId="767" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="768" />
+  <NewLine Num="1" UId="769" />
+  <Access Scope="GlobalVariable" UId="770">
+    <Symbol UId="771">
+      <Component Name="DB_Application" UId="772" />
+      <Token Text="." UId="773" />
+      <Component Name="FromHB" UId="774" />
+      <Token Text="." UId="775" />
+      <Component Name="Alarms" UId="776">
+        <Token Text="[" UId="777" />
+        <Access Scope="LiteralConstant" UId="778">
+          <Constant UId="779">
+            <ConstantValue UId="781">131</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="782" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="783" />
+  <Token Text=":=" UId="784" />
+  <Blank Num="1" UId="785" />
+  <Access Scope="GlobalVariable" UId="786">
+    <Symbol UId="787">
+      <Component Name="DB_WinCCAlarms" UId="788" />
+      <Token Text="." UId="789" />
+      <Component Name="5-Auxiliaries" UId="790" />
+      <Token Text="." UId="791" />
+      <Component Name="5255_SSC_PDT_01_Fault" UId="792" />
+      <Token Text="." UId="793" />
+      <Component Name="Memory" UId="794" />
+      <Token Text="." UId="795" />
+      <Token Text="%X0" UId="796" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="797" />
+  <NewLine Num="1" UId="798" />
+  <Access Scope="GlobalVariable" UId="799">
+    <Symbol UId="800">
+      <Component Name="DB_Application" UId="801" />
+      <Token Text="." UId="802" />
+      <Component Name="FromHB" UId="803" />
+      <Token Text="." UId="804" />
+      <Component Name="Alarms" UId="805">
+        <Token Text="[" UId="806" />
+        <Access Scope="LiteralConstant" UId="807">
+          <Constant UId="808">
+            <ConstantValue UId="810">132</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="811" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="812" />
+  <Token Text=":=" UId="813" />
+  <Blank Num="1" UId="814" />
+  <Access Scope="GlobalVariable" UId="815">
+    <Symbol UId="816">
+      <Component Name="DB_WinCCAlarms" UId="817" />
+      <Token Text="." UId="818" />
+      <Component Name="5-Auxiliaries" UId="819" />
+      <Token Text="." UId="820" />
+      <Component Name="5256_SSC_LT_01_Fault" UId="821" />
+      <Token Text="." UId="822" />
+      <Component Name="Memory" UId="823" />
+      <Token Text="." UId="824" />
+      <Token Text="%X0" UId="825" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="826" />
+  <NewLine Num="1" UId="827" />
+  <Access Scope="GlobalVariable" UId="828">
+    <Symbol UId="829">
+      <Component Name="DB_Application" UId="830" />
+      <Token Text="." UId="831" />
+      <Component Name="FromHB" UId="832" />
+      <Token Text="." UId="833" />
+      <Component Name="Alarms" UId="834">
+        <Token Text="[" UId="835" />
+        <Access Scope="LiteralConstant" UId="836">
+          <Constant UId="837">
+            <ConstantValue UId="839">133</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="840" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="841" />
+  <Token Text=":=" UId="842" />
+  <Blank Num="1" UId="843" />
+  <Access Scope="GlobalVariable" UId="844">
+    <Symbol UId="845">
+      <Component Name="DB_WinCCAlarms" UId="846" />
+      <Token Text="." UId="847" />
+      <Component Name="5-Auxiliaries" UId="848" />
+      <Token Text="." UId="849" />
+      <Component Name="5257_SSC_LT_01_Low" UId="850" />
+      <Token Text="." UId="851" />
+      <Component Name="Memory" UId="852" />
+      <Token Text="." UId="853" />
+      <Token Text="%X0" UId="854" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="855" />
+  <NewLine Num="1" UId="856" />
+  <Access Scope="GlobalVariable" UId="857">
+    <Symbol UId="858">
+      <Component Name="DB_Application" UId="859" />
+      <Token Text="." UId="860" />
+      <Component Name="FromHB" UId="861" />
+      <Token Text="." UId="862" />
+      <Component Name="Alarms" UId="863">
+        <Token Text="[" UId="864" />
+        <Access Scope="LiteralConstant" UId="865">
+          <Constant UId="866">
+            <ConstantValue UId="868">134</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="869" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="870" />
+  <Token Text=":=" UId="871" />
+  <Blank Num="1" UId="872" />
+  <Access Scope="GlobalVariable" UId="873">
+    <Symbol UId="874">
+      <Component Name="DB_WinCCAlarms" UId="875" />
+      <Token Text="." UId="876" />
+      <Component Name="5-Auxiliaries" UId="877" />
+      <Token Text="." UId="878" />
+      <Component Name="5258_SSC_PDT_01_High" UId="879" />
+      <Token Text="." UId="880" />
+      <Component Name="Memory" UId="881" />
+      <Token Text="." UId="882" />
+      <Token Text="%X0" UId="883" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="884" />
+  <NewLine Num="1" UId="885" />
+  <Access Scope="GlobalVariable" UId="886">
+    <Symbol UId="887">
+      <Component Name="DB_Application" UId="888" />
+      <Token Text="." UId="889" />
+      <Component Name="FromHB" UId="890" />
+      <Token Text="." UId="891" />
+      <Component Name="Alarms" UId="892">
+        <Token Text="[" UId="893" />
+        <Access Scope="LiteralConstant" UId="894">
+          <Constant UId="895">
+            <ConstantValue UId="897">135</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="898" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="899" />
+  <Token Text=":=" UId="900" />
+  <Blank Num="1" UId="901" />
+  <Access Scope="GlobalVariable" UId="902">
+    <Symbol UId="903">
+      <Component Name="DB_WinCCAlarms" UId="904" />
+      <Token Text="." UId="905" />
+      <Component Name="5-Auxiliaries" UId="906" />
+      <Token Text="." UId="907" />
+      <Component Name="5259_SSC_TT_02_High" UId="908" />
+      <Token Text="." UId="909" />
+      <Component Name="Memory" UId="910" />
+      <Token Text="." UId="911" />
+      <Token Text="%X0" UId="912" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="913" />
+  <NewLine Num="1" UId="914" />
+  <Access Scope="GlobalVariable" UId="915">
+    <Symbol UId="916">
+      <Component Name="DB_Application" UId="917" />
+      <Token Text="." UId="918" />
+      <Component Name="FromHB" UId="919" />
+      <Token Text="." UId="920" />
+      <Component Name="Alarms" UId="921">
+        <Token Text="[" UId="922" />
+        <Access Scope="LiteralConstant" UId="923">
+          <Constant UId="924">
+            <ConstantValue UId="926">136</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="927" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="928" />
+  <Token Text=":=" UId="929" />
+  <Blank Num="1" UId="930" />
+  <Access Scope="GlobalVariable" UId="931">
+    <Symbol UId="932">
+      <Component Name="DB_WinCCAlarms" UId="933" />
+      <Token Text="." UId="934" />
+      <Component Name="5-Auxiliaries" UId="935" />
+      <Token Text="." UId="936" />
+      <Component Name="5260_SSC_TT_03_Low" UId="937" />
+      <Token Text="." UId="938" />
+      <Component Name="Memory" UId="939" />
+      <Token Text="." UId="940" />
+      <Token Text="%X0" UId="941" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="942" />
+  <NewLine Num="1" UId="943" />
+  <Access Scope="GlobalVariable" UId="944">
+    <Symbol UId="945">
+      <Component Name="DB_Application" UId="946" />
+      <Token Text="." UId="947" />
+      <Component Name="FromHB" UId="948" />
+      <Token Text="." UId="949" />
+      <Component Name="Alarms" UId="950">
+        <Token Text="[" UId="951" />
+        <Access Scope="LiteralConstant" UId="952">
+          <Constant UId="953">
+            <ConstantValue UId="955">137</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="956" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="957" />
+  <Token Text=":=" UId="958" />
+  <Blank Num="1" UId="959" />
+  <Access Scope="GlobalVariable" UId="960">
+    <Symbol UId="961">
+      <Component Name="DB_WinCCAlarms" UId="962" />
+      <Token Text="." UId="963" />
+      <Component Name="5-Auxiliaries" UId="964" />
+      <Token Text="." UId="965" />
+      <Component Name="5261_SSC_PIT_01_Low" UId="966" />
+      <Token Text="." UId="967" />
+      <Component Name="Memory" UId="968" />
+      <Token Text="." UId="969" />
+      <Token Text="%X0" UId="970" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="971" />
+  <NewLine Num="1" UId="972" />
+  <Access Scope="GlobalVariable" UId="973">
+    <Symbol UId="974">
+      <Component Name="DB_Application" UId="975" />
+      <Token Text="." UId="976" />
+      <Component Name="FromHB" UId="977" />
+      <Token Text="." UId="978" />
+      <Component Name="Alarms" UId="979">
+        <Token Text="[" UId="980" />
+        <Access Scope="LiteralConstant" UId="981">
+          <Constant UId="982">
+            <ConstantValue UId="984">138</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="985" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="986" />
+  <Token Text=":=" UId="987" />
+  <Blank Num="1" UId="988" />
+  <Access Scope="GlobalVariable" UId="989">
+    <Symbol UId="990">
+      <Component Name="DB_WinCCAlarms" UId="991" />
+      <Token Text="." UId="992" />
+      <Component Name="5-Auxiliaries" UId="993" />
+      <Token Text="." UId="994" />
+      <Component Name="5262_DeltaT_ShaftSealHigh" UId="995" />
+      <Token Text="." UId="996" />
+      <Component Name="Memory" UId="997" />
+      <Token Text="." UId="998" />
+      <Token Text="%X0" UId="999" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1000" />
+  <NewLine Num="1" UId="1001" />
+  <Access Scope="GlobalVariable" UId="1002">
+    <Symbol UId="1003">
+      <Component Name="DB_Application" UId="1004" />
+      <Token Text="." UId="1005" />
+      <Component Name="FromHB" UId="1006" />
+      <Token Text="." UId="1007" />
+      <Component Name="Alarms" UId="1008">
+        <Token Text="[" UId="1009" />
+        <Access Scope="LiteralConstant" UId="1010">
+          <Constant UId="1011">
+            <ConstantValue UId="1013">139</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1014" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1015" />
+  <Token Text=":=" UId="1016" />
+  <Blank Num="1" UId="1017" />
+  <Access Scope="GlobalVariable" UId="1018">
+    <Symbol UId="1019">
+      <Component Name="DB_WinCCAlarms" UId="1020" />
+      <Token Text="." UId="1021" />
+      <Component Name="5-Auxiliaries" UId="1022" />
+      <Token Text="." UId="1023" />
+      <Component Name="5263_SSC_PIT_01_High" UId="1024" />
+      <Token Text="." UId="1025" />
+      <Component Name="Memory" UId="1026" />
+      <Token Text="." UId="1027" />
+      <Token Text="%X0" UId="1028" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1029" />
+  <NewLine Num="1" UId="1030" />
+  <Access Scope="GlobalVariable" UId="1031">
+    <Symbol UId="1032">
+      <Component Name="DB_Application" UId="1033" />
+      <Token Text="." UId="1034" />
+      <Component Name="FromHB" UId="1035" />
+      <Token Text="." UId="1036" />
+      <Component Name="Alarms" UId="1037">
+        <Token Text="[" UId="1038" />
+        <Access Scope="LiteralConstant" UId="1039">
+          <Constant UId="1040">
+            <ConstantValue UId="1042">140</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="1043" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="1044" />
+  <Token Text=":=" UId="1045" />
+  <Blank Num="1" UId="1046" />
+  <Access Scope="GlobalVariable" UId="1047">
+    <Symbol UId="1048">
+      <Component Name="DB_WinCCAlarms" UId="1049" />
+      <Token Text="." UId="1050" />
+      <Component Name="5-Auxiliaries" UId="1051" />
+      <Token Text="." UId="1052" />
+      <Component Name="5268_ShaftSealSystemShutdown" UId="1053" />
+      <Token Text="." UId="1054" />
+      <Component Name="Memory" UId="1055" />
+      <Token Text="." UId="1056" />
+      <Token Text="%X0" UId="1057" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="1058" />
+  <NewLine Num="1" UId="1059" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Alarms to App PLC - Group 3 &amp; 5</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> Group 8-Events</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="24">
+    <Text UId="25">"DB_Application".Status.Alarms[141] := "DB_WinCCAlarms"."8-Events"."8000_State0_Initialize".Memory.%X0;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="26" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="27">
+    <Text UId="28">"DB_Application".Status.Alarms[142] := "DB_WinCCAlarms"."8-Events"."8001_State1_Offline".Memory.%X0;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="29" />
+  <Access Scope="GlobalVariable" UId="30">
+    <Symbol UId="31">
+      <Component Name="DB_Application" UId="32" />
+      <Token Text="." UId="33" />
+      <Component Name="FromHB" UId="34" />
+      <Token Text="." UId="35" />
+      <Component Name="Alarms" UId="36">
+        <Token Text="[" UId="37" />
+        <Access Scope="LiteralConstant" UId="38">
+          <Constant UId="39">
+            <ConstantValue UId="41">143</ConstantValue>
+          </Constant>
+        </Access>
+        <Token Text="]" UId="42" />
+      </Component>
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="43" />
+  <Token Text=":=" UId="44" />
+  <Blank Num="1" UId="45" />
+  <Access Scope="GlobalVariable" UId="46">
+    <Symbol UId="47">
+      <Component Name="DB_WinCCAlarms" UId="48" />
+      <Token Text="." UId="49" />
+      <Component Name="8-Events" UId="50" />
+      <Token Text="." UId="51" />
+      <Component Name="8002_State2_Standby" UId="52" />
+      <Token Text="." UId="53" />
+      <Component Name="Memory" UId="54" />
+      <Token Text="." UId="55" />
+      <Token Text="%X0" UId="56" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="57" />
+  <NewLine Num="7" UId="58" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Alarms to App PLC - Group 8</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="30" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="31" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>Misc alarm handling</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T06:49:31.9881729Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Types.PlcStruct ID="0">
+    <AttributeList>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="None">
+    <Member Name="Fluids" Datatype="Array[1..4] of &quot;FluidData-STRUCT&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="Name" Datatype="String" /><Member Name="FluidTypeNumber" Datatype="Int" /><Member Name="SaturationCurve_Temperature_C" Datatype="Array[0..40] of Real" /><Member Name="SaturationCurve_Pressure_kPa" Datatype="Array[0..40] of Real" /><Member Name="DensityCurve_Pressure_kPa" Datatype="Array[0..12] of Real" /><Member Name="DensityCurveLiquide_Densety_kg_m3" Datatype="Array[0..12] of Real" /><Member Name="DensityCurveVapor_Densety_kg_m3" Datatype="Array[0..12] of Real" /><Member Name="DensityCurveVapor_SuperheatCorrection_a" Datatype="Real" /><Member Name="DensityCurveVapor_SuperheatCorrection_b" Datatype="Real" /><Member Name="EnthalpyMap_Superheat_C" Datatype="Array[0..8] of Real" /><Member Name="EnthalpyMap_Pressure_kPa" Datatype="Array[0..11] of Real" /><Member Name="EnthalpyMap_Enthalpy_kJ_kg" Datatype="Array[0..11, 0..8] of Real" /><Member Name="Limits" Datatype="&quot;FluidBasedLimits-STRUCT&quot;"><Sections><Section Name="None"><Member Name="T_HeatSourceTemperature_Max" Datatype="Real" /><Member Name="T_HeatSourceTemperature_Min" Datatype="Real" /><Member Name="T_HeatSinkTemperature_Max" Datatype="Real" /><Member Name="T_OilTemperature_Critical" Datatype="Real" /><Member Name="T_OilSuperheat" Datatype="Real" /><Member Name="T_CoolingSetpoint" Datatype="Real" /></Section></Sections></Member><Member Name="T_AdditionalSuperHeatEvaporator" Datatype="Real" /><Member Name="P_CriticalPoint" Datatype="Real" /></Section></Sections></Member>
+    <Member Name="CompressorTypes" Datatype="Array[1..4] of &quot;CompressorData-STRUCT&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="CompressorTypeNumber" Datatype="Int" /><Member Name="Limits" Datatype="Struct"><Member Name="p_CrankCase_Max" Datatype="Real" /><Member Name="p_Oil_Min" Datatype="Real" /><Member Name="n_Compressor_Max" Datatype="Real" /><Member Name="T_Motor_Max" Datatype="Real" /><Member Name="M_Motor_Limit" Datatype="Real" /><Member Name="T_Inverter_Max" Datatype="Real" /></Member><Member Name="Constant" Datatype="Struct"><Member Name="CompressionVolume_L" Datatype="Real" /><Member Name="CompressionLostPerPressureRatio" Datatype="Real" /><Member Name="PumpEfficinecy" Datatype="Real" /></Member><Member Name="Settings" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="SystemTypes" Datatype="Array[1..6] of &quot;SystemData-STRUCT&quot;"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="SystemTypeNumber" Datatype="Int" /><Member Name="Limits" Datatype="Struct"><Member Name="T_SuperHeatCompressorIn_Min" Datatype="Real" /><Member Name="T_Housing_Max" Datatype="Real" /><Member Name="T_CoolingCycle_Max" Datatype="Real" /><Member Name="p_CompressorOut_Max" Datatype="Real" /><Member Name="p_EvaporatorOut_Max" Datatype="Real" /></Member><Member Name="Constant" Datatype="Bool" /><Member Name="Settings" Datatype="Struct"><Member Name="CooliungPump_ReversedPWM" Datatype="Bool" /><Member Name="MotorCooling_AirFanCooledCycle" Datatype="Bool" /><Member Name="DoubleExpansionValves" Datatype="Bool" /><Member Name="Reserve3" Datatype="Bool" /><Member Name="Reserve4" Datatype="Bool" /><Member Name="Reserve5" Datatype="Bool" /></Member></Section></Sections></Member>
+  </Section>
+</Sections></Interface>
+      <IsFailsafeCompliant>false</IsFailsafeCompliant>
+      <Name>StaticData-STRUCT</Name>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Types.PlcStruct>
+</Document>

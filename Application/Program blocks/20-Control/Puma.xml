@@ -1,0 +1,1971 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T06:49:08.0055945Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="bEnable" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="Watchdog" Datatype="&quot;fbHeartbeatCount2&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bEnable" Datatype="Bool" /><Member Name="nLocalCount" Datatype="UInt" /><Member Name="nRemoteCount" Datatype="UInt" /></Section><Section Name="Output"><Member Name="bOk" Datatype="Bool" /></Section><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stHeartbeatCount2&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Timeout" Datatype="TON_TIME" Version="1.0"><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member><Member Name="nRemoteCountPrev" Datatype="UInt" /><Member Name="Enabled" Datatype="Bool" /></Section></Sections></Member>
+    <Member Name="Dummy" Datatype="UInt" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+    <Member Name="epForceExpansionValveSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enForceExpansionValveSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epForceHeatSinkOutSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enForceHeatSinkOutSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epForceMotorRpmSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enForceMotorRpmSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epForceOilHeatingSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enForceOilHeatingSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epForcePinchSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enForcePinchSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epForceSuperheatSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enForceSuperheatSP" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epStartRequest" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enStartRequest" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epStopRequest" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enStopRequest" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epAlarmAcknowledge" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enAlarmAcknowledge" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epResetEmergencyStop" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enResetEmergencyStop" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="epHydrolockProtection" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enHydrolockProtection" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="enClearance" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="ExpansionManualPrev" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="HeatSinkManualPrev" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="PerformanceManualPrev" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="OilHeatingManualPrev" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="PinchManualPrev" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="SuperheatManualPrev" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="WatchdogTimeout" Datatype="TON_TIME" Version="1.0" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="PT" Datatype="Time" /><Member Name="ET" Datatype="Time" /><Member Name="IN" Datatype="Bool" /><Member Name="Q" Datatype="Bool" /></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="bStopReq" Datatype="Bool" />
+    <Member Name="bWatchdogOk" Datatype="Bool" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>Puma</Name>
+      <Number>2</Number>
+      <ProgrammingLanguage>LAD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LiteralConstant" UId="21">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>true</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="CAN-Communication_DB" />
+        <Component Name="CountSendAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="WatchdogFeedback" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Puma" />
+        <Component Name="Watchdog" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="bWatchdogOk" />
+      </Symbol>
+    </Access>
+    <Call UId="26">
+      <CallInfo Name="fbHeartbeatCount2" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="27">
+          <Component Name="Watchdog" />
+        </Instance>
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="nLocalCount" Section="Input" Type="UInt" />
+        <Parameter Name="nRemoteCount" Section="Input" Type="UInt" />
+        <Parameter Name="bOk" Section="Output" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stHeartbeatCount2&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="28">
+      <Powerrail />
+      <NameCon UId="26" Name="en" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="21" />
+      <NameCon UId="26" Name="bEnable" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="22" />
+      <NameCon UId="26" Name="nLocalCount" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="nRemoteCount" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="24" />
+      <NameCon UId="26" Name="sTag" />
+    </Wire>
+    <Wire UId="33">
+      <NameCon UId="26" Name="bOk" />
+      <IdentCon UId="25" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Watchdog</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="epForceExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_104h" />
+        <Component Name="ExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="ExpansionManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="ExpansionValveRegulatorManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_104h" />
+        <Component Name="ExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="ExpansionValveManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="ExpansionManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="enForceExpansionValveSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="ExpansionValveRegulatorManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceHeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="epForceHeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceHeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_102h" />
+        <Component Name="HeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="HeatSinkManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="HeatSinkOutManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="39">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_102h" />
+        <Component Name="HeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="HeatSinkOutManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="41">
+      <Symbol>
+        <Component Name="HeatSinkManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceHeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="43">
+      <Symbol>
+        <Component Name="enForceHeatSinkOutSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="HeatSinkOutManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="45">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForcePerformanceControlSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="46">
+      <Symbol>
+        <Component Name="epForceMotorRpmSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="47">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForcePerformanceControlSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_103h" />
+        <Component Name="PerformanceControlSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="49">
+      <Symbol>
+        <Component Name="PerformanceManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PerformanceControlManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="51">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_103h" />
+        <Component Name="PerformanceControlSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PerformanceControlManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="53">
+      <Symbol>
+        <Component Name="PerformanceManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForcePerformanceControlSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="55">
+      <Symbol>
+        <Component Name="enForceMotorRpmSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PerformanceControlManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="57">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceOilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="58">
+      <Symbol>
+        <Component Name="epForceOilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="59">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceOilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_103h" />
+        <Component Name="OilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="61">
+      <Symbol>
+        <Component Name="OilHeatingManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="OilHeatingRegulatorManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="63">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_103h" />
+        <Component Name="OilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="OilHeatingManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="65">
+      <Symbol>
+        <Component Name="OilHeatingManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceOilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="67">
+      <Symbol>
+        <Component Name="enForceOilHeatingSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="68">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="OilHeatingRegulatorManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="69">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForcePinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="70">
+      <Symbol>
+        <Component Name="epForcePinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="71">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForcePinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="72">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_104h" />
+        <Component Name="PinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="73">
+      <Symbol>
+        <Component Name="PinchManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="74">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PinchRegulatorManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="75">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_104h" />
+        <Component Name="PinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="76">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PinchManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="77">
+      <Symbol>
+        <Component Name="PinchManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="78">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForcePinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="79">
+      <Symbol>
+        <Component Name="enForcePinchSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="80">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PinchRegulatorManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="81">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceSuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="82">
+      <Symbol>
+        <Component Name="epForceSuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="83">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceSuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="84">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_102h" />
+        <Component Name="SuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="85">
+      <Symbol>
+        <Component Name="SuperheatManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="86">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="SuperheatManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="87">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_102h" />
+        <Component Name="SuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="88">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="SuperheatManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="89">
+      <Symbol>
+        <Component Name="SuperheatManualPrev" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="90">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ForceSuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="91">
+      <Symbol>
+        <Component Name="enForceSuperheatSP" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="92">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="SuperheatManualMode" />
+      </Symbol>
+    </Access>
+    <Part Name="PContact" UId="93" />
+    <Part Name="Contact" UId="94" />
+    <Part Name="Ne" UId="95">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="O" UId="96">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="97" />
+    <Part Name="Move" UId="98" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="NContact" UId="99" />
+    <Part Name="RCoil" UId="100" />
+    <Part Name="PContact" UId="101" />
+    <Part Name="Contact" UId="102" />
+    <Part Name="Ne" UId="103">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="O" UId="104">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="105" />
+    <Part Name="Move" UId="106" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="NContact" UId="107" />
+    <Part Name="RCoil" UId="108" />
+    <Part Name="PContact" UId="109" />
+    <Part Name="Contact" UId="110" />
+    <Part Name="Ne" UId="111">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="O" UId="112">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="113" />
+    <Part Name="Move" UId="114" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="NContact" UId="115" />
+    <Part Name="RCoil" UId="116" />
+    <Part Name="PContact" UId="117" />
+    <Part Name="Contact" UId="118" />
+    <Part Name="Ne" UId="119">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="O" UId="120">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="121" />
+    <Part Name="Move" UId="122" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="NContact" UId="123" />
+    <Part Name="RCoil" UId="124" />
+    <Part Name="PContact" UId="125" />
+    <Part Name="Contact" UId="126" />
+    <Part Name="Ne" UId="127">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="O" UId="128">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="129" />
+    <Part Name="Move" UId="130" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="NContact" UId="131" />
+    <Part Name="RCoil" UId="132" />
+    <Part Name="PContact" UId="133" />
+    <Part Name="Contact" UId="134" />
+    <Part Name="Ne" UId="135">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="O" UId="136">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="SCoil" UId="137" />
+    <Part Name="Move" UId="138" DisabledENO="true">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="NContact" UId="139" />
+    <Part Name="RCoil" UId="140" />
+  </Parts>
+  <Wires>
+    <Wire UId="141">
+      <Powerrail />
+      <NameCon UId="93" Name="pre" />
+      <NameCon UId="94" Name="in" />
+      <NameCon UId="99" Name="pre" />
+      <NameCon UId="101" Name="pre" />
+      <NameCon UId="102" Name="in" />
+      <NameCon UId="107" Name="pre" />
+      <NameCon UId="109" Name="pre" />
+      <NameCon UId="110" Name="in" />
+      <NameCon UId="115" Name="pre" />
+      <NameCon UId="117" Name="pre" />
+      <NameCon UId="118" Name="in" />
+      <NameCon UId="123" Name="pre" />
+      <NameCon UId="125" Name="pre" />
+      <NameCon UId="126" Name="in" />
+      <NameCon UId="131" Name="pre" />
+      <NameCon UId="133" Name="pre" />
+      <NameCon UId="134" Name="in" />
+      <NameCon UId="139" Name="pre" />
+    </Wire>
+    <Wire UId="142">
+      <IdentCon UId="22" />
+      <NameCon UId="93" Name="bit" />
+    </Wire>
+    <Wire UId="143">
+      <IdentCon UId="21" />
+      <NameCon UId="93" Name="operand" />
+    </Wire>
+    <Wire UId="144">
+      <NameCon UId="93" Name="out" />
+      <NameCon UId="96" Name="in1" />
+    </Wire>
+    <Wire UId="145">
+      <IdentCon UId="23" />
+      <NameCon UId="94" Name="operand" />
+    </Wire>
+    <Wire UId="146">
+      <NameCon UId="94" Name="out" />
+      <NameCon UId="95" Name="pre" />
+    </Wire>
+    <Wire UId="147">
+      <IdentCon UId="24" />
+      <NameCon UId="95" Name="in1" />
+    </Wire>
+    <Wire UId="148">
+      <IdentCon UId="25" />
+      <NameCon UId="95" Name="in2" />
+    </Wire>
+    <Wire UId="149">
+      <NameCon UId="95" Name="out" />
+      <NameCon UId="96" Name="in2" />
+    </Wire>
+    <Wire UId="150">
+      <NameCon UId="96" Name="out" />
+      <NameCon UId="97" Name="in" />
+      <NameCon UId="98" Name="en" />
+    </Wire>
+    <Wire UId="151">
+      <IdentCon UId="26" />
+      <NameCon UId="97" Name="operand" />
+    </Wire>
+    <Wire UId="152">
+      <IdentCon UId="27" />
+      <NameCon UId="98" Name="in" />
+    </Wire>
+    <Wire UId="153">
+      <NameCon UId="98" Name="out1" />
+      <IdentCon UId="28" />
+    </Wire>
+    <Wire UId="154">
+      <NameCon UId="98" Name="out2" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="155">
+      <IdentCon UId="31" />
+      <NameCon UId="99" Name="bit" />
+    </Wire>
+    <Wire UId="156">
+      <IdentCon UId="30" />
+      <NameCon UId="99" Name="operand" />
+    </Wire>
+    <Wire UId="157">
+      <NameCon UId="99" Name="out" />
+      <NameCon UId="100" Name="in" />
+    </Wire>
+    <Wire UId="158">
+      <IdentCon UId="32" />
+      <NameCon UId="100" Name="operand" />
+    </Wire>
+    <Wire UId="159">
+      <IdentCon UId="34" />
+      <NameCon UId="101" Name="bit" />
+    </Wire>
+    <Wire UId="160">
+      <IdentCon UId="33" />
+      <NameCon UId="101" Name="operand" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="101" Name="out" />
+      <NameCon UId="104" Name="in1" />
+    </Wire>
+    <Wire UId="162">
+      <IdentCon UId="35" />
+      <NameCon UId="102" Name="operand" />
+    </Wire>
+    <Wire UId="163">
+      <NameCon UId="102" Name="out" />
+      <NameCon UId="103" Name="pre" />
+    </Wire>
+    <Wire UId="164">
+      <IdentCon UId="36" />
+      <NameCon UId="103" Name="in1" />
+    </Wire>
+    <Wire UId="165">
+      <IdentCon UId="37" />
+      <NameCon UId="103" Name="in2" />
+    </Wire>
+    <Wire UId="166">
+      <NameCon UId="103" Name="out" />
+      <NameCon UId="104" Name="in2" />
+    </Wire>
+    <Wire UId="167">
+      <NameCon UId="104" Name="out" />
+      <NameCon UId="105" Name="in" />
+      <NameCon UId="106" Name="en" />
+    </Wire>
+    <Wire UId="168">
+      <IdentCon UId="38" />
+      <NameCon UId="105" Name="operand" />
+    </Wire>
+    <Wire UId="169">
+      <IdentCon UId="39" />
+      <NameCon UId="106" Name="in" />
+    </Wire>
+    <Wire UId="170">
+      <NameCon UId="106" Name="out1" />
+      <IdentCon UId="40" />
+    </Wire>
+    <Wire UId="171">
+      <NameCon UId="106" Name="out2" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="172">
+      <IdentCon UId="43" />
+      <NameCon UId="107" Name="bit" />
+    </Wire>
+    <Wire UId="173">
+      <IdentCon UId="42" />
+      <NameCon UId="107" Name="operand" />
+    </Wire>
+    <Wire UId="174">
+      <NameCon UId="107" Name="out" />
+      <NameCon UId="108" Name="in" />
+    </Wire>
+    <Wire UId="175">
+      <IdentCon UId="44" />
+      <NameCon UId="108" Name="operand" />
+    </Wire>
+    <Wire UId="176">
+      <IdentCon UId="46" />
+      <NameCon UId="109" Name="bit" />
+    </Wire>
+    <Wire UId="177">
+      <IdentCon UId="45" />
+      <NameCon UId="109" Name="operand" />
+    </Wire>
+    <Wire UId="178">
+      <NameCon UId="109" Name="out" />
+      <NameCon UId="112" Name="in1" />
+    </Wire>
+    <Wire UId="179">
+      <IdentCon UId="47" />
+      <NameCon UId="110" Name="operand" />
+    </Wire>
+    <Wire UId="180">
+      <NameCon UId="110" Name="out" />
+      <NameCon UId="111" Name="pre" />
+    </Wire>
+    <Wire UId="181">
+      <IdentCon UId="48" />
+      <NameCon UId="111" Name="in1" />
+    </Wire>
+    <Wire UId="182">
+      <IdentCon UId="49" />
+      <NameCon UId="111" Name="in2" />
+    </Wire>
+    <Wire UId="183">
+      <NameCon UId="111" Name="out" />
+      <NameCon UId="112" Name="in2" />
+    </Wire>
+    <Wire UId="184">
+      <NameCon UId="112" Name="out" />
+      <NameCon UId="113" Name="in" />
+      <NameCon UId="114" Name="en" />
+    </Wire>
+    <Wire UId="185">
+      <IdentCon UId="50" />
+      <NameCon UId="113" Name="operand" />
+    </Wire>
+    <Wire UId="186">
+      <IdentCon UId="51" />
+      <NameCon UId="114" Name="in" />
+    </Wire>
+    <Wire UId="187">
+      <NameCon UId="114" Name="out1" />
+      <IdentCon UId="52" />
+    </Wire>
+    <Wire UId="188">
+      <NameCon UId="114" Name="out2" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="189">
+      <IdentCon UId="55" />
+      <NameCon UId="115" Name="bit" />
+    </Wire>
+    <Wire UId="190">
+      <IdentCon UId="54" />
+      <NameCon UId="115" Name="operand" />
+    </Wire>
+    <Wire UId="191">
+      <NameCon UId="115" Name="out" />
+      <NameCon UId="116" Name="in" />
+    </Wire>
+    <Wire UId="192">
+      <IdentCon UId="56" />
+      <NameCon UId="116" Name="operand" />
+    </Wire>
+    <Wire UId="193">
+      <IdentCon UId="58" />
+      <NameCon UId="117" Name="bit" />
+    </Wire>
+    <Wire UId="194">
+      <IdentCon UId="57" />
+      <NameCon UId="117" Name="operand" />
+    </Wire>
+    <Wire UId="195">
+      <NameCon UId="117" Name="out" />
+      <NameCon UId="120" Name="in1" />
+    </Wire>
+    <Wire UId="196">
+      <IdentCon UId="59" />
+      <NameCon UId="118" Name="operand" />
+    </Wire>
+    <Wire UId="197">
+      <NameCon UId="118" Name="out" />
+      <NameCon UId="119" Name="pre" />
+    </Wire>
+    <Wire UId="198">
+      <IdentCon UId="60" />
+      <NameCon UId="119" Name="in1" />
+    </Wire>
+    <Wire UId="199">
+      <IdentCon UId="61" />
+      <NameCon UId="119" Name="in2" />
+    </Wire>
+    <Wire UId="200">
+      <NameCon UId="119" Name="out" />
+      <NameCon UId="120" Name="in2" />
+    </Wire>
+    <Wire UId="201">
+      <NameCon UId="120" Name="out" />
+      <NameCon UId="121" Name="in" />
+      <NameCon UId="122" Name="en" />
+    </Wire>
+    <Wire UId="202">
+      <IdentCon UId="62" />
+      <NameCon UId="121" Name="operand" />
+    </Wire>
+    <Wire UId="203">
+      <IdentCon UId="63" />
+      <NameCon UId="122" Name="in" />
+    </Wire>
+    <Wire UId="204">
+      <NameCon UId="122" Name="out1" />
+      <IdentCon UId="64" />
+    </Wire>
+    <Wire UId="205">
+      <NameCon UId="122" Name="out2" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="206">
+      <IdentCon UId="67" />
+      <NameCon UId="123" Name="bit" />
+    </Wire>
+    <Wire UId="207">
+      <IdentCon UId="66" />
+      <NameCon UId="123" Name="operand" />
+    </Wire>
+    <Wire UId="208">
+      <NameCon UId="123" Name="out" />
+      <NameCon UId="124" Name="in" />
+    </Wire>
+    <Wire UId="209">
+      <IdentCon UId="68" />
+      <NameCon UId="124" Name="operand" />
+    </Wire>
+    <Wire UId="210">
+      <IdentCon UId="70" />
+      <NameCon UId="125" Name="bit" />
+    </Wire>
+    <Wire UId="211">
+      <IdentCon UId="69" />
+      <NameCon UId="125" Name="operand" />
+    </Wire>
+    <Wire UId="212">
+      <NameCon UId="125" Name="out" />
+      <NameCon UId="128" Name="in1" />
+    </Wire>
+    <Wire UId="213">
+      <IdentCon UId="71" />
+      <NameCon UId="126" Name="operand" />
+    </Wire>
+    <Wire UId="214">
+      <NameCon UId="126" Name="out" />
+      <NameCon UId="127" Name="pre" />
+    </Wire>
+    <Wire UId="215">
+      <IdentCon UId="72" />
+      <NameCon UId="127" Name="in1" />
+    </Wire>
+    <Wire UId="216">
+      <IdentCon UId="73" />
+      <NameCon UId="127" Name="in2" />
+    </Wire>
+    <Wire UId="217">
+      <NameCon UId="127" Name="out" />
+      <NameCon UId="128" Name="in2" />
+    </Wire>
+    <Wire UId="218">
+      <NameCon UId="128" Name="out" />
+      <NameCon UId="129" Name="in" />
+      <NameCon UId="130" Name="en" />
+    </Wire>
+    <Wire UId="219">
+      <IdentCon UId="74" />
+      <NameCon UId="129" Name="operand" />
+    </Wire>
+    <Wire UId="220">
+      <IdentCon UId="75" />
+      <NameCon UId="130" Name="in" />
+    </Wire>
+    <Wire UId="221">
+      <NameCon UId="130" Name="out1" />
+      <IdentCon UId="76" />
+    </Wire>
+    <Wire UId="222">
+      <NameCon UId="130" Name="out2" />
+      <IdentCon UId="77" />
+    </Wire>
+    <Wire UId="223">
+      <IdentCon UId="79" />
+      <NameCon UId="131" Name="bit" />
+    </Wire>
+    <Wire UId="224">
+      <IdentCon UId="78" />
+      <NameCon UId="131" Name="operand" />
+    </Wire>
+    <Wire UId="225">
+      <NameCon UId="131" Name="out" />
+      <NameCon UId="132" Name="in" />
+    </Wire>
+    <Wire UId="226">
+      <IdentCon UId="80" />
+      <NameCon UId="132" Name="operand" />
+    </Wire>
+    <Wire UId="227">
+      <IdentCon UId="82" />
+      <NameCon UId="133" Name="bit" />
+    </Wire>
+    <Wire UId="228">
+      <IdentCon UId="81" />
+      <NameCon UId="133" Name="operand" />
+    </Wire>
+    <Wire UId="229">
+      <NameCon UId="133" Name="out" />
+      <NameCon UId="136" Name="in1" />
+    </Wire>
+    <Wire UId="230">
+      <IdentCon UId="83" />
+      <NameCon UId="134" Name="operand" />
+    </Wire>
+    <Wire UId="231">
+      <NameCon UId="134" Name="out" />
+      <NameCon UId="135" Name="pre" />
+    </Wire>
+    <Wire UId="232">
+      <IdentCon UId="84" />
+      <NameCon UId="135" Name="in1" />
+    </Wire>
+    <Wire UId="233">
+      <IdentCon UId="85" />
+      <NameCon UId="135" Name="in2" />
+    </Wire>
+    <Wire UId="234">
+      <NameCon UId="135" Name="out" />
+      <NameCon UId="136" Name="in2" />
+    </Wire>
+    <Wire UId="235">
+      <NameCon UId="136" Name="out" />
+      <NameCon UId="137" Name="in" />
+      <NameCon UId="138" Name="en" />
+    </Wire>
+    <Wire UId="236">
+      <IdentCon UId="86" />
+      <NameCon UId="137" Name="operand" />
+    </Wire>
+    <Wire UId="237">
+      <IdentCon UId="87" />
+      <NameCon UId="138" Name="in" />
+    </Wire>
+    <Wire UId="238">
+      <NameCon UId="138" Name="out1" />
+      <IdentCon UId="88" />
+    </Wire>
+    <Wire UId="239">
+      <NameCon UId="138" Name="out2" />
+      <IdentCon UId="89" />
+    </Wire>
+    <Wire UId="240">
+      <IdentCon UId="91" />
+      <NameCon UId="139" Name="bit" />
+    </Wire>
+    <Wire UId="241">
+      <IdentCon UId="90" />
+      <NameCon UId="139" Name="operand" />
+    </Wire>
+    <Wire UId="242">
+      <NameCon UId="139" Name="out" />
+      <NameCon UId="140" Name="in" />
+    </Wire>
+    <Wire UId="243">
+      <IdentCon UId="92" />
+      <NameCon UId="140" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>A positive edge followed by a SET  writes to the destination bit once, without "holding" the value. Easiest to write &amp; read in ladder.
+Triggering a MOVE on value change writes the value once without continually overwriting it.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Write Puma setpoints to Application</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="StartRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="epStartRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="Clearance" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="PumaSystemReady" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="StartRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="StartRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="enStartRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="StartRequest" />
+      </Symbol>
+    </Access>
+    <Part Name="PContact" UId="29" />
+    <Part Name="Contact" UId="30" />
+    <Part Name="Contact" UId="31" />
+    <Part Name="SCoil" UId="32" />
+    <Part Name="NContact" UId="33" />
+    <Part Name="RCoil" UId="34" />
+  </Parts>
+  <Wires>
+    <Wire UId="35">
+      <Powerrail />
+      <NameCon UId="29" Name="pre" />
+      <NameCon UId="33" Name="pre" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="22" />
+      <NameCon UId="29" Name="bit" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="21" />
+      <NameCon UId="29" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="23" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="30" Name="out" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="24" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="42">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="25" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="27" />
+      <NameCon UId="33" Name="bit" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="46">
+      <NameCon UId="33" Name="out" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="28" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>PumaSystemReady: Puma is ok
+Clearance: Puma and the Test Support System are ok.</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Start request</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="StopRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="Clearance" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="bWatchdogOk" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="PumaSystemReady" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="25">
+      <Constant>
+        <ConstantType>Bool</ConstantType>
+        <ConstantValue>FALSE</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="FastStopRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="bStopReq" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="bStopReq" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="epStopRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="StopRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="bStopReq" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="32">
+      <Symbol>
+        <Component Name="enStopRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="StopRequest" />
+      </Symbol>
+    </Access>
+    <Part Name="Contact" UId="34" />
+    <Part Name="Contact" UId="35">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="36">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="37">
+      <Negated Name="operand" />
+    </Part>
+    <Part Name="Contact" UId="38" />
+    <Part Name="Contact" UId="39" />
+    <Part Name="O" UId="40">
+      <TemplateValue Name="Card" Type="Cardinality">5</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="41" />
+    <Part Name="PContact" UId="42" />
+    <Part Name="SCoil" UId="43" />
+    <Part Name="NContact" UId="44" />
+    <Part Name="RCoil" UId="45" />
+  </Parts>
+  <Wires>
+    <Wire UId="46">
+      <Powerrail />
+      <NameCon UId="34" Name="in" />
+      <NameCon UId="35" Name="in" />
+      <NameCon UId="36" Name="in" />
+      <NameCon UId="37" Name="in" />
+      <NameCon UId="39" Name="in" />
+      <NameCon UId="42" Name="pre" />
+      <NameCon UId="44" Name="pre" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="21" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="48">
+      <NameCon UId="34" Name="out" />
+      <NameCon UId="40" Name="in1" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="22" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+    <Wire UId="50">
+      <NameCon UId="35" Name="out" />
+      <NameCon UId="40" Name="in2" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="23" />
+      <NameCon UId="36" Name="operand" />
+    </Wire>
+    <Wire UId="52">
+      <NameCon UId="36" Name="out" />
+      <NameCon UId="40" Name="in3" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="24" />
+      <NameCon UId="37" Name="operand" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="37" Name="out" />
+      <NameCon UId="38" Name="in" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="25" />
+      <NameCon UId="38" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <NameCon UId="38" Name="out" />
+      <NameCon UId="40" Name="in4" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="26" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in5" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="40" Name="out" />
+      <NameCon UId="41" Name="in" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="27" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="29" />
+      <NameCon UId="42" Name="bit" />
+    </Wire>
+    <Wire UId="62">
+      <IdentCon UId="28" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="63">
+      <NameCon UId="42" Name="out" />
+      <NameCon UId="43" Name="in" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="30" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="32" />
+      <NameCon UId="44" Name="bit" />
+    </Wire>
+    <Wire UId="66">
+      <IdentCon UId="31" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="67">
+      <NameCon UId="44" Name="out" />
+      <NameCon UId="45" Name="in" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="33" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>a low clearance signal is the same as a stop request
+a watchdog timeout is the same as a stop request
+(a low PumaSystemReady is the same as a stop request) No, it shouldn't be
+a FastStoprequest is also a stop request</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Stop request</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="AlarmAcknowledge" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="epAlarmAcknowledge" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="AlarmAcknowledge" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="AlarmAcknowledge" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="enAlarmAcknowledge" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="AlarmAcknowledge" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ResetEmergencyStop" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="epResetEmergencyStop" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="EmergencyStopResetRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="ResetEmergencyStop" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="31">
+      <Symbol>
+        <Component Name="enResetEmergencyStop" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="EmergencyStopResetRequest" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="33">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="HydrolockProtection" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="epHydrolockProtection" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="35">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="HydrolockProtection" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="HydrolockProtection" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="enHydrolockProtection" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="HydrolockProtection" />
+      </Symbol>
+    </Access>
+    <Part Name="PContact" UId="39" />
+    <Part Name="SCoil" UId="40" />
+    <Part Name="NContact" UId="41" />
+    <Part Name="RCoil" UId="42" />
+    <Part Name="PContact" UId="43" />
+    <Part Name="SCoil" UId="44" />
+    <Part Name="NContact" UId="45" />
+    <Part Name="RCoil" UId="46" />
+    <Part Name="PContact" UId="47" />
+    <Part Name="SCoil" UId="48" />
+    <Part Name="NContact" UId="49" />
+    <Part Name="RCoil" UId="50" />
+  </Parts>
+  <Wires>
+    <Wire UId="51">
+      <Powerrail />
+      <NameCon UId="39" Name="pre" />
+      <NameCon UId="41" Name="pre" />
+      <NameCon UId="43" Name="pre" />
+      <NameCon UId="45" Name="pre" />
+      <NameCon UId="47" Name="pre" />
+      <NameCon UId="49" Name="pre" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="22" />
+      <NameCon UId="39" Name="bit" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="21" />
+      <NameCon UId="39" Name="operand" />
+    </Wire>
+    <Wire UId="54">
+      <NameCon UId="39" Name="out" />
+      <NameCon UId="40" Name="in" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="23" />
+      <NameCon UId="40" Name="operand" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="25" />
+      <NameCon UId="41" Name="bit" />
+    </Wire>
+    <Wire UId="57">
+      <IdentCon UId="24" />
+      <NameCon UId="41" Name="operand" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="41" Name="out" />
+      <NameCon UId="42" Name="in" />
+    </Wire>
+    <Wire UId="59">
+      <IdentCon UId="26" />
+      <NameCon UId="42" Name="operand" />
+    </Wire>
+    <Wire UId="60">
+      <IdentCon UId="28" />
+      <NameCon UId="43" Name="bit" />
+    </Wire>
+    <Wire UId="61">
+      <IdentCon UId="27" />
+      <NameCon UId="43" Name="operand" />
+    </Wire>
+    <Wire UId="62">
+      <NameCon UId="43" Name="out" />
+      <NameCon UId="44" Name="in" />
+    </Wire>
+    <Wire UId="63">
+      <IdentCon UId="29" />
+      <NameCon UId="44" Name="operand" />
+    </Wire>
+    <Wire UId="64">
+      <IdentCon UId="31" />
+      <NameCon UId="45" Name="bit" />
+    </Wire>
+    <Wire UId="65">
+      <IdentCon UId="30" />
+      <NameCon UId="45" Name="operand" />
+    </Wire>
+    <Wire UId="66">
+      <NameCon UId="45" Name="out" />
+      <NameCon UId="46" Name="in" />
+    </Wire>
+    <Wire UId="67">
+      <IdentCon UId="32" />
+      <NameCon UId="46" Name="operand" />
+    </Wire>
+    <Wire UId="68">
+      <IdentCon UId="34" />
+      <NameCon UId="47" Name="bit" />
+    </Wire>
+    <Wire UId="69">
+      <IdentCon UId="33" />
+      <NameCon UId="47" Name="operand" />
+    </Wire>
+    <Wire UId="70">
+      <NameCon UId="47" Name="out" />
+      <NameCon UId="48" Name="in" />
+    </Wire>
+    <Wire UId="71">
+      <IdentCon UId="35" />
+      <NameCon UId="48" Name="operand" />
+    </Wire>
+    <Wire UId="72">
+      <IdentCon UId="37" />
+      <NameCon UId="49" Name="bit" />
+    </Wire>
+    <Wire UId="73">
+      <IdentCon UId="36" />
+      <NameCon UId="49" Name="operand" />
+    </Wire>
+    <Wire UId="74">
+      <NameCon UId="49" Name="out" />
+      <NameCon UId="50" Name="in" />
+    </Wire>
+    <Wire UId="75">
+      <IdentCon UId="38" />
+      <NameCon UId="50" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Commands</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource />
+          <ProgrammingLanguage>LAD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="26" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="27" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>Combine signals from Puma into DB_Application</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>
