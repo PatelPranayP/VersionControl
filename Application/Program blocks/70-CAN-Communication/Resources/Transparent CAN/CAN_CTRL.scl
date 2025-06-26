@@ -1,0 +1,417 @@
+﻿FUNCTION_BLOCK "CAN_CTRL"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      HW_ID { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : HW_IO;
+      FCN { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Int;
+      LEN_BufferLimit { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : UInt;
+      CANIdList : "FCN_1_CANIDList";
+   END_VAR
+
+   VAR_OUTPUT 
+      BUSY { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+      RET { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : UInt;
+      CAN_STATUS { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Word;
+   END_VAR
+
+   VAR_IN_OUT 
+      REQ { ExternalAccessible := 'False'; ExternalVisible := 'False'; ExternalWritable := 'False'} : Bool;
+   END_VAR
+
+   VAR 
+      stat_siState : SInt := #cSTATE_INIT_CAN_CTRL;
+      stat_fStartSFC : Bool := TRUE;
+      stat_uiRetry : UInt := 0;
+      stat_uiCmdLength : UInt := 0;
+      stat_awRequest : Array[0..123] of Word;
+      stat_abResponse : Array[0..247] of Byte;
+      stat_RDREC {InstructionName := 'RDREC'; LibVersion := '1.0'} : RDREC;
+      stat_WRREC {InstructionName := 'WRREC'; LibVersion := '1.1'} : WRREC;
+   END_VAR
+
+   VAR_TEMP 
+      fBusy : Bool;
+      fDoneValid : Bool;
+      fError : Bool;
+      dwStatus : DWord;
+      wReturn : Word;
+      uiResult : UInt;
+      uiLen : UInt;
+      udiCountElements : UDInt;
+      iLoop : Int;
+      iLoopEnd : Int;
+   END_VAR
+
+   VAR CONSTANT 
+      cSTATE_INIT_CAN_CTRL : SInt := 0;
+      cSTATE_WRITE_CAN_CTRL : SInt := 1;
+      cSTATE_READ_CAN_CTRL : SInt := 2;
+      cINDEX_CMD_CAN_CTRL : DInt := 16#9A;
+      cMLEN_RDREC_CAN_CTRL : USInt := 248;
+      cSRC_INDEX_CAN_CTRL : DInt := 0;
+      cDEST_INDEX_CAN_CTRL : DInt := 2;
+      cMAX_RETRY_CAN_CTRL : UInt := 1000;
+      cMAX_NO_CANIDS_CAN_CTRL : UInt := 118;
+   END_VAR
+
+
+BEGIN
+	(* ------------------------------------------------------------------------
+	Title:        CAN_CTRL
+	Description:  function processes the CAN_CTRL commands on a
+	              CM CANopen module in transparent mode
+	
+	Inputs:       HW_ID:           hardware identifier of the CM module
+	              FCN:             function code
+	                               see manual: CAN_CTRL
+	              LEN_BufferLimit: FCN: 1 <=> number if CAN ids to be transferred 
+	                               FCN: 2 <=> value Buffer LIMIT REACHED
+	              CANIdList:       points to the acceptance filter array
+	                               - acceptance filter array:
+	                                 - data type: Array[0..] of Word
+	                                 - Array[0]: 1. CAN Id
+	                                   Array[n]: (n + 1). CAN Id
+	                                   bit 15: set     => receive
+	                                           not set => remove
+	
+	InOut:        REQ:             TRUE : process CAN_CTRL
+	                                      is automatically cleared when the command
+	                                      has been processed
+	                               FALSE: do not process CAN_CTRL
+	                                      initializes the function
+	                                           
+	Outputs:      BUSY:            TRUE : function is running
+	                               FALSE: function has been processed
+	              RET:             result of the processed command
+	                               only valid if output BUSY is FALSE
+	                               see manual: RET ouput of CAN_CTRL 
+	              CAN_STATUS:      CAN status:
+	                               bit coded:
+	                                 - bit  0 set: Bus off
+	                                 - bit  1 set: error passive
+	                                 - bit  2 set: receive queue: full
+	                                 - bit  3 set: receive queue: half full
+	                                 - bit  4 set: receive queue: warning limit reached
+	                                 - bit  5 set: receive message lost
+	                                 - bit  6 set: transmit queue: half full
+	                                 - bit  7 set: transmit queue: warning limit reached
+	                                 - bit 8 - 14: not used
+	                                 - bit 15 set: valid
+	                               CAN_STATUS is only valid if bit 15 is set:
+	                               CAN_STATUS = 16#8000 <=> no error
+	                               
+	Hint:         - function needs minimum 2 calls before the response is available
+	                  - delay time caused by the CM module:
+	                    - time between reception and response: < 1ms
+	                  - the more serious delay is caused by the asynchronous processing of
+	                    the telegram whose transmission is requested by WRREC and RDREC
+	              - the delay is not serious because it not blocking
+	
+	Author:       HMS
+	Version:      1.0
+	Date:         2017-03-19
+	------------------------------------------------------------------------- *)
+	
+	// init Output RET
+	#RET := 0;
+	// init Output CAN_STATUS
+	#CAN_STATUS := 0;
+	
+	IF #REQ = FALSE THEN
+	    ///////////////////////////////////////////////////
+	    // do not process CAN_CTRL
+	    // initialize CAN_CTRL
+	    ///////////////////////////////////////////////////    
+	    #stat_siState := #cSTATE_INIT_CAN_CTRL;
+	    #stat_uiRetry := 0;
+	    #BUSY := FALSE;
+	    RETURN;
+	END_IF;
+	
+	// init Output BUSY
+	#BUSY := TRUE;
+	
+	//==============================================================================  
+	// main of "CAN_CTRL"()
+	//==============================================================================  
+	CASE #stat_siState OF
+	        // initialize the data of the requested FCN command    
+	    #cSTATE_INIT_CAN_CTRL:
+	        GOTO CAN_CTRL_INIT_CMD;
+	        
+	        // transfer the command and its data to the CM module
+	    #cSTATE_WRITE_CAN_CTRL:
+	        GOTO CAN_CTRL_TRANSFER_CMD;
+	        
+	        // read result from the CM module
+	    #cSTATE_READ_CAN_CTRL:
+	        GOTO CAN_CTRL_GET_RESULT;
+	        
+	    ELSE
+	        // state is not supported
+	        // error code: state error (not defined in the manual)
+	        #uiResult := 16#109F;
+	        GOTO CAN_CTRL_DONE;
+	END_CASE;
+	
+	//==============================================================================  
+	// initialize the FCN specific data
+	//==============================================================================  
+	CAN_CTRL_INIT_CMD:
+	
+	// switch function code
+	CASE #FCN OF
+	    1:  // set acceptance filter in the module        
+	        ///////////////////////////////////////////////////////////////////////////
+	        // the CM module supports 2 types of "Set acceptance filter in the module"
+	        // 1. #LEN_BufferLimit = 0
+	        //      => disable all CAN-IDs
+	        // 1. #LEN_BufferLimit > 0 
+	        //      => selected CAN-IDs are entered in or removed from the acceptance
+	        //         filter
+	        //      => includes receive all CAN-IDs
+	        ///////////////////////////////////////////////////////////////////////////
+	        
+	        ///////////////////////////////////////////////////////////////////////////
+	        // #stat_awRequest[0]: FCN
+	        // #stat_awRequest[1]: LEN
+	        // #stat_awRequest[2...]: CAN Ids
+	        ///////////////////////////////////////////////////////////////////////////
+	
+	        // function code: 
+	        // - low address : function code
+	        // - high address: 0 
+	        #stat_awRequest[0] := 16#0100;
+	        
+	        // enter number of CAN-Ids:
+	        // - big endian
+	        #stat_awRequest[1] := UINT_TO_WORD(#LEN_BufferLimit);
+	        
+	        // number of data bytes to be written:
+	        // - 4 bytes header + LEN_BufferLimit * 2
+	        #stat_uiCmdLength := 4 + (#LEN_BufferLimit * 2);
+	        
+	        IF (#LEN_BufferLimit = 0) THEN
+	            #stat_awRequest[2] := 16#0000;
+	        ELSIF (#LEN_BufferLimit <= #cMAX_NO_CANIDS_CAN_CTRL) THEN
+	            
+	            // processing time MOVE_BLK:
+	            // - CPU 1215C AC/DC/Rly needs
+	            //       less than 0,240ms
+	            //   to move 118 (maximum) CAN Ids            
+	            MOVE_BLK(IN:=#CANIdList.FCN_1_CANIDList[#cSRC_INDEX_CAN_CTRL],
+	                     COUNT:=#LEN_BufferLimit,
+	                     OUT=>#stat_awRequest[#cDEST_INDEX_CAN_CTRL]);
+	            
+	            
+	            // check if CAN-IDs are valid
+	            // valid CAN-IDs
+	            // - enable CAN ID : 16#xxxx OR 16#8000
+	            //                   16#xxxx <= 16#7FF
+	            // - enable all    : 16#FFFF 
+	            // - disable CAN ID: 16#xxxx <= 16#7FF
+	            #iLoopEnd := DINT_TO_INT(#cDEST_INDEX_CAN_CTRL) + UINT_TO_INT(#LEN_BufferLimit) - 1;
+	            FOR #iLoop := DINT_TO_INT(#cDEST_INDEX_CAN_CTRL) TO #iLoopEnd DO
+	                // Statement section FOR
+	                IF (#stat_awRequest[#iLoop] AND 16#7FFF) > 16#7FF THEN
+	                    IF #stat_awRequest[#iLoop] <> 16#FFFF THEN
+	                        #uiResult := 16#109E;
+	                        GOTO CAN_CTRL_DONE;
+	                    END_IF;
+	                END_IF;
+	            END_FOR;
+	                              
+	        ELSE
+	            // error code: too many CAN identifiers
+	            #uiResult := 16#109C;
+	            GOTO CAN_CTRL_DONE;
+	        END_IF;
+	        
+	    2: // Set number of frames to store before warning (BUFFER LIMIT REACHED)
+	        // default value of BUFFER LIMIT REACHED: 256
+	        // 
+	        // limitation:
+	        //             1 <= BUFFER LIMIT REACHED value <= 256
+	        IF ((#LEN_BufferLimit > 0) AND (#LEN_BufferLimit <= 256)) THEN
+	            // - low address : function code
+	            // - high address: 0
+	            #stat_awRequest[0] := 16#0200;
+	            
+	            // enter buffer limit:
+	            // - big endian
+	            #stat_awRequest[1] := UINT_TO_WORD(#LEN_BufferLimit);
+	            
+	            // number of data bytes to be written:
+	            // - 2 bytes header + 2 bytes data         
+	            #stat_uiCmdLength := 4;
+	        ELSE
+	            // error code: buffer limit out of range
+	            #uiResult := 16#109E;
+	            GOTO CAN_CTRL_DONE;
+	        END_IF;
+	        
+	    3: // Clear RX buffer
+	        // - low address : function code
+	        // - high address: 0
+	        #stat_awRequest[0] := 16#0300;
+	        
+	        // no parameter / no data  
+	        
+	        // number of data bytes to be written:
+	        // - 2 bytes header + 0 bytes data
+	        #stat_uiCmdLength := 2;
+	        
+	    5: // Reset CAN controller (implies “Clear Bus Off”)
+	        // - low address : function code
+	        // - high address: 0
+	        #stat_awRequest[0] := 16#0500;
+	        
+	        // no parameter / no data  
+	        
+	        // number of data bytes to be written:
+	        // - 2 bytes header + 0 bytes data
+	        #stat_uiCmdLength := 2;
+	        
+	    ELSE
+	        // function code is not supported
+	        // error code: "Function code (FCN) not allowed
+	        #uiResult := 16#109B;
+	        GOTO CAN_CTRL_DONE;
+	END_CASE;
+	
+	// set start flag for SFC
+	#stat_fStartSFC := TRUE;
+	// init number of retry
+	#stat_uiRetry := 0;
+	// next state: transfer the command to the CM module
+	#stat_siState := #cSTATE_WRITE_CAN_CTRL;
+	
+	
+	//==============================================================================  
+	// transfer the requested CAN control command to the CM module
+	//==============================================================================  
+	CAN_CTRL_TRANSFER_CMD:
+	
+	// download the requested command by using WRREC
+	#stat_WRREC(REQ:=#stat_fStartSFC,
+	           ID:=#HW_ID,
+	           INDEX:=#cINDEX_CMD_CAN_CTRL,
+	           LEN:=#stat_uiCmdLength,
+	           DONE=>#fDoneValid,
+	           BUSY=>#fBusy,
+	           ERROR=>#fError,
+	           STATUS=>#dwStatus,
+	           RECORD:=#stat_awRequest);
+	
+	IF #fBusy = TRUE THEN
+	    // reset variable to prevent WRREC to be triggered once more
+	    #stat_fStartSFC := FALSE;
+	    RETURN;
+	ELSE
+	    IF #fError = FALSE THEN
+	        // seems no error occured, continue with read response
+	        // init number of retry
+	        #stat_uiRetry := 0;
+	        
+	        // set start flag for SFC
+	        #stat_fStartSFC := TRUE;
+	        
+	        // next state:
+	        // read the result from the CM module
+	        #stat_siState := #cSTATE_READ_CAN_CTRL;
+	    ELSE
+	        //Write error
+	        #wReturn := DWORD_TO_WORD(SHR(IN := #dwStatus, N := 8)) AND W#16#FFFF;
+	        "SendReceiveErrorCode"(wReturn := #wReturn,
+	                               bAddErrInfo := 16#00,
+	                               uiErrorCode => #uiResult);
+	        GOTO CAN_CTRL_DONE;
+	    END_IF;
+	END_IF;
+	
+	
+	//==============================================================================  
+	// read the result from the CM module
+	//============================================================================== 
+	CAN_CTRL_GET_RESULT:
+	
+	// upload the result by using RDREC
+	#stat_RDREC(REQ:=#stat_fStartSFC,
+	           ID:=#HW_ID,
+	           INDEX:=#cINDEX_CMD_CAN_CTRL,
+	           MLEN:=#cMLEN_RDREC_CAN_CTRL,
+	           VALID=>#fDoneValid,
+	           BUSY=>#fBusy,
+	           ERROR=>#fError,
+	           STATUS=>#dwStatus,
+	           LEN=>#uiLen,
+	           RECORD:=#stat_abResponse);
+	
+	IF #fBusy = TRUE THEN
+	    // reset variable to prevent WRREC to be triggered once more
+	    #stat_fStartSFC := FALSE;
+	    RETURN;
+	ELSE
+	    #wReturn := DWORD_TO_WORD(SHR(IN := #dwStatus, N := 8)) AND W#16#FFFF;
+	    
+	    // check if
+	    // - RDREC reports "DP slave or module not ready": 16#xx80B5xx
+	    // - CM module repots "busy": 16#FE
+	    IF (#wReturn = W#16#80B5) OR (#stat_abResponse[0] = w#16#FE) THEN
+	        #stat_uiRetry := #stat_uiRetry + 1;
+	        
+	        IF #stat_uiRetry > #cMAX_RETRY_CAN_CTRL THEN
+	            //Internal error  
+	            #uiResult := 16#1013;
+	            GOTO CAN_CTRL_DONE;
+	        ELSE
+	            // repeat: REQ input of RDREC must be set to TRUE
+	            #stat_fStartSFC := TRUE;
+	            RETURN;
+	        END_IF;
+	    ELSE
+	        // check for failure 
+	        IF #fError = TRUE THEN
+	            // RDREC has reported a communication error
+	            "SendReceiveErrorCode"(wReturn := #wReturn,
+	                                   bAddErrInfo := 16#00,
+	                                   uiErrorCode => #uiResult);
+	        ELSIF #stat_abResponse[0] > 0 THEN
+	            // command was rejected by the CM module
+	            "SendReceiveErrorCode"(wReturn := 16#00FF,
+	                                   bAddErrInfo := #stat_abResponse[0],
+	                                   uiErrorCode => #uiResult);
+	            // check if CAN status is available
+	            IF #uiLen >= 2 THEN
+	                #CAN_STATUS := BYTE_TO_WORD(#stat_abResponse[1]) OR 16#8000;
+	            END_IF;
+	        ELSE
+	            // success
+	            #uiResult := 0;
+	            // check if CAN status is available
+	            IF #uiLen >= 2 THEN
+	                #CAN_STATUS := BYTE_TO_WORD(#stat_abResponse[1]) OR 16#8000;
+	            END_IF;
+	        END_IF; // IF #fError = TRUE THEN  ELSIF  ELSE
+	    END_IF;   // IF (#wReturn = W#16#80B5) ... THEN  ELSE   
+	    
+	END_IF; // IF #fBusy = TRUE THEN ... ELSE
+	
+	
+	//==============================================================================  
+	// command has been processed
+	//==============================================================================  
+	CAN_CTRL_DONE:
+	// initialize "CAN_CTRL"()
+	#stat_siState := #cSTATE_INIT_CAN_CTRL;
+	#stat_uiRetry := 0;
+	
+	// update outputs
+	#RET := #uiResult;
+	#BUSY := FALSE;
+	
+	// clear request at InOut
+	#REQ := FALSE;
+	
+END_FUNCTION_BLOCK
+
