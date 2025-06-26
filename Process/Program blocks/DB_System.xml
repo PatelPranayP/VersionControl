@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T07:49:51.1187588Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.GlobalDB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <DBAccessibleFromOPCUA>true</DBAccessibleFromOPCUA>
+      <DBAccessibleFromWebserver>true</DBAccessibleFromWebserver>
+      <HeaderAuthor>Heaten</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Static">
+    <Member Name="bFirstCycle" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">High on first scan only</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bFirstCycleCyclic" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><StartValue>FALSE</StartValue></Member>
+    <Member Name="bSimulation" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Simulation active</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bProfiling" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Profiling active</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bInternalEmergencyStop" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">PLC source E-stop. 0 = ok, 1 = Emergency stop</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bExternalEmergencyStop" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">External source E-stop. 0 = ok, 1 = Emergency stop</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bEmergencyStop" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Emergency stop state. 0 = ok, 1 = Emergency stop</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bManualModeWarning" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">1 = one or more regulators in manual mode, 0 = no regulators in manual mode</MultiLanguageText></Comment><StartValue>FALSE</StartValue></Member>
+    <Member Name="bExternalValidData" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">1 = values sent from APP PLC are valid</MultiLanguageText></Comment><StartValue>TRUE</StartValue></Member>
+    <Member Name="fCycleTime" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Cycle time in sec</MultiLanguageText></Comment><StartValue>0.1000159</StartValue></Member>
+    <Member Name="lfCycleTime" Datatype="LReal" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Cycle time in sec</MultiLanguageText></Comment><StartValue>0.100015944</StartValue></Member>
+    <Member Name="BarometricOffset" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">[kPa] Pressure offset relative to absolute</MultiLanguageText></Comment><StartValue>101.325</StartValue></Member>
+    <Member Name="SystemUptime" Datatype="&quot;stHoursCounter&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">System powered on</MultiLanguageText></Comment><Sections><Section Name="None"><Member Name="nHours" Datatype="UDInt"><StartValue>5956</StartValue></Member><Member Name="nMinutes" Datatype="USInt"><StartValue>7</StartValue></Member><Member Name="nSeconds" Datatype="USInt"><StartValue>43</StartValue></Member><Member Name="bReset" Datatype="Bool"><StartValue>FALSE</StartValue></Member></Section></Sections></Member>
+    <Member Name="SystemActiveTime" Datatype="&quot;stHoursCounter&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Standby or higher</MultiLanguageText></Comment><Sections><Section Name="None"><Member Name="nHours" Datatype="UDInt"><StartValue>0</StartValue></Member><Member Name="nMinutes" Datatype="USInt"><StartValue>0</StartValue></Member><Member Name="nSeconds" Datatype="USInt"><StartValue>0</StartValue></Member><Member Name="bReset" Datatype="Bool"><StartValue>FALSE</StartValue></Member></Section></Sections></Member>
+    <Member Name="RunningTime" Datatype="&quot;stHoursCounter&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">In running state</MultiLanguageText></Comment><Sections><Section Name="None"><Member Name="nHours" Datatype="UDInt"><StartValue>0</StartValue></Member><Member Name="nMinutes" Datatype="USInt"><StartValue>0</StartValue></Member><Member Name="nSeconds" Datatype="USInt"><StartValue>0</StartValue></Member><Member Name="bReset" Datatype="Bool"><StartValue>FALSE</StartValue></Member></Section></Sections></Member>
+    <Member Name="SafetyRelay" Datatype="&quot;stSafetyRelay&quot;" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">Emergency stop safety relay</MultiLanguageText></Comment><Sections><Section Name="None"><Member Name="tResetLoopTime" Datatype="Time"><StartValue>T#1S</StartValue></Member><Member Name="tResetTimeout" Datatype="Time"><StartValue>T#1S</StartValue></Member><Member Name="nState" Datatype="USInt"><StartValue>3</StartValue></Member><Member Name="bStatus" Datatype="Bool"><StartValue>TRUE</StartValue></Member><Member Name="bResetReq" Datatype="Bool"><StartValue>FALSE</StartValue></Member><Member Name="bResetLoop" Datatype="Bool"><StartValue>FALSE</StartValue></Member><Member Name="bResetCmd" Datatype="Bool"><StartValue>FALSE</StartValue></Member><Member Name="bResetFailed" Datatype="Bool"><StartValue>FALSE</StartValue></Member></Section></Sections></Member>
+    <Member Name="WinCCLink" Datatype="&quot;stHeartbeat&quot;" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="bOut" Datatype="Bool"><StartValue>FALSE</StartValue></Member><Member Name="bIn" Datatype="Bool"><StartValue>TRUE</StartValue></Member><Member Name="bEnable" Datatype="Bool"><StartValue>TRUE</StartValue></Member><Member Name="bOk" Datatype="Bool"><StartValue>TRUE</StartValue></Member><Member Name="nState" Datatype="USInt"><StartValue>2</StartValue></Member><Member Name="tTimeout" Datatype="Time"><StartValue>T#1M_30S</StartValue></Member></Section></Sections></Member>
+    <Member Name="AppPLCLink" Datatype="&quot;stHeartbeatCount2&quot;" Remanence="Retain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">true</BooleanAttribute></AttributeList><Sections><Section Name="None"><Member Name="nLocalCount" Datatype="UInt"><StartValue>0</StartValue></Member><Member Name="nRemoteCount" Datatype="UInt"><StartValue>35505</StartValue></Member><Member Name="bEnable" Datatype="Bool"><StartValue>TRUE</StartValue></Member><Member Name="bOk" Datatype="Bool"><StartValue>TRUE</StartValue></Member><Member Name="nState" Datatype="USInt"><StartValue>2</StartValue></Member><Member Name="tTimeout" Datatype="Time"><StartValue>T#2S</StartValue></Member></Section></Sections></Member>
+    <Member Name="SoftwareVersion" Datatype="String" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">PLC software version string (set in FC35)</MultiLanguageText></Comment><StartValue>'V4.0.0.6'</StartValue></Member>
+  </Section>
+</Sections></Interface>
+      <IsOnlyStoredInLoadMemory>false</IsOnlyStoredInLoadMemory>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <IsWriteProtectedInAS>false</IsWriteProtectedInAS>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>DB_System</Name>
+      <Number>42</Number>
+      <ProgrammingLanguage>DB</ProgrammingLanguage>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <MultilingualText ID="3" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="4" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.GlobalDB>
+</Document>

@@ -1,0 +1,28 @@
+﻿FUNCTION "VapPerformance" : Real
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      AddSuperheat : Real;
+      Pinch : Real;
+   END_VAR
+
+   VAR_TEMP 
+      VapPerformance1 : Real;
+      VapPerformance2 : Real;
+      VapPerformance3 : Real;
+   END_VAR
+
+
+BEGIN
+	//The VapOccupRat is an indicator for the occupancy of the evaporator. The pinch on the steam side is compared to the pinch on the liquid side of the evaporator. The Pinch on the liquid side should be smaller by a factor of "Adjust" to demand a balanced performance.
+	#VapPerformance1 := 0.7 * (("DB_AI".HBL_TT_546.Eng.fValue - "DB_AI".HBL_TT_543.Eng.fValue) - 2.5 * #Pinch);
+	    // This might react better on a huge variation of heat flow mass flows
+	    //#VapPerformance := ("DB_SensorInputs".HeatSource."T13_Inlet_(feed)" - "DB_SensorInputs".LowPressPart.T12_EvaporatorOut) - 0.9 * ("DB_SensorInputs".HeatSource."T13_Inlet_(feed)" - "DB_SensorInputs".LowPressPart.T_EvaporationTemperature);
+	#VapPerformance2 := - 3*("DB_Calc".LowPressPart.EvaporatorSuperheat.fValue - 0.12 * ("DB_AI".HBL_TT_546.Eng.fValue-"DB_Calc".LowPressPart.EvaporatorSaturationTemperature.fValue));
+	
+	
+	#VapPerformance3 := 1.0 *(#AddSuperheat-"DB_Calc".LowPressPart.EvaporatorSuperheat.fValue + 0.05 * ("DB_AI".HBL_TT_546.Eng.fValue - "DB_AI".HBL_TT_542.Eng.fValue) + (0.1) * #Pinch);
+	
+	#VapPerformance := #VapPerformance3;
+END_FUNCTION
+

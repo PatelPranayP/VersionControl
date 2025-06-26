@@ -1,0 +1,66 @@
+﻿FUNCTION "SendReceiveErrorCode" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      wReturn : Word;
+      bAddErrInfo : Byte;
+   END_VAR
+
+   VAR_OUTPUT 
+      uiErrorCode : UInt;
+   END_VAR
+
+   VAR_TEMP 
+      wErrorCode : Word;
+   END_VAR
+
+
+BEGIN
+	(* ------------------------------------------------------------------------
+	Title:        SendReceiveErrorCode
+	Description:  function calculates the error code according the manual of the
+	              CM module for "CAN_CTRL"(), "CAN_RCV"(), "CAN_SEND"() and
+	              "CAN_GET_DIAGNOSTIC"()
+	
+	Inputs:       wReturn:         raw error value
+	              bAddErrInfo:     additional error info
+	Outputs:      uiErrorCode      error code as described by the manual for
+	                               the transparent CAN functions
+	
+	Author:       HMS
+	Version:      1.0
+	Date:         2014-08-20
+	-------------------------------------------------------------------------*)
+	IF #wReturn = W#16#8090 THEN
+	  #uiErrorCode :=  16#3100;
+	ELSIF #wReturn = W#16#8093 THEN
+	  #uiErrorCode :=  16#3200;
+	ELSIF #wReturn = W#16#80A0 OR #wReturn = W#16#80A1 THEN
+	  #uiErrorCode :=  16#3300;
+	ELSIF #wReturn = W#16#80A2 THEN
+	  #uiErrorCode :=  16#3701;
+	ELSIF #wReturn = W#16#80A3 THEN
+	  #uiErrorCode :=  16#3600;
+	ELSIF #wReturn = W#16#80A4 THEN
+	  #uiErrorCode :=  16#3702;
+	ELSIF #wReturn = W#16#80B2 THEN
+	  #uiErrorCode :=  16#3400;
+	ELSIF #wReturn = W#16#80B3 THEN
+	  #uiErrorCode :=  16#3500;
+	ELSIF #wReturn >= W#16#80C1 AND #wReturn <= W#16#80C6 THEN
+	  #uiErrorCode :=  WORD_TO_UINT(#wReturn) - 16#80C0 + 16#3702;
+	ELSIF #wReturn = 0 THEN
+	  #uiErrorCode :=  16#3800 + BYTE_TO_UINT(#bAddErrInfo);
+	ELSIF #wReturn = W#16#FF THEN
+	  #uiErrorCode :=  16#3900 + BYTE_TO_UINT(#bAddErrInfo);
+	ELSE
+	  IF #wReturn <> 0 OR #bAddErrInfo = 0 THEN
+	    #uiErrorCode :=  16#FF00;
+	  ELSE
+	    #uiErrorCode :=  BYTE_TO_UINT(SHL(IN:=#bAddErrInfo, N:=8));
+	  END_IF;
+	END_IF;
+	
+	
+END_FUNCTION
+

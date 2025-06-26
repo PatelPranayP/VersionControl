@@ -1,0 +1,44 @@
+﻿FUNCTION "FindIndex" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      x : Real;
+   END_VAR
+
+   VAR_OUTPUT 
+      index_L : DInt;
+   END_VAR
+
+   VAR_IN_OUT 
+      "Array" : Array[*] of Real;
+   END_VAR
+
+   VAR_TEMP 
+      Count_i : DInt;
+   END_VAR
+
+
+BEGIN
+	        
+	        
+	        #Count_i := UPPER_BOUND(ARR:=#Array, DIM:=1);
+	        #index_L := #Count_i/2;
+	    // If x is closest to the last index (Count_Xi) or lies beyond, then take the second last index anyway
+	    // We use our previous result from last calculation (#LastXi) as startpoint for the search
+	    //#Xindex_L := #LastXi;
+	    //IF #index_L > 0 AND #x < #Array[#index_L] THEN //die If ist nicht unbedingt notwendig.
+	        //Suche nach links (kleinere indizes)
+	        WHILE #index_L > 0 AND #x < #Array[#index_L] DO
+	            #index_L -= 1;
+	            //IF #index_L = 0 THEN // Durch Schleifenbedingung unnötig, oder?!
+	            //    EXIT;
+	            //END_IF;
+	        END_WHILE;
+	    //ELSE
+	    //Suche nach rechts (größere indizes)
+	        WHILE #index_L < (#Count_i - 1) AND #x > #Array[#index_L + 1] DO
+	            #index_L += 1;
+	        END_WHILE;
+	    //END_IF;
+END_FUNCTION
+

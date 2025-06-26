@@ -1,0 +1,239 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T07:49:44.8985505Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FC ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="Pressure" Datatype="Real" Accessibility="Public" />
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut">
+    <Member Name="Fluid" Datatype="&quot;FluidData-STRUCT&quot;" Accessibility="Public">
+      <Sections>
+        <Section Name="None">
+          <Member Name="Name" Datatype="String" />
+          <Member Name="FluidTypeNumber" Datatype="Int" />
+          <Member Name="SaturationCurve_Temperature_C" Datatype="Array[0..40] of Real" />
+          <Member Name="SaturationCurve_Pressure_kPa" Datatype="Array[0..40] of Real" />
+          <Member Name="DensityCurve_Pressure_kPa" Datatype="Array[0..12] of Real" />
+          <Member Name="DensityCurveLiquide_Densety_kg_m3" Datatype="Array[0..12] of Real" />
+          <Member Name="DensityCurveVapor_Densety_kg_m3" Datatype="Array[0..12] of Real" />
+          <Member Name="DensityCurveVapor_SuperheatCorrection_a" Datatype="Real" />
+          <Member Name="DensityCurveVapor_SuperheatCorrection_b" Datatype="Real" />
+          <Member Name="EnthalpyMap_Superheat_C" Datatype="Array[0..8] of Real" />
+          <Member Name="EnthalpyMap_Pressure_kPa" Datatype="Array[0..11] of Real" />
+          <Member Name="EnthalpyMap_Enthalpy_kJ_kg" Datatype="Array[0..11, 0..8] of Real" />
+          <Member Name="Limits" Datatype="&quot;FluidBasedLimits-STRUCT&quot;">
+            <Sections>
+              <Section Name="None">
+                <Member Name="T_HeatSourceTemperature_Max" Datatype="Real" />
+                <Member Name="T_HeatSourceTemperature_Min" Datatype="Real" />
+                <Member Name="T_HeatSinkTemperature_Max" Datatype="Real" />
+                <Member Name="T_OilTemperature_Critical" Datatype="Real" />
+                <Member Name="T_OilSuperheat" Datatype="Real" />
+                <Member Name="T_CoolingSetpoint" Datatype="Real" />
+              </Section>
+            </Sections>
+          </Member>
+          <Member Name="T_AdditionalSuperHeatEvaporator" Datatype="Real" />
+          <Member Name="P_CriticalPoint" Datatype="Real" />
+        </Section>
+      </Sections>
+    </Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="MinPressure" Datatype="Real" />
+  </Section>
+  <Section Name="Constant" />
+  <Section Name="Return">
+    <Member Name="Ret_Val" Datatype="Real" Accessibility="Public" />
+  </Section>
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <Name>SaturationTemperature</Name>
+      <Number>14</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="Pressure" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="Fluid" />
+        <Component Name="P_CriticalPoint" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="MinPressure" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="MinPressure" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="Fluid" />
+        <Component Name="SaturationCurve_Pressure_kPa" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="26">
+      <Symbol>
+        <Component Name="Fluid" />
+        <Component Name="SaturationCurve_Temperature_C" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="SaturationTemperature" />
+      </Symbol>
+    </Access>
+    <Part Name="MIN" Version="1.0" UId="28" DisabledENO="true">
+      <TemplateValue Name="card" Type="Cardinality">2</TemplateValue>
+      <TemplateValue Name="value_type" Type="Type">Real</TemplateValue>
+    </Part>
+    <Call UId="29">
+      <CallInfo Name="1D-Interpolation" BlockType="FC">
+        <Parameter Name="x_in" Section="Input" Type="Real" />
+        <Parameter Name="f_out" Section="Output" Type="Real" />
+        <Parameter Name="X_Array" Section="InOut" Type="Array[*] of Real" />
+        <Parameter Name="F_Array" Section="InOut" Type="Array[*] of Real" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="32">
+      <OpenCon UId="30" />
+      <NameCon UId="28" Name="en" />
+    </Wire>
+    <Wire UId="33">
+      <IdentCon UId="21" />
+      <NameCon UId="28" Name="IN1" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="IN2" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="28" Name="OUT" />
+      <IdentCon UId="23" />
+    </Wire>
+    <Wire UId="36">
+      <OpenCon UId="31" />
+      <NameCon UId="29" Name="en" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="x_in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="X_Array" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="26" />
+      <NameCon UId="29" Name="F_Array" />
+    </Wire>
+    <Wire UId="40">
+      <NameCon UId="29" Name="f_out" />
+      <IdentCon UId="27" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="8" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="9" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FC>
+</Document>

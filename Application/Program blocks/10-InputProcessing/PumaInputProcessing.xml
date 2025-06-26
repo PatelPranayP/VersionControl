@@ -1,0 +1,2423 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T07:49:16.300104Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor>Heaten</HeaderAuthor>
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="bEnable" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output" />
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="Dummy" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">true</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="bCommOk" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Puma is running</MultiLanguageText>
+      </Comment>
+    </Member>
+    <Member Name="fDummy" Datatype="Real" />
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>0</MemoryReserve>
+      <Name>PumaInputProcessing</Name>
+      <Number>5</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Puma" />
+        <Component Name="Watchdog" />
+        <Component Name="bOk" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="22">
+      <Symbol>
+        <Component Name="bCommOk" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Application" />
+        <Component Name="ToHB" />
+        <Component Name="PumaCommOk" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="24">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="25" />
+    <Part Name="Coil" UId="26" />
+  </Parts>
+  <Wires>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="in1" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="out" />
+      <NameCon UId="25" Name="in" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Comm ok</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bCommOk" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_110h" />
+        <Component Name="I_208" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_TT_208" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_110h" />
+        <Component Name="I_209" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="27">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_TT_209" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_111h" />
+        <Component Name="I_210" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_FT_210" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="33">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_111h" />
+        <Component Name="I_211" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="35">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_FT_211" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_112h" />
+        <Component Name="I_206" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_TT_206" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="41">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_112h" />
+        <Component Name="E_214" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="43">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_SC_214" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="45">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_113h" />
+        <Component Name="I_302" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="47">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Valve" />
+        <Component Name="TSS_HCV_302_A1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="49">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_113h" />
+        <Component Name="E_213" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="51">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_SC_213" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="53">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_114h" />
+        <Component Name="I_301" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="55">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Valve" />
+        <Component Name="TSS_HCV_301_A1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="57">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_114h" />
+        <Component Name="I_201" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="59">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_TT_201" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="61">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_115h" />
+        <Component Name="I_202" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="63">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_TT_202" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="65">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="66">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Call UId="67">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="68">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="69">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="70">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="71">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="72">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="73">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="74">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="75">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="76">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="77">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="89">
+      <IdentCon UId="21" />
+      <NameCon UId="66" Name="in1" />
+    </Wire>
+    <Wire UId="90">
+      <NameCon UId="66" Name="out" />
+      <NameCon UId="67" Name="bValidData" />
+      <NameCon UId="68" Name="bValidData" />
+      <NameCon UId="69" Name="bValidData" />
+      <NameCon UId="70" Name="bValidData" />
+      <NameCon UId="71" Name="bValidData" />
+      <NameCon UId="72" Name="bValidData" />
+      <NameCon UId="73" Name="bValidData" />
+      <NameCon UId="74" Name="bValidData" />
+      <NameCon UId="75" Name="bValidData" />
+      <NameCon UId="76" Name="bValidData" />
+      <NameCon UId="77" Name="bValidData" />
+    </Wire>
+    <Wire UId="91">
+      <OpenCon UId="78" />
+      <NameCon UId="67" Name="en" />
+    </Wire>
+    <Wire UId="92">
+      <IdentCon UId="22" />
+      <NameCon UId="67" Name="fIn" />
+    </Wire>
+    <Wire UId="93">
+      <IdentCon UId="23" />
+      <NameCon UId="67" Name="fOffset" />
+    </Wire>
+    <Wire UId="94">
+      <IdentCon UId="24" />
+      <NameCon UId="67" Name="sTag" />
+    </Wire>
+    <Wire UId="95">
+      <NameCon UId="67" Name="fEngValue" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="96">
+      <OpenCon UId="79" />
+      <NameCon UId="68" Name="en" />
+    </Wire>
+    <Wire UId="97">
+      <IdentCon UId="26" />
+      <NameCon UId="68" Name="fIn" />
+    </Wire>
+    <Wire UId="98">
+      <IdentCon UId="27" />
+      <NameCon UId="68" Name="fOffset" />
+    </Wire>
+    <Wire UId="99">
+      <IdentCon UId="28" />
+      <NameCon UId="68" Name="sTag" />
+    </Wire>
+    <Wire UId="100">
+      <NameCon UId="68" Name="fEngValue" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="101">
+      <OpenCon UId="80" />
+      <NameCon UId="69" Name="en" />
+    </Wire>
+    <Wire UId="102">
+      <IdentCon UId="30" />
+      <NameCon UId="69" Name="fIn" />
+    </Wire>
+    <Wire UId="103">
+      <IdentCon UId="31" />
+      <NameCon UId="69" Name="fOffset" />
+    </Wire>
+    <Wire UId="104">
+      <IdentCon UId="32" />
+      <NameCon UId="69" Name="sTag" />
+    </Wire>
+    <Wire UId="105">
+      <NameCon UId="69" Name="fEngValue" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="106">
+      <OpenCon UId="81" />
+      <NameCon UId="70" Name="en" />
+    </Wire>
+    <Wire UId="107">
+      <IdentCon UId="34" />
+      <NameCon UId="70" Name="fIn" />
+    </Wire>
+    <Wire UId="108">
+      <IdentCon UId="35" />
+      <NameCon UId="70" Name="fOffset" />
+    </Wire>
+    <Wire UId="109">
+      <IdentCon UId="36" />
+      <NameCon UId="70" Name="sTag" />
+    </Wire>
+    <Wire UId="110">
+      <NameCon UId="70" Name="fEngValue" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="111">
+      <OpenCon UId="82" />
+      <NameCon UId="71" Name="en" />
+    </Wire>
+    <Wire UId="112">
+      <IdentCon UId="38" />
+      <NameCon UId="71" Name="fIn" />
+    </Wire>
+    <Wire UId="113">
+      <IdentCon UId="39" />
+      <NameCon UId="71" Name="fOffset" />
+    </Wire>
+    <Wire UId="114">
+      <IdentCon UId="40" />
+      <NameCon UId="71" Name="sTag" />
+    </Wire>
+    <Wire UId="115">
+      <NameCon UId="71" Name="fEngValue" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="116">
+      <OpenCon UId="83" />
+      <NameCon UId="72" Name="en" />
+    </Wire>
+    <Wire UId="117">
+      <IdentCon UId="42" />
+      <NameCon UId="72" Name="fIn" />
+    </Wire>
+    <Wire UId="118">
+      <IdentCon UId="43" />
+      <NameCon UId="72" Name="fOffset" />
+    </Wire>
+    <Wire UId="119">
+      <IdentCon UId="44" />
+      <NameCon UId="72" Name="sTag" />
+    </Wire>
+    <Wire UId="120">
+      <NameCon UId="72" Name="fEngValue" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="121">
+      <OpenCon UId="84" />
+      <NameCon UId="73" Name="en" />
+    </Wire>
+    <Wire UId="122">
+      <IdentCon UId="46" />
+      <NameCon UId="73" Name="fIn" />
+    </Wire>
+    <Wire UId="123">
+      <IdentCon UId="47" />
+      <NameCon UId="73" Name="fOffset" />
+    </Wire>
+    <Wire UId="124">
+      <IdentCon UId="48" />
+      <NameCon UId="73" Name="sTag" />
+    </Wire>
+    <Wire UId="125">
+      <NameCon UId="73" Name="fEngValue" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="126">
+      <OpenCon UId="85" />
+      <NameCon UId="74" Name="en" />
+    </Wire>
+    <Wire UId="127">
+      <IdentCon UId="50" />
+      <NameCon UId="74" Name="fIn" />
+    </Wire>
+    <Wire UId="128">
+      <IdentCon UId="51" />
+      <NameCon UId="74" Name="fOffset" />
+    </Wire>
+    <Wire UId="129">
+      <IdentCon UId="52" />
+      <NameCon UId="74" Name="sTag" />
+    </Wire>
+    <Wire UId="130">
+      <NameCon UId="74" Name="fEngValue" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="131">
+      <OpenCon UId="86" />
+      <NameCon UId="75" Name="en" />
+    </Wire>
+    <Wire UId="132">
+      <IdentCon UId="54" />
+      <NameCon UId="75" Name="fIn" />
+    </Wire>
+    <Wire UId="133">
+      <IdentCon UId="55" />
+      <NameCon UId="75" Name="fOffset" />
+    </Wire>
+    <Wire UId="134">
+      <IdentCon UId="56" />
+      <NameCon UId="75" Name="sTag" />
+    </Wire>
+    <Wire UId="135">
+      <NameCon UId="75" Name="fEngValue" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="136">
+      <OpenCon UId="87" />
+      <NameCon UId="76" Name="en" />
+    </Wire>
+    <Wire UId="137">
+      <IdentCon UId="58" />
+      <NameCon UId="76" Name="fIn" />
+    </Wire>
+    <Wire UId="138">
+      <IdentCon UId="59" />
+      <NameCon UId="76" Name="fOffset" />
+    </Wire>
+    <Wire UId="139">
+      <IdentCon UId="60" />
+      <NameCon UId="76" Name="sTag" />
+    </Wire>
+    <Wire UId="140">
+      <NameCon UId="76" Name="fEngValue" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="141">
+      <OpenCon UId="88" />
+      <NameCon UId="77" Name="en" />
+    </Wire>
+    <Wire UId="142">
+      <IdentCon UId="62" />
+      <NameCon UId="77" Name="fIn" />
+    </Wire>
+    <Wire UId="143">
+      <IdentCon UId="63" />
+      <NameCon UId="77" Name="fOffset" />
+    </Wire>
+    <Wire UId="144">
+      <IdentCon UId="64" />
+      <NameCon UId="77" Name="sTag" />
+    </Wire>
+    <Wire UId="145">
+      <NameCon UId="77" Name="fEngValue" />
+      <IdentCon UId="65" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>TSS = Test Support System</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Test Support System values (AI)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bCommOk" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_115h" />
+        <Component Name="I_307" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="23">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_FT_307" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_116h" />
+        <Component Name="I_355" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="27">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_FT_355" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="29">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_116h" />
+        <Component Name="I_308" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="31">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_LT_308" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="33">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="34">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_117h" />
+        <Component Name="I_300" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="35">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="36">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_300" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="37">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_117h" />
+        <Component Name="I_301" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="39">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="40">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_TT_301" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="41">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="42">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_118h" />
+        <Component Name="I_304" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="43">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="44">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_TT_304" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="45">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="46">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_118h" />
+        <Component Name="I_306" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="47">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="48">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_306" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="49">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="50">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_119h" />
+        <Component Name="I_320" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="51">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="52">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_TT_320" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="53">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="54">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_119h" />
+        <Component Name="I_321" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="55">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="56">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_321" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="57">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="58">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_120h" />
+        <Component Name="I_322" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="59">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="60">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Valve" />
+        <Component Name="TSA_HCV_322_A1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="61">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="62">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_120h" />
+        <Component Name="I_323" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="63">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="64">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_323" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="65">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="66">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_121h" />
+        <Component Name="I_324" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="67">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="68">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_TT_324" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="69">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="70">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_121h" />
+        <Component Name="I_328" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="71">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="72">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_328" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="73">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="74">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_122h" />
+        <Component Name="I_350" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="75">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="76">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_350" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="77">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="78">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_122h" />
+        <Component Name="I_351" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="79">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="80">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_TT_351" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="81">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="82">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_123h" />
+        <Component Name="I_354" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="83">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="84">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_354" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="85">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="86">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_123h" />
+        <Component Name="I_356" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="87">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="88">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_TT_356" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="89">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="90">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_124h" />
+        <Component Name="I_370" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="91">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="92">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Valve" />
+        <Component Name="TSA_HCV_370_A1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="93">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="94">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_124h" />
+        <Component Name="I_374" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="95">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="96">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSA_PT_374" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="97">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="98">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_125h" />
+        <Component Name="E_301" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="99">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="100">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Inverter" />
+        <Component Name="TSA_SC_301" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="101">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="102">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_125h" />
+        <Component Name="E_330" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="103">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="104">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Inverter" />
+        <Component Name="TSA_SC_330" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="105">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="106">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_126h" />
+        <Component Name="E_351" />
+      </Symbol>
+    </Access>
+    <Access Scope="LiteralConstant" UId="107">
+      <Constant>
+        <ConstantType>Real</ConstantType>
+        <ConstantValue>0.0</ConstantValue>
+      </Constant>
+    </Access>
+    <Access Scope="GlobalVariable" UId="108">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="Inverter" />
+        <Component Name="TSA_SC_351" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="109">
+      <Symbol>
+        <Component Name="fDummy" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="110">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Call UId="111">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="112">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="113">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="114">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="115">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="116">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="117">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="118">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="119">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="120">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="121">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="122">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="123">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="124">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="125">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="126">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="127">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="128">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="129">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="130">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="131">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+    <Call UId="132">
+      <CallInfo Name="fcCalcInput" BlockType="FC">
+        <Parameter Name="bValidData" Section="Input" Type="Bool" />
+        <Parameter Name="fIn" Section="Input" Type="Real" />
+        <Parameter Name="fOffset" Section="Input" Type="Real" />
+        <Parameter Name="fEngValue" Section="Output" Type="Real" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stCalcValue&quot;" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="155">
+      <IdentCon UId="21" />
+      <NameCon UId="110" Name="in1" />
+    </Wire>
+    <Wire UId="156">
+      <NameCon UId="110" Name="out" />
+      <NameCon UId="111" Name="bValidData" />
+      <NameCon UId="112" Name="bValidData" />
+      <NameCon UId="113" Name="bValidData" />
+      <NameCon UId="114" Name="bValidData" />
+      <NameCon UId="115" Name="bValidData" />
+      <NameCon UId="116" Name="bValidData" />
+      <NameCon UId="117" Name="bValidData" />
+      <NameCon UId="118" Name="bValidData" />
+      <NameCon UId="119" Name="bValidData" />
+      <NameCon UId="120" Name="bValidData" />
+      <NameCon UId="121" Name="bValidData" />
+      <NameCon UId="122" Name="bValidData" />
+      <NameCon UId="123" Name="bValidData" />
+      <NameCon UId="124" Name="bValidData" />
+      <NameCon UId="125" Name="bValidData" />
+      <NameCon UId="126" Name="bValidData" />
+      <NameCon UId="127" Name="bValidData" />
+      <NameCon UId="128" Name="bValidData" />
+      <NameCon UId="129" Name="bValidData" />
+      <NameCon UId="130" Name="bValidData" />
+      <NameCon UId="131" Name="bValidData" />
+      <NameCon UId="132" Name="bValidData" />
+    </Wire>
+    <Wire UId="157">
+      <OpenCon UId="133" />
+      <NameCon UId="111" Name="en" />
+    </Wire>
+    <Wire UId="158">
+      <IdentCon UId="22" />
+      <NameCon UId="111" Name="fIn" />
+    </Wire>
+    <Wire UId="159">
+      <IdentCon UId="23" />
+      <NameCon UId="111" Name="fOffset" />
+    </Wire>
+    <Wire UId="160">
+      <IdentCon UId="24" />
+      <NameCon UId="111" Name="sTag" />
+    </Wire>
+    <Wire UId="161">
+      <NameCon UId="111" Name="fEngValue" />
+      <IdentCon UId="25" />
+    </Wire>
+    <Wire UId="162">
+      <OpenCon UId="134" />
+      <NameCon UId="112" Name="en" />
+    </Wire>
+    <Wire UId="163">
+      <IdentCon UId="26" />
+      <NameCon UId="112" Name="fIn" />
+    </Wire>
+    <Wire UId="164">
+      <IdentCon UId="27" />
+      <NameCon UId="112" Name="fOffset" />
+    </Wire>
+    <Wire UId="165">
+      <IdentCon UId="28" />
+      <NameCon UId="112" Name="sTag" />
+    </Wire>
+    <Wire UId="166">
+      <NameCon UId="112" Name="fEngValue" />
+      <IdentCon UId="29" />
+    </Wire>
+    <Wire UId="167">
+      <OpenCon UId="135" />
+      <NameCon UId="113" Name="en" />
+    </Wire>
+    <Wire UId="168">
+      <IdentCon UId="30" />
+      <NameCon UId="113" Name="fIn" />
+    </Wire>
+    <Wire UId="169">
+      <IdentCon UId="31" />
+      <NameCon UId="113" Name="fOffset" />
+    </Wire>
+    <Wire UId="170">
+      <IdentCon UId="32" />
+      <NameCon UId="113" Name="sTag" />
+    </Wire>
+    <Wire UId="171">
+      <NameCon UId="113" Name="fEngValue" />
+      <IdentCon UId="33" />
+    </Wire>
+    <Wire UId="172">
+      <OpenCon UId="136" />
+      <NameCon UId="114" Name="en" />
+    </Wire>
+    <Wire UId="173">
+      <IdentCon UId="34" />
+      <NameCon UId="114" Name="fIn" />
+    </Wire>
+    <Wire UId="174">
+      <IdentCon UId="35" />
+      <NameCon UId="114" Name="fOffset" />
+    </Wire>
+    <Wire UId="175">
+      <IdentCon UId="36" />
+      <NameCon UId="114" Name="sTag" />
+    </Wire>
+    <Wire UId="176">
+      <NameCon UId="114" Name="fEngValue" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="177">
+      <OpenCon UId="137" />
+      <NameCon UId="115" Name="en" />
+    </Wire>
+    <Wire UId="178">
+      <IdentCon UId="38" />
+      <NameCon UId="115" Name="fIn" />
+    </Wire>
+    <Wire UId="179">
+      <IdentCon UId="39" />
+      <NameCon UId="115" Name="fOffset" />
+    </Wire>
+    <Wire UId="180">
+      <IdentCon UId="40" />
+      <NameCon UId="115" Name="sTag" />
+    </Wire>
+    <Wire UId="181">
+      <NameCon UId="115" Name="fEngValue" />
+      <IdentCon UId="41" />
+    </Wire>
+    <Wire UId="182">
+      <OpenCon UId="138" />
+      <NameCon UId="116" Name="en" />
+    </Wire>
+    <Wire UId="183">
+      <IdentCon UId="42" />
+      <NameCon UId="116" Name="fIn" />
+    </Wire>
+    <Wire UId="184">
+      <IdentCon UId="43" />
+      <NameCon UId="116" Name="fOffset" />
+    </Wire>
+    <Wire UId="185">
+      <IdentCon UId="44" />
+      <NameCon UId="116" Name="sTag" />
+    </Wire>
+    <Wire UId="186">
+      <NameCon UId="116" Name="fEngValue" />
+      <IdentCon UId="45" />
+    </Wire>
+    <Wire UId="187">
+      <OpenCon UId="139" />
+      <NameCon UId="117" Name="en" />
+    </Wire>
+    <Wire UId="188">
+      <IdentCon UId="46" />
+      <NameCon UId="117" Name="fIn" />
+    </Wire>
+    <Wire UId="189">
+      <IdentCon UId="47" />
+      <NameCon UId="117" Name="fOffset" />
+    </Wire>
+    <Wire UId="190">
+      <IdentCon UId="48" />
+      <NameCon UId="117" Name="sTag" />
+    </Wire>
+    <Wire UId="191">
+      <NameCon UId="117" Name="fEngValue" />
+      <IdentCon UId="49" />
+    </Wire>
+    <Wire UId="192">
+      <OpenCon UId="140" />
+      <NameCon UId="118" Name="en" />
+    </Wire>
+    <Wire UId="193">
+      <IdentCon UId="50" />
+      <NameCon UId="118" Name="fIn" />
+    </Wire>
+    <Wire UId="194">
+      <IdentCon UId="51" />
+      <NameCon UId="118" Name="fOffset" />
+    </Wire>
+    <Wire UId="195">
+      <IdentCon UId="52" />
+      <NameCon UId="118" Name="sTag" />
+    </Wire>
+    <Wire UId="196">
+      <NameCon UId="118" Name="fEngValue" />
+      <IdentCon UId="53" />
+    </Wire>
+    <Wire UId="197">
+      <OpenCon UId="141" />
+      <NameCon UId="119" Name="en" />
+    </Wire>
+    <Wire UId="198">
+      <IdentCon UId="54" />
+      <NameCon UId="119" Name="fIn" />
+    </Wire>
+    <Wire UId="199">
+      <IdentCon UId="55" />
+      <NameCon UId="119" Name="fOffset" />
+    </Wire>
+    <Wire UId="200">
+      <IdentCon UId="56" />
+      <NameCon UId="119" Name="sTag" />
+    </Wire>
+    <Wire UId="201">
+      <NameCon UId="119" Name="fEngValue" />
+      <IdentCon UId="57" />
+    </Wire>
+    <Wire UId="202">
+      <OpenCon UId="142" />
+      <NameCon UId="120" Name="en" />
+    </Wire>
+    <Wire UId="203">
+      <IdentCon UId="58" />
+      <NameCon UId="120" Name="fIn" />
+    </Wire>
+    <Wire UId="204">
+      <IdentCon UId="59" />
+      <NameCon UId="120" Name="fOffset" />
+    </Wire>
+    <Wire UId="205">
+      <IdentCon UId="60" />
+      <NameCon UId="120" Name="sTag" />
+    </Wire>
+    <Wire UId="206">
+      <NameCon UId="120" Name="fEngValue" />
+      <IdentCon UId="61" />
+    </Wire>
+    <Wire UId="207">
+      <OpenCon UId="143" />
+      <NameCon UId="121" Name="en" />
+    </Wire>
+    <Wire UId="208">
+      <IdentCon UId="62" />
+      <NameCon UId="121" Name="fIn" />
+    </Wire>
+    <Wire UId="209">
+      <IdentCon UId="63" />
+      <NameCon UId="121" Name="fOffset" />
+    </Wire>
+    <Wire UId="210">
+      <IdentCon UId="64" />
+      <NameCon UId="121" Name="sTag" />
+    </Wire>
+    <Wire UId="211">
+      <NameCon UId="121" Name="fEngValue" />
+      <IdentCon UId="65" />
+    </Wire>
+    <Wire UId="212">
+      <OpenCon UId="144" />
+      <NameCon UId="122" Name="en" />
+    </Wire>
+    <Wire UId="213">
+      <IdentCon UId="66" />
+      <NameCon UId="122" Name="fIn" />
+    </Wire>
+    <Wire UId="214">
+      <IdentCon UId="67" />
+      <NameCon UId="122" Name="fOffset" />
+    </Wire>
+    <Wire UId="215">
+      <IdentCon UId="68" />
+      <NameCon UId="122" Name="sTag" />
+    </Wire>
+    <Wire UId="216">
+      <NameCon UId="122" Name="fEngValue" />
+      <IdentCon UId="69" />
+    </Wire>
+    <Wire UId="217">
+      <OpenCon UId="145" />
+      <NameCon UId="123" Name="en" />
+    </Wire>
+    <Wire UId="218">
+      <IdentCon UId="70" />
+      <NameCon UId="123" Name="fIn" />
+    </Wire>
+    <Wire UId="219">
+      <IdentCon UId="71" />
+      <NameCon UId="123" Name="fOffset" />
+    </Wire>
+    <Wire UId="220">
+      <IdentCon UId="72" />
+      <NameCon UId="123" Name="sTag" />
+    </Wire>
+    <Wire UId="221">
+      <NameCon UId="123" Name="fEngValue" />
+      <IdentCon UId="73" />
+    </Wire>
+    <Wire UId="222">
+      <OpenCon UId="146" />
+      <NameCon UId="124" Name="en" />
+    </Wire>
+    <Wire UId="223">
+      <IdentCon UId="74" />
+      <NameCon UId="124" Name="fIn" />
+    </Wire>
+    <Wire UId="224">
+      <IdentCon UId="75" />
+      <NameCon UId="124" Name="fOffset" />
+    </Wire>
+    <Wire UId="225">
+      <IdentCon UId="76" />
+      <NameCon UId="124" Name="sTag" />
+    </Wire>
+    <Wire UId="226">
+      <NameCon UId="124" Name="fEngValue" />
+      <IdentCon UId="77" />
+    </Wire>
+    <Wire UId="227">
+      <OpenCon UId="147" />
+      <NameCon UId="125" Name="en" />
+    </Wire>
+    <Wire UId="228">
+      <IdentCon UId="78" />
+      <NameCon UId="125" Name="fIn" />
+    </Wire>
+    <Wire UId="229">
+      <IdentCon UId="79" />
+      <NameCon UId="125" Name="fOffset" />
+    </Wire>
+    <Wire UId="230">
+      <IdentCon UId="80" />
+      <NameCon UId="125" Name="sTag" />
+    </Wire>
+    <Wire UId="231">
+      <NameCon UId="125" Name="fEngValue" />
+      <IdentCon UId="81" />
+    </Wire>
+    <Wire UId="232">
+      <OpenCon UId="148" />
+      <NameCon UId="126" Name="en" />
+    </Wire>
+    <Wire UId="233">
+      <IdentCon UId="82" />
+      <NameCon UId="126" Name="fIn" />
+    </Wire>
+    <Wire UId="234">
+      <IdentCon UId="83" />
+      <NameCon UId="126" Name="fOffset" />
+    </Wire>
+    <Wire UId="235">
+      <IdentCon UId="84" />
+      <NameCon UId="126" Name="sTag" />
+    </Wire>
+    <Wire UId="236">
+      <NameCon UId="126" Name="fEngValue" />
+      <IdentCon UId="85" />
+    </Wire>
+    <Wire UId="237">
+      <OpenCon UId="149" />
+      <NameCon UId="127" Name="en" />
+    </Wire>
+    <Wire UId="238">
+      <IdentCon UId="86" />
+      <NameCon UId="127" Name="fIn" />
+    </Wire>
+    <Wire UId="239">
+      <IdentCon UId="87" />
+      <NameCon UId="127" Name="fOffset" />
+    </Wire>
+    <Wire UId="240">
+      <IdentCon UId="88" />
+      <NameCon UId="127" Name="sTag" />
+    </Wire>
+    <Wire UId="241">
+      <NameCon UId="127" Name="fEngValue" />
+      <IdentCon UId="89" />
+    </Wire>
+    <Wire UId="242">
+      <OpenCon UId="150" />
+      <NameCon UId="128" Name="en" />
+    </Wire>
+    <Wire UId="243">
+      <IdentCon UId="90" />
+      <NameCon UId="128" Name="fIn" />
+    </Wire>
+    <Wire UId="244">
+      <IdentCon UId="91" />
+      <NameCon UId="128" Name="fOffset" />
+    </Wire>
+    <Wire UId="245">
+      <IdentCon UId="92" />
+      <NameCon UId="128" Name="sTag" />
+    </Wire>
+    <Wire UId="246">
+      <NameCon UId="128" Name="fEngValue" />
+      <IdentCon UId="93" />
+    </Wire>
+    <Wire UId="247">
+      <OpenCon UId="151" />
+      <NameCon UId="129" Name="en" />
+    </Wire>
+    <Wire UId="248">
+      <IdentCon UId="94" />
+      <NameCon UId="129" Name="fIn" />
+    </Wire>
+    <Wire UId="249">
+      <IdentCon UId="95" />
+      <NameCon UId="129" Name="fOffset" />
+    </Wire>
+    <Wire UId="250">
+      <IdentCon UId="96" />
+      <NameCon UId="129" Name="sTag" />
+    </Wire>
+    <Wire UId="251">
+      <NameCon UId="129" Name="fEngValue" />
+      <IdentCon UId="97" />
+    </Wire>
+    <Wire UId="252">
+      <OpenCon UId="152" />
+      <NameCon UId="130" Name="en" />
+    </Wire>
+    <Wire UId="253">
+      <IdentCon UId="98" />
+      <NameCon UId="130" Name="fIn" />
+    </Wire>
+    <Wire UId="254">
+      <IdentCon UId="99" />
+      <NameCon UId="130" Name="fOffset" />
+    </Wire>
+    <Wire UId="255">
+      <IdentCon UId="100" />
+      <NameCon UId="130" Name="sTag" />
+    </Wire>
+    <Wire UId="256">
+      <NameCon UId="130" Name="fEngValue" />
+      <IdentCon UId="101" />
+    </Wire>
+    <Wire UId="257">
+      <OpenCon UId="153" />
+      <NameCon UId="131" Name="en" />
+    </Wire>
+    <Wire UId="258">
+      <IdentCon UId="102" />
+      <NameCon UId="131" Name="fIn" />
+    </Wire>
+    <Wire UId="259">
+      <IdentCon UId="103" />
+      <NameCon UId="131" Name="fOffset" />
+    </Wire>
+    <Wire UId="260">
+      <IdentCon UId="104" />
+      <NameCon UId="131" Name="sTag" />
+    </Wire>
+    <Wire UId="261">
+      <NameCon UId="131" Name="fEngValue" />
+      <IdentCon UId="105" />
+    </Wire>
+    <Wire UId="262">
+      <OpenCon UId="154" />
+      <NameCon UId="132" Name="en" />
+    </Wire>
+    <Wire UId="263">
+      <IdentCon UId="106" />
+      <NameCon UId="132" Name="fIn" />
+    </Wire>
+    <Wire UId="264">
+      <IdentCon UId="107" />
+      <NameCon UId="132" Name="fOffset" />
+    </Wire>
+    <Wire UId="265">
+      <IdentCon UId="108" />
+      <NameCon UId="132" Name="sTag" />
+    </Wire>
+    <Wire UId="266">
+      <NameCon UId="132" Name="fEngValue" />
+      <IdentCon UId="109" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>TSA = TSS Steam Adapters</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Steam Adapter values (AI)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="I_326" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="DI" />
+        <Component Name="TSA_HV_326" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="I_327" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="DI" />
+        <Component Name="TSA_HV_327" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="I_330" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="DI" />
+        <Component Name="TSA_HV_330" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="I_372" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="28">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="DI" />
+        <Component Name="TSA_HV_372" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="CAN_Data_DB" />
+        <Component Name="InputData" />
+        <Component Name="CAN_ID_101h" />
+        <Component Name="I_373" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="30">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="DI" />
+        <Component Name="TSA_HV_373" />
+      </Symbol>
+    </Access>
+    <Part Name="Coil" UId="31" />
+    <Part Name="Coil" UId="32" />
+    <Part Name="Coil" UId="33" />
+    <Part Name="Coil" UId="34" />
+    <Part Name="Coil" UId="35" />
+  </Parts>
+  <Wires>
+    <Wire UId="36">
+      <IdentCon UId="21" />
+      <NameCon UId="31" Name="in" />
+    </Wire>
+    <Wire UId="37">
+      <IdentCon UId="22" />
+      <NameCon UId="31" Name="operand" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="23" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="24" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="25" />
+      <NameCon UId="33" Name="in" />
+    </Wire>
+    <Wire UId="41">
+      <IdentCon UId="26" />
+      <NameCon UId="33" Name="operand" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="27" />
+      <NameCon UId="34" Name="in" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="28" />
+      <NameCon UId="34" Name="operand" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="29" />
+      <NameCon UId="35" Name="in" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="30" />
+      <NameCon UId="35" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Steam Adapter values (DI)</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_FT_210" />
+        <Component Name="fValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_CurrentSetting" />
+        <Component Name="HeatSourceFlowLimit" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="EXT_FS_01" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_TestSupport" />
+        <Component Name="AI" />
+        <Component Name="TSS_FT_211" />
+        <Component Name="fValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_CurrentSetting" />
+        <Component Name="HeatSinkFlowLimit" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_DI" />
+        <Component Name="EXT_FS_02" />
+      </Symbol>
+    </Access>
+    <Part Name="Ge" UId="27">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="28" />
+    <Part Name="Ge" UId="29">
+      <TemplateValue Name="SrcType" Type="Type">Real</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="30" />
+  </Parts>
+  <Wires>
+    <Wire UId="31">
+      <IdentCon UId="21" />
+      <NameCon UId="27" Name="in1" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="22" />
+      <NameCon UId="27" Name="in2" />
+    </Wire>
+    <Wire UId="33">
+      <NameCon UId="27" Name="out" />
+      <NameCon UId="28" Name="in" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="23" />
+      <NameCon UId="28" Name="operand" />
+    </Wire>
+    <Wire UId="35">
+      <IdentCon UId="24" />
+      <NameCon UId="29" Name="in1" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="25" />
+      <NameCon UId="29" Name="in2" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="26" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Flow detection</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bEnable" />
+      </Symbol>
+    </Access>
+    <Part Name="Return" UId="22">
+      <Negated Name="in" />
+    </Part>
+  </Parts>
+  <Wires>
+    <Wire UId="23">
+      <IdentCon UId="21" />
+      <NameCon UId="22" Name="in" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Do processing or not</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="21" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="22" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

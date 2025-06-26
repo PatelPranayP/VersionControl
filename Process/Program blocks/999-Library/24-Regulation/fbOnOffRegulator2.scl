@@ -1,0 +1,82 @@
+﻿FUNCTION_BLOCK "fbOnOffRegulator2"
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      bEnable : Bool;   // Enable from process. 1 = enabled, 0 = disabled
+      bLow : Bool;   // Lower level switch (1 = level is above switch, 0 = level is below switch)
+      bHigh : Bool;   // Higher level switch (1 = level is above switch, 0 = level is below switch)
+      bAbove : Bool;   // 1 = regulate when above threshold, 0 = regulate when below threshold
+      bReset : Bool;   // 1 = reset manual modes
+   END_VAR
+
+   VAR_OUTPUT 
+      bOutput : Bool;
+      bAtSetpoint : Bool;
+   END_VAR
+
+   VAR_IN_OUT 
+      sTag : "stOnOffRegulator2";
+   END_VAR
+
+   VAR 
+      Controller { S7_SetPoint := 'False'} : "fbHysteresis2";
+   END_VAR
+
+   VAR_TEMP 
+      fSetpoint : Real;
+      Enabled : Bool;
+   END_VAR
+
+
+BEGIN
+	// 1-sided on/off controller with switch inputs
+	// Above = 1: regulate when Process Value (PV) above threshold. Eg. cooling, emptying, depressurizing
+	// Above = 0: regulate when PV below threshold. Eg. heating, filling, pressurizing
+	
+	// Reset manual modes.
+	IF #bReset THEN
+	    #sTag.bManualOverride := FALSE;
+	    #sTag.bOverrideCmd := FALSE;
+	END_IF;
+	
+	IF #sTag.bManualOverride = TRUE THEN
+	    // In manual override, everything is awesome
+	    #sTag.bFault := FALSE;
+	    #sTag.bOutput := #sTag.bOverrideCmd;
+	    #sTag.bAtSetpoint := NOT(#sTag.bOutput);
+	ELSE
+	
+	    // Enabled when enabled from process and from HMI (Auto)
+	    #Enabled := (#bEnable AND #sTag.bEnable);
+	
+	    // Run controller
+	    #Controller(bEnable := #Enabled, bLow := #bLow, bHigh := #bHigh, bReset := #bReset, bAbove := #bAbove, bOut => #sTag.bOutput );
+	
+	    // At setpoint
+	    IF #Enabled = TRUE THEN
+	        #sTag.bAtSetpoint := NOT(#sTag.bOutput);
+	    ELSE
+	        #sTag.bAtSetpoint := FALSE;
+	    END_IF;
+	
+	    // Controller fault
+	    #sTag.bFault := FALSE;
+	
+	END_IF;
+	
+	// Mode
+	IF #sTag.bManualOverride = TRUE THEN
+	    #sTag.nMode := 3;
+	ELSIF #sTag.bEnable = TRUE THEN
+	    #sTag.nMode := 1;
+	ELSE
+	    #sTag.nMode := 0;
+	END_IF;
+	
+	// Local outputs
+	#bOutput := #sTag.bOutput;
+	#bAtSetpoint := #sTag.bAtSetpoint;
+	
+	
+END_FUNCTION_BLOCK
+

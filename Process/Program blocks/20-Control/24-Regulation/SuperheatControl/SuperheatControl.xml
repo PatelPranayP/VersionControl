@@ -1,0 +1,1814 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document>
+  <Engineering version="V17" />
+  <DocumentInfo>
+    <Created>2025-06-26T07:49:38.0416026Z</Created>
+    <ExportSetting>WithDefaults</ExportSetting>
+    <InstalledProducts>
+      <Product>
+        <DisplayName>Totally Integrated Automation Portal</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>TIA Portal Openness</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </OptionPackage>
+      <OptionPackage>
+        <DisplayName>TIA Portal Version Control Interface</DisplayName>
+        <DisplayVersion>V17</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>STEP 7 Professional</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+      <OptionPackage>
+        <DisplayName>STEP 7 Safety</DisplayName>
+        <DisplayVersion>V17 Update 6</DisplayVersion>
+      </OptionPackage>
+      <Product>
+        <DisplayName>WinCC Advanced</DisplayName>
+        <DisplayVersion>V17 Update 8</DisplayVersion>
+      </Product>
+    </InstalledProducts>
+  </DocumentInfo>
+  <SW.Blocks.FB ID="0">
+    <AttributeList>
+      <AutoNumber>true</AutoNumber>
+      <HeaderAuthor />
+      <HeaderFamily />
+      <HeaderName />
+      <HeaderVersion>0.1</HeaderVersion>
+      <Interface><Sections xmlns="http://www.siemens.com/automation/Openness/SW/Interface/v5">
+  <Section Name="Input">
+    <Member Name="bEnable" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">1 = enable controller 0 = disable controller</MultiLanguageText></Comment></Member>
+    <Member Name="bReset" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList><Comment><MultiLanguageText Lang="de-DE">1 = reset manual mode</MultiLanguageText></Comment></Member>
+    <Member Name="AdditionalSuperheat" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="Output">
+    <Member Name="AddSuperheat" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+  </Section>
+  <Section Name="InOut" />
+  <Section Name="Static">
+    <Member Name="SuperheatSetpoint" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="PinchSetpoint" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="PinchPerformanceCurrent" Datatype="Real" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="Regulator" Datatype="Struct" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Member Name="x_intern_1" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member><Member Name="x_intern_2" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member><Member Name="x_intern_3" Datatype="Real"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member></Member>
+    <Member Name="Enabled" Datatype="Bool" Remanence="NonRetain" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList></Member>
+    <Member Name="A3020" Datatype="&quot;fbHMIEvent&quot;" Accessibility="Public"><AttributeList><BooleanAttribute Name="ExternalAccessible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalVisible" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="ExternalWritable" SystemDefined="true">false</BooleanAttribute><BooleanAttribute Name="SetPoint" SystemDefined="true">false</BooleanAttribute></AttributeList><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAckAll" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="sTag" Datatype="&quot;stEvent&quot;"><Sections><Section Name="None" /></Sections></Member></Section><Section Name="Static"><Member Name="Event" Datatype="&quot;fbEvent&quot;"><Sections><Section Name="Input"><Member Name="bInput" Datatype="Bool" /><Member Name="bAck" Datatype="Bool" /><Member Name="bEnable" Datatype="Bool" /></Section><Section Name="Output" /><Section Name="InOut"><Member Name="bActive" Datatype="Bool" /><Member Name="bActiveUnack" Datatype="Bool" /></Section><Section Name="Static"><Member Name="mActive" Datatype="Bool" /></Section></Sections></Member></Section></Sections></Member>
+  </Section>
+  <Section Name="Temp">
+    <Member Name="PinchPerformance" Datatype="Real" />
+    <Member Name="PIDControlInactive" Datatype="Bool">
+      <Comment>
+        <MultiLanguageText Lang="de-DE">Is true if pinch setpoint is externally controlled</MultiLanguageText>
+      </Comment>
+    </Member>
+  </Section>
+  <Section Name="Constant" />
+</Sections></Interface>
+      <IsIECCheckEnabled>false</IsIECCheckEnabled>
+      <IsRetainMemResEnabled>false</IsRetainMemResEnabled>
+      <MemoryLayout>Optimized</MemoryLayout>
+      <MemoryReserve>100</MemoryReserve>
+      <Name>SuperheatControl</Name>
+      <Number>23</Number>
+      <ProgrammingLanguage>FBD</ProgrammingLanguage>
+      <SetENOAutomatically>false</SetENOAutomatically>
+      <UDABlockProperties />
+      <UDAEnableTagReadback>false</UDAEnableTagReadback>
+    </AttributeList>
+    <ObjectList>
+      <MultilingualText ID="1" CompositionName="Comment">
+        <ObjectList>
+          <MultilingualTextItem ID="2" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text />
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+      <SW.Blocks.CompileUnit ID="3" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bReset" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="bManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="FORCE!_FixedPinch" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="24">
+      <TemplateValue Name="Card" Type="Cardinality">1</TemplateValue>
+    </Part>
+    <Part Name="RCoil" UId="25" />
+    <Part Name="RCoil" UId="26" />
+  </Parts>
+  <Wires>
+    <Wire UId="27">
+      <IdentCon UId="21" />
+      <NameCon UId="24" Name="in1" />
+    </Wire>
+    <Wire UId="28">
+      <NameCon UId="24" Name="out" />
+      <NameCon UId="25" Name="in" />
+      <NameCon UId="26" Name="in" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="operand" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="23" />
+      <NameCon UId="26" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="4" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="5" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="6" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="7" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Reset manual mode</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="8" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Access Scope="GlobalVariable" UId="21">
+    <Symbol UId="22">
+      <Component Name="DB_Regulators" UId="23" />
+      <Token Text="." UId="24" />
+      <Component Name="SuperheatControl" UId="25" />
+      <Token Text="." UId="26" />
+      <Component Name="Regulator" UId="27" />
+      <Token Text="." UId="28" />
+      <Component Name="bManualMode" UId="29" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="30" />
+  <Token Text=":=" UId="31" />
+  <Blank Num="1" UId="32" />
+  <Access Scope="GlobalVariable" UId="33">
+    <Symbol UId="34">
+      <Component Name="DB_Regulators" UId="35" />
+      <Token Text="." UId="36" />
+      <Component Name="SuperheatControl" UId="37" />
+      <Token Text="." UId="38" />
+      <Component Name="FORCE!_FixedPinch" UId="39" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="40" />
+  <NewLine Num="1" UId="41" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="9" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="B" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="C" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Manual values are given as Pinch, regulator works on "Pinch Performance"</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="D" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="LocalVariable" UId="21">
+      <Symbol>
+        <Component Name="bEnable" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="bEnable" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="FORCE!_FixedPinch" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="24">
+      <Symbol>
+        <Component Name="Enabled" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="25">
+      <Symbol>
+        <Component Name="bEnable" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="bManualMode" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="27">
+      <Symbol>
+        <Component Name="PIDControlInactive" />
+      </Symbol>
+    </Access>
+    <Part Name="A" UId="28">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="O" UId="29">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+    </Part>
+    <Part Name="Coil" UId="30" />
+    <Part Name="A" UId="31">
+      <TemplateValue Name="Card" Type="Cardinality">2</TemplateValue>
+      <Negated Name="in2" />
+      <Negated Name="out" />
+    </Part>
+    <Part Name="Coil" UId="32" />
+  </Parts>
+  <Wires>
+    <Wire UId="33">
+      <IdentCon UId="21" />
+      <NameCon UId="28" Name="in1" />
+    </Wire>
+    <Wire UId="34">
+      <IdentCon UId="22" />
+      <NameCon UId="28" Name="in2" />
+    </Wire>
+    <Wire UId="35">
+      <NameCon UId="28" Name="out" />
+      <NameCon UId="29" Name="in1" />
+    </Wire>
+    <Wire UId="36">
+      <IdentCon UId="23" />
+      <NameCon UId="29" Name="in2" />
+    </Wire>
+    <Wire UId="37">
+      <NameCon UId="29" Name="out" />
+      <NameCon UId="30" Name="in" />
+    </Wire>
+    <Wire UId="38">
+      <IdentCon UId="24" />
+      <NameCon UId="30" Name="operand" />
+    </Wire>
+    <Wire UId="39">
+      <IdentCon UId="25" />
+      <NameCon UId="31" Name="in1" />
+    </Wire>
+    <Wire UId="40">
+      <IdentCon UId="26" />
+      <NameCon UId="31" Name="in2" />
+    </Wire>
+    <Wire UId="41">
+      <NameCon UId="31" Name="out" />
+      <NameCon UId="32" Name="in" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="27" />
+      <NameCon UId="32" Name="operand" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="E" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>NOTE that we are not using the conventional bManual bit!!
+Due to the difference between "Pinch Performance" and "Pinch"</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="10" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="11" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Enabled</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="12" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22">Additional Superheat</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Access Scope="LocalVariable" UId="24">
+    <Symbol UId="25">
+      <Component Name="AddSuperheat" UId="26" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="27" />
+  <Token Text=":=" UId="28" />
+  <Blank Num="1" UId="29" />
+  <Access Scope="LocalVariable" UId="30">
+    <Symbol UId="31">
+      <Component Name="AdditionalSuperheat" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="33" />
+  <Token Text="+" UId="34" />
+  <Blank Num="1" UId="35" />
+  <Access Scope="GlobalVariable" UId="36">
+    <Symbol UId="37">
+      <Component Name="DB_Regulators" UId="38" />
+      <Token Text="." UId="39" />
+      <Component Name="SuperheatControl" UId="40" />
+      <Token Text="." UId="41" />
+      <Component Name="AdditionalSuperheat" UId="42" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="43" />
+  <Token Text="+" UId="44" />
+  <Blank Num="1" UId="45" />
+  <Access Scope="GlobalVariable" UId="46">
+    <Symbol UId="47">
+      <Component Name="DB_CurrentSetting" UId="48" />
+      <Token Text="." UId="49" />
+      <Component Name="Fluid" UId="50" />
+      <Token Text="." UId="51" />
+      <Component Name="T_AdditionalSuperHeatEvaporator" UId="52" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="53" />
+  <NewLine Num="2" UId="54" />
+  <Access Scope="LocalVariable" UId="55">
+    <Symbol UId="56">
+      <Component Name="SuperheatSetpoint" UId="57" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="58" />
+  <Token Text=":=" UId="59" />
+  <Blank Num="1" UId="60" />
+  <Access Scope="LiteralConstant" UId="61">
+    <Constant UId="62">
+      <ConstantValue UId="64">1.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="65" />
+  <Token Text="*" UId="66" />
+  <Blank Num="1" UId="67" />
+  <Access Scope="Call" UId="68">
+    <CallInfo UId="69" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="71">
+        <Component Name="RecTarget" UId="70" />
+      </Instance>
+      <Token Text="(" UId="72" />
+      <NamelessParameter UId="73">
+        <Access Scope="GlobalVariable" UId="74">
+          <Symbol UId="75">
+            <Component Name="DB_Regulators" UId="76" />
+            <Token Text="." UId="77" />
+            <Component Name="SuperheatControl" UId="78" />
+            <Token Text="." UId="79" />
+            <Component Name="fineTuningRecTarget" UId="80" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="82" />
+    </CallInfo>
+  </Access>
+  <Blank Num="1" UId="83" />
+  <Token Text="+" UId="84" />
+  <NewLine Num="1" UId="85" />
+  <Blank Num="22" UId="86" />
+  <Access Scope="LiteralConstant" UId="87">
+    <Constant UId="88">
+      <ConstantValue UId="90">1.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="91" />
+  <Token Text="*" UId="92" />
+  <Blank Num="1" UId="93" />
+  <Access Scope="LocalVariable" UId="94">
+    <Symbol UId="95">
+      <Component Name="AddSuperheat" UId="96" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="97" />
+  <NewLine Num="2" UId="98" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="99">
+    <Text UId="100"> Superheat setpoint</Text>
+  </LineComment>
+  <NewLine Num="1" UId="101" />
+  <Token Text="IF" UId="102" />
+  <Blank Num="1" UId="103" />
+  <Access Scope="GlobalVariable" UId="104">
+    <Symbol UId="105">
+      <Component Name="DB_State" UId="106" />
+      <Token Text="." UId="107" />
+      <Component Name="State" UId="108" />
+      <Token Text="." UId="109" />
+      <Component Name="6_Running" UId="110" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="111" />
+  <Token Text="THEN" UId="112" />
+  <NewLine Num="1" UId="113" />
+  <Blank Num="4" UId="114" />
+  <Access Scope="LocalVariable" UId="115">
+    <Symbol UId="116">
+      <Component Name="SuperheatSetpoint" UId="117" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="118" />
+  <Token Text=":=" UId="119" />
+  <Blank Num="1" UId="120" />
+  <Access Scope="LocalVariable" UId="121">
+    <Symbol UId="122">
+      <Component Name="SuperheatSetpoint" UId="123" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="124" />
+  <Token Text="+" UId="125" />
+  <Blank Num="1" UId="126" />
+  <Access Scope="LiteralConstant" UId="127">
+    <Constant UId="128">
+      <ConstantValue UId="130">1.0</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="131" />
+  <Token Text="*" UId="132" />
+  <Blank Num="1" UId="133" />
+  <Access Scope="Call" UId="134">
+    <CallInfo UId="135" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="137">
+        <Component Name="VapPerformance" UId="136" />
+      </Instance>
+      <Token Text="(" UId="138" />
+      <Parameter Name="AddSuperheat" UId="139">
+        <Blank Num="1" UId="140" />
+        <Token Text=":=" UId="141" />
+        <Blank Num="1" UId="142" />
+        <Access Scope="LocalVariable" UId="143">
+          <Symbol UId="144">
+            <Component Name="AddSuperheat" UId="145" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="146" />
+      <Blank Num="1" UId="147" />
+      <Parameter Name="Pinch" UId="148">
+        <Blank Num="1" UId="149" />
+        <Token Text=":=" UId="150" />
+        <Blank Num="1" UId="151" />
+        <Access Scope="LocalVariable" UId="152">
+          <Symbol UId="153">
+            <Component Name="PinchSetpoint" UId="154" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="156" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="157" />
+  <NewLine Num="1" UId="158" />
+  <Token Text="ELSE" UId="159" />
+  <NewLine Num="1" UId="160" />
+  <Blank Num="4" UId="161" />
+  <Access Scope="LocalVariable" UId="162">
+    <Symbol UId="163">
+      <Component Name="SuperheatSetpoint" UId="164" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="165" />
+  <Token Text=":=" UId="166" />
+  <Blank Num="1" UId="167" />
+  <Access Scope="LocalVariable" UId="168">
+    <Symbol UId="169">
+      <Component Name="SuperheatSetpoint" UId="170" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="171" />
+  <Token Text="+" UId="172" />
+  <Blank Num="1" UId="173" />
+  <Access Scope="LiteralConstant" UId="174">
+    <Constant UId="175">
+      <ConstantValue UId="177">0.5</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="178" />
+  <Token Text="*" UId="179" />
+  <Blank Num="1" UId="180" />
+  <Access Scope="Call" UId="181">
+    <CallInfo UId="182" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="184">
+        <Component Name="VapPerformance" UId="183" />
+      </Instance>
+      <Token Text="(" UId="185" />
+      <Parameter Name="AddSuperheat" UId="186">
+        <Blank Num="1" UId="187" />
+        <Token Text=":=" UId="188" />
+        <Blank Num="1" UId="189" />
+        <Access Scope="LocalVariable" UId="190">
+          <Symbol UId="191">
+            <Component Name="AddSuperheat" UId="192" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="193" />
+      <Blank Num="1" UId="194" />
+      <Parameter Name="Pinch" UId="195">
+        <Blank Num="1" UId="196" />
+        <Token Text=":=" UId="197" />
+        <Blank Num="1" UId="198" />
+        <Access Scope="LocalVariable" UId="199">
+          <Symbol UId="200">
+            <Component Name="PinchSetpoint" UId="201" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="203" />
+    </CallInfo>
+  </Access>
+  <Token Text=";" UId="204" />
+  <NewLine Num="2" UId="205" />
+  <Token Text="END_IF" UId="206" />
+  <Token Text=";" UId="207" />
+  <NewLine Num="2" UId="208" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="209">
+    <Text UId="210"> Enforce a lower bound on the superheat</Text>
+  </LineComment>
+  <NewLine Num="1" UId="211" />
+  <Access Scope="LocalVariable" UId="212">
+    <Symbol UId="213">
+      <Component Name="SuperheatSetpoint" UId="214" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="215" />
+  <Token Text=":=" UId="216" />
+  <Blank Num="1" UId="217" />
+  <Access Scope="Call" UId="218">
+    <Instruction Name="MAX" UId="219">
+      <Token Text="(" UId="220" />
+      <Parameter Name="IN1" UId="221">
+        <Blank Num="1" UId="222" />
+        <Token Text=":=" UId="223" />
+        <Blank Num="1" UId="224" />
+        <Access Scope="LocalVariable" UId="225">
+          <Symbol UId="226">
+            <Component Name="SuperheatSetpoint" UId="227" />
+          </Symbol>
+        </Access>
+      </Parameter>
+      <Token Text="," UId="228" />
+      <Blank Num="1" UId="229" />
+      <Parameter Name="IN2" UId="230">
+        <Blank Num="1" UId="231" />
+        <Token Text=":=" UId="232" />
+        <Blank Num="1" UId="233" />
+        <Access Scope="GlobalVariable" UId="234">
+          <Symbol UId="235">
+            <Component Name="DB_CurrentSetting" UId="236" />
+            <Token Text="." UId="237" />
+            <Component Name="System" UId="238" />
+            <Token Text="." UId="239" />
+            <Component Name="Limits" UId="240" />
+            <Token Text="." UId="241" />
+            <Component Name="T_SuperHeatCompressorIn_Min" UId="242" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="243" />
+        <Token Text="+" UId="244" />
+        <Blank Num="1" UId="245" />
+        <Access Scope="LiteralConstant" UId="246">
+          <Constant UId="247">
+            <ConstantValue UId="249">5.5</ConstantValue>
+          </Constant>
+        </Access>
+      </Parameter>
+      <Token Text=")" UId="251" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="252" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="13" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="14" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="15" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="16" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Superheat setpoint</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="17" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <Token Text="IF" UId="21" />
+  <Blank Num="1" UId="22" />
+  <Access Scope="GlobalVariable" UId="23">
+    <Symbol UId="24">
+      <Component Name="DB_Regulators" UId="25" />
+      <Token Text="." UId="26" />
+      <Component Name="SuperheatControl" UId="27" />
+      <Token Text="." UId="28" />
+      <Component Name="Regulator" UId="29" />
+      <Token Text="." UId="30" />
+      <Component Name="bManualMode" UId="31" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="32" />
+  <Token Text="=" UId="33" />
+  <Blank Num="1" UId="34" />
+  <Access Scope="LiteralConstant" UId="35">
+    <Constant UId="36">
+      <ConstantValue UId="38">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="39" />
+  <Token Text="THEN" UId="40" />
+  <NewLine Num="1" UId="41" />
+  <Blank Num="4" UId="42" />
+  <Access Scope="GlobalVariable" UId="43">
+    <Symbol UId="44">
+      <Component Name="DB_Regulators" UId="45" />
+      <Token Text="." UId="46" />
+      <Component Name="SuperheatControl" UId="47" />
+      <Token Text="." UId="48" />
+      <Component Name="Regulator" UId="49" />
+      <Token Text="." UId="50" />
+      <Component Name="fManualValue" UId="51" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="52" />
+  <Token Text=":=" UId="53" />
+  <Blank Num="1" UId="54" />
+  <Access Scope="Call" UId="55">
+    <Instruction Name="LN" UId="56">
+      <Token Text="(" UId="57" />
+      <NamelessParameter UId="58">
+        <Access Scope="Call" UId="59">
+          <Instruction Name="MAX" UId="60">
+            <Token Text="(" UId="61" />
+            <Parameter Name="IN1" UId="62">
+              <Blank Num="1" UId="63" />
+              <Token Text=":=" UId="64" />
+              <Blank Num="1" UId="65" />
+              <Access Scope="GlobalVariable" UId="66">
+                <Symbol UId="67">
+                  <Component Name="DB_Regulators" UId="68" />
+                  <Token Text="." UId="69" />
+                  <Component Name="SuperheatControl" UId="70" />
+                  <Token Text="." UId="71" />
+                  <Component Name="FORCE!_FixedPinch_Value" UId="72" />
+                </Symbol>
+              </Access>
+            </Parameter>
+            <Token Text="," UId="73" />
+            <Blank Num="1" UId="74" />
+            <Parameter Name="IN2" UId="75">
+              <Blank Num="1" UId="76" />
+              <Token Text=":=" UId="77" />
+              <Blank Num="1" UId="78" />
+              <Access Scope="LiteralConstant" UId="79">
+                <Constant UId="80">
+                  <ConstantValue UId="82">0.01</ConstantValue>
+                </Constant>
+              </Access>
+            </Parameter>
+            <Token Text=")" UId="84" />
+          </Instruction>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="86" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="87" />
+  <Token Text="*" UId="88" />
+  <Blank Num="1" UId="89" />
+  <Access Scope="GlobalVariable" UId="90">
+    <Symbol UId="91">
+      <Component Name="DB_Regulators" UId="92" />
+      <Token Text="." UId="93" />
+      <Component Name="SuperheatControl" UId="94" />
+      <Token Text="." UId="95" />
+      <Component Name="ExponentialPinchFactor" UId="96" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="97" />
+  <NewLine Num="1" UId="98" />
+  <Blank Num="4" UId="99" />
+  <Access Scope="GlobalVariable" UId="100">
+    <Symbol UId="101">
+      <Component Name="DB_Regulators" UId="102" />
+      <Token Text="." UId="103" />
+      <Component Name="SuperheatControl" UId="104" />
+      <Token Text="." UId="105" />
+      <Component Name="bFault" UId="106" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="107" />
+  <Token Text=":=" UId="108" />
+  <Blank Num="1" UId="109" />
+  <Access Scope="LiteralConstant" UId="110">
+    <Constant UId="111">
+      <ConstantValue UId="113">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="114" />
+  <NewLine Num="1" UId="115" />
+  <Token Text="ELSE" UId="116" />
+  <NewLine Num="1" UId="117" />
+  <Blank Num="4" UId="118" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="119">
+    <Text UId="120">- Preset manual value to current pinch value to set controller to this value if inactive. Except if bManualMode whwre we directely set it to the target pinch performance</Text>
+  </LineComment>
+  <NewLine Num="1" UId="121" />
+  <Blank Num="4" UId="122" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="123">
+    <Text UId="124">- Limited to 1K superhetat to prevent division by zero and critical low pinch values</Text>
+  </LineComment>
+  <NewLine Num="1" UId="125" />
+  <Blank Num="4" UId="126" />
+  <Access Scope="GlobalVariable" UId="127">
+    <Symbol UId="128">
+      <Component Name="DB_Regulators" UId="129" />
+      <Token Text="." UId="130" />
+      <Component Name="SuperheatControl" UId="131" />
+      <Token Text="." UId="132" />
+      <Component Name="Regulator" UId="133" />
+      <Token Text="." UId="134" />
+      <Component Name="fManualValue" UId="135" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="136" />
+  <Token Text=":=" UId="137" />
+  <Blank Num="1" UId="138" />
+  <Access Scope="Call" UId="139">
+    <Instruction Name="LN" UId="140">
+      <Token Text="(" UId="141" />
+      <NamelessParameter UId="142">
+        <Access Scope="Call" UId="143">
+          <Instruction Name="MAX" UId="144">
+            <Token Text="(" UId="145" />
+            <Parameter Name="IN1" UId="146">
+              <Blank Num="1" UId="147" />
+              <Token Text=":=" UId="148" />
+              <Blank Num="1" UId="149" />
+              <Access Scope="GlobalVariable" UId="150">
+                <Symbol UId="151">
+                  <Component Name="DB_Calc" UId="152" />
+                  <Token Text="." UId="153" />
+                  <Component Name="HeatSource" UId="154" />
+                  <Token Text="." UId="155" />
+                  <Component Name="Pinch" UId="156" />
+                  <Token Text="." UId="157" />
+                  <Component Name="fValue" UId="158" />
+                </Symbol>
+              </Access>
+            </Parameter>
+            <Token Text="," UId="159" />
+            <Blank Num="1" UId="160" />
+            <Parameter Name="IN2" UId="161">
+              <Blank Num="1" UId="162" />
+              <Token Text=":=" UId="163" />
+              <Blank Num="1" UId="164" />
+              <Access Scope="LiteralConstant" UId="165">
+                <Constant UId="166">
+                  <ConstantValue UId="168">1</ConstantValue>
+                </Constant>
+              </Access>
+            </Parameter>
+            <Token Text=")" UId="170" />
+          </Instruction>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="172" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="173" />
+  <Token Text="*" UId="174" />
+  <Blank Num="1" UId="175" />
+  <Access Scope="GlobalVariable" UId="176">
+    <Symbol UId="177">
+      <Component Name="DB_Regulators" UId="178" />
+      <Token Text="." UId="179" />
+      <Component Name="SuperheatControl" UId="180" />
+      <Token Text="." UId="181" />
+      <Component Name="ExponentialPinchFactor" UId="182" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="183" />
+  <NewLine Num="1" UId="184" />
+  <Blank Num="4" UId="185" />
+  <NewLine Num="1" UId="186" />
+  <Blank Num="4" UId="187" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="188">
+    <Text UId="189">Preset with current pinch as starting value if "FORCE!_FixedPinch is used</Text>
+  </LineComment>
+  <NewLine Num="1" UId="190" />
+  <Blank Num="4" UId="191" />
+  <Access Scope="GlobalVariable" UId="192">
+    <Symbol UId="193">
+      <Component Name="DB_Regulators" UId="194" />
+      <Token Text="." UId="195" />
+      <Component Name="SuperheatControl" UId="196" />
+      <Token Text="." UId="197" />
+      <Component Name="FORCE!_FixedPinch_Value" UId="198" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="199" />
+  <Token Text=":=" UId="200" />
+  <Blank Num="1" UId="201" />
+  <Access Scope="GlobalVariable" UId="202">
+    <Symbol UId="203">
+      <Component Name="DB_Calc" UId="204" />
+      <Token Text="." UId="205" />
+      <Component Name="HeatSource" UId="206" />
+      <Token Text="." UId="207" />
+      <Component Name="Pinch" UId="208" />
+      <Token Text="." UId="209" />
+      <Component Name="fValue" UId="210" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="211" />
+  <NewLine Num="1" UId="212" />
+  <Blank Num="4" UId="213" />
+  <NewLine Num="1" UId="214" />
+  <Blank Num="4" UId="215" />
+  <NewLine Num="1" UId="216" />
+  <Blank Num="4" UId="217" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="218">
+    <Text UId="219">Auto mode setpoint</Text>
+  </LineComment>
+  <NewLine Num="1" UId="220" />
+  <Blank Num="4" UId="221" />
+  <Token Text="IF" UId="222" />
+  <Blank Num="1" UId="223" />
+  <Access Scope="Call" UId="224">
+    <CallInfo UId="225" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="227">
+        <Component Name="isNaN" UId="226" />
+      </Instance>
+      <Token Text="(" UId="228" />
+      <NamelessParameter UId="229">
+        <Access Scope="GlobalVariable" UId="230">
+          <Symbol UId="231">
+            <Component Name="DB_Calc" UId="232" />
+            <Token Text="." UId="233" />
+            <Component Name="LowPressPart" UId="234" />
+            <Token Text="." UId="235" />
+            <Component Name="CompressorSuperheat" UId="236" />
+            <Token Text="." UId="237" />
+            <Component Name="fValue" UId="238" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="240" />
+    </CallInfo>
+  </Access>
+  <Blank Num="1" UId="241" />
+  <Token Text="OR" UId="242" />
+  <Blank Num="1" UId="243" />
+  <Access Scope="Call" UId="244">
+    <CallInfo UId="245" BlockType="FC">
+      <Instance Scope="GlobalVariable" UId="247">
+        <Component Name="isNaN" UId="246" />
+      </Instance>
+      <Token Text="(" UId="248" />
+      <NamelessParameter UId="249">
+        <Access Scope="LocalVariable" UId="250">
+          <Symbol UId="251">
+            <Component Name="SuperheatSetpoint" UId="252" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="254" />
+    </CallInfo>
+  </Access>
+  <Blank Num="1" UId="255" />
+  <Token Text="THEN" UId="256" />
+  <NewLine Num="1" UId="257" />
+  <Blank Num="8" UId="258" />
+  <Access Scope="GlobalVariable" UId="259">
+    <Symbol UId="260">
+      <Component Name="DB_Regulators" UId="261" />
+      <Token Text="." UId="262" />
+      <Component Name="SuperheatControl" UId="263" />
+      <Token Text="." UId="264" />
+      <Component Name="Regulator" UId="265" />
+      <Token Text="." UId="266" />
+      <Component Name="fControlDeviation" UId="267" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="268" />
+  <Token Text=":=" UId="269" />
+  <Blank Num="1" UId="270" />
+  <Access Scope="LiteralConstant" UId="271">
+    <Constant UId="272">
+      <ConstantValue UId="274">0</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="275" />
+  <NewLine Num="1" UId="276" />
+  <Blank Num="8" UId="277" />
+  <Access Scope="GlobalVariable" UId="278">
+    <Symbol UId="279">
+      <Component Name="DB_Regulators" UId="280" />
+      <Token Text="." UId="281" />
+      <Component Name="SuperheatControl" UId="282" />
+      <Token Text="." UId="283" />
+      <Component Name="bFault" UId="284" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="285" />
+  <Token Text=":=" UId="286" />
+  <Blank Num="1" UId="287" />
+  <Access Scope="LiteralConstant" UId="288">
+    <Constant UId="289">
+      <ConstantValue UId="291">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="292" />
+  <NewLine Num="1" UId="293" />
+  <Blank Num="4" UId="294" />
+  <Token Text="ELSE" UId="295" />
+  <NewLine Num="1" UId="296" />
+  <Blank Num="8" UId="297" />
+  <Access Scope="GlobalVariable" UId="298">
+    <Symbol UId="299">
+      <Component Name="DB_Regulators" UId="300" />
+      <Token Text="." UId="301" />
+      <Component Name="SuperheatControl" UId="302" />
+      <Token Text="." UId="303" />
+      <Component Name="Regulator" UId="304" />
+      <Token Text="." UId="305" />
+      <Component Name="fControlDeviation" UId="306" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="307" />
+  <Token Text=":=" UId="308" />
+  <Blank Num="1" UId="309" />
+  <Access Scope="LocalVariable" UId="310">
+    <Symbol UId="311">
+      <Component Name="SuperheatSetpoint" UId="312" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="313" />
+  <Token Text="-" UId="314" />
+  <Blank Num="1" UId="315" />
+  <Access Scope="GlobalVariable" UId="316">
+    <Symbol UId="317">
+      <Component Name="DB_Calc" UId="318" />
+      <Token Text="." UId="319" />
+      <Component Name="LowPressPart" UId="320" />
+      <Token Text="." UId="321" />
+      <Component Name="CompressorSuperheat" UId="322" />
+      <Token Text="." UId="323" />
+      <Component Name="fValue" UId="324" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="325" />
+  <NewLine Num="1" UId="326" />
+  <Blank Num="8" UId="327" />
+  <Access Scope="GlobalVariable" UId="328">
+    <Symbol UId="329">
+      <Component Name="DB_Regulators" UId="330" />
+      <Token Text="." UId="331" />
+      <Component Name="SuperheatControl" UId="332" />
+      <Token Text="." UId="333" />
+      <Component Name="bFault" UId="334" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="335" />
+  <Token Text=":=" UId="336" />
+  <Blank Num="1" UId="337" />
+  <Access Scope="LiteralConstant" UId="338">
+    <Constant UId="339">
+      <ConstantValue UId="341">FALSE</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="342" />
+  <NewLine Num="1" UId="343" />
+  <Blank Num="4" UId="344" />
+  <Token Text="END_IF" UId="345" />
+  <Token Text=";" UId="346" />
+  <NewLine Num="1" UId="347" />
+  <Token Text="END_IF" UId="348" />
+  <Token Text=";" UId="349" />
+  <NewLine Num="2" UId="350" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="351">
+    <Text UId="352">- Current pinch performance for informative reasons</Text>
+  </LineComment>
+  <NewLine Num="1" UId="353" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="354">
+    <Text UId="355">- Limited to 0.1K to prevent division by zero </Text>
+  </LineComment>
+  <NewLine Num="1" UId="356" />
+  <Access Scope="LocalVariable" UId="357">
+    <Symbol UId="358">
+      <Component Name="PinchPerformanceCurrent" UId="359" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="360" />
+  <Token Text=":=" UId="361" />
+  <Blank Num="1" UId="362" />
+  <Access Scope="Call" UId="363">
+    <Instruction Name="LN" UId="364">
+      <Token Text="(" UId="365" />
+      <NamelessParameter UId="366">
+        <Access Scope="Call" UId="367">
+          <Instruction Name="MAX" UId="368">
+            <Token Text="(" UId="369" />
+            <Parameter Name="IN1" UId="370">
+              <Blank Num="1" UId="371" />
+              <Token Text=":=" UId="372" />
+              <Blank Num="1" UId="373" />
+              <Access Scope="GlobalVariable" UId="374">
+                <Symbol UId="375">
+                  <Component Name="DB_Calc" UId="376" />
+                  <Token Text="." UId="377" />
+                  <Component Name="HeatSource" UId="378" />
+                  <Token Text="." UId="379" />
+                  <Component Name="Pinch" UId="380" />
+                  <Token Text="." UId="381" />
+                  <Component Name="fValue" UId="382" />
+                </Symbol>
+              </Access>
+            </Parameter>
+            <Token Text="," UId="383" />
+            <Blank Num="1" UId="384" />
+            <Parameter Name="IN2" UId="385">
+              <Blank Num="1" UId="386" />
+              <Token Text=":=" UId="387" />
+              <Blank Num="1" UId="388" />
+              <Access Scope="LiteralConstant" UId="389">
+                <Constant UId="390">
+                  <ConstantValue UId="392">0.1</ConstantValue>
+                </Constant>
+              </Access>
+            </Parameter>
+            <Token Text=")" UId="394" />
+          </Instruction>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="396" />
+    </Instruction>
+  </Access>
+  <Blank Num="1" UId="397" />
+  <Token Text="*" UId="398" />
+  <Blank Num="1" UId="399" />
+  <Access Scope="GlobalVariable" UId="400">
+    <Symbol UId="401">
+      <Component Name="DB_Regulators" UId="402" />
+      <Token Text="." UId="403" />
+      <Component Name="SuperheatControl" UId="404" />
+      <Token Text="." UId="405" />
+      <Component Name="ExponentialPinchFactor" UId="406" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="407" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="18" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="19" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1A" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="1B" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Deviation</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="1C" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="fControlDeviation" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="Kp" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="23">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="Tn" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="Tv" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="25">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="T1" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="26">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="fOutMin" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="27">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="fOutMax" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="28">
+      <Symbol>
+        <Component Name="PIDControlInactive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="29">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="fManualValue" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="30">
+      <Symbol>
+        <Component Name="PinchPerformanceCurrent" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="31">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="fFeedbackHysteresis" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="32">
+      <Symbol>
+        <Component Name="DB_System" />
+        <Component Name="fCycleTime" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="33">
+      <Symbol>
+        <Component Name="Regulator" />
+        <Component Name="x_intern_1" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="34">
+      <Symbol>
+        <Component Name="Regulator" />
+        <Component Name="x_intern_2" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="35">
+      <Symbol>
+        <Component Name="Regulator" />
+        <Component Name="x_intern_3" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="36">
+      <Symbol>
+        <Component Name="PinchPerformance" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="37">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="bAtMin" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="38">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="Regulator" />
+        <Component Name="bAtMax" />
+      </Symbol>
+    </Access>
+    <Call UId="39">
+      <CallInfo Name="fcPID_Regulator_neu" BlockType="FC">
+        <Parameter Name="ControllerDeviation" Section="Input" Type="Real" />
+        <Parameter Name="Kp" Section="Input" Type="Real" />
+        <Parameter Name="Tn" Section="Input" Type="Real" />
+        <Parameter Name="Tv" Section="Input" Type="Real" />
+        <Parameter Name="T1" Section="Input" Type="Real" />
+        <Parameter Name="LowerLimit" Section="Input" Type="Real" />
+        <Parameter Name="UpperLimit" Section="Input" Type="Real" />
+        <Parameter Name="ManualTrigger" Section="Input" Type="Bool" />
+        <Parameter Name="ManualValue" Section="Input" Type="Real" />
+        <Parameter Name="Feedback" Section="Input" Type="Real" />
+        <Parameter Name="FeedbackHysteresis" Section="Input" Type="Real" />
+        <Parameter Name="fCycleTime" Section="Input" Type="Real" />
+        <Parameter Name="Output" Section="Output" Type="Real" />
+        <Parameter Name="LowerLimit_Reached" Section="Output" Type="Bool" />
+        <Parameter Name="UpperLimit_Reached" Section="Output" Type="Bool" />
+        <Parameter Name="DT1_Memory" Section="InOut" Type="Real" />
+        <Parameter Name="IntegralPart_Memory" Section="InOut" Type="Real" />
+        <Parameter Name="ParameterChange_Memory" Section="InOut" Type="Real" />
+      </CallInfo>
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="41">
+      <OpenCon UId="40" />
+      <NameCon UId="39" Name="en" />
+    </Wire>
+    <Wire UId="42">
+      <IdentCon UId="21" />
+      <NameCon UId="39" Name="ControllerDeviation" />
+    </Wire>
+    <Wire UId="43">
+      <IdentCon UId="22" />
+      <NameCon UId="39" Name="Kp" />
+    </Wire>
+    <Wire UId="44">
+      <IdentCon UId="23" />
+      <NameCon UId="39" Name="Tn" />
+    </Wire>
+    <Wire UId="45">
+      <IdentCon UId="24" />
+      <NameCon UId="39" Name="Tv" />
+    </Wire>
+    <Wire UId="46">
+      <IdentCon UId="25" />
+      <NameCon UId="39" Name="T1" />
+    </Wire>
+    <Wire UId="47">
+      <IdentCon UId="26" />
+      <NameCon UId="39" Name="LowerLimit" />
+    </Wire>
+    <Wire UId="48">
+      <IdentCon UId="27" />
+      <NameCon UId="39" Name="UpperLimit" />
+    </Wire>
+    <Wire UId="49">
+      <IdentCon UId="28" />
+      <NameCon UId="39" Name="ManualTrigger" />
+    </Wire>
+    <Wire UId="50">
+      <IdentCon UId="29" />
+      <NameCon UId="39" Name="ManualValue" />
+    </Wire>
+    <Wire UId="51">
+      <IdentCon UId="30" />
+      <NameCon UId="39" Name="Feedback" />
+    </Wire>
+    <Wire UId="52">
+      <IdentCon UId="31" />
+      <NameCon UId="39" Name="FeedbackHysteresis" />
+    </Wire>
+    <Wire UId="53">
+      <IdentCon UId="32" />
+      <NameCon UId="39" Name="fCycleTime" />
+    </Wire>
+    <Wire UId="54">
+      <IdentCon UId="33" />
+      <NameCon UId="39" Name="DT1_Memory" />
+    </Wire>
+    <Wire UId="55">
+      <IdentCon UId="34" />
+      <NameCon UId="39" Name="IntegralPart_Memory" />
+    </Wire>
+    <Wire UId="56">
+      <IdentCon UId="35" />
+      <NameCon UId="39" Name="ParameterChange_Memory" />
+    </Wire>
+    <Wire UId="57">
+      <NameCon UId="39" Name="Output" />
+      <IdentCon UId="36" />
+    </Wire>
+    <Wire UId="58">
+      <NameCon UId="39" Name="LowerLimit_Reached" />
+      <IdentCon UId="37" />
+    </Wire>
+    <Wire UId="59">
+      <NameCon UId="39" Name="UpperLimit_Reached" />
+      <IdentCon UId="38" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="1D" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="1E" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="1F" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="20" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Regulator</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="21" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22">The PinchPerfomance value is interpreted logarithmically as pinch set point (-oo =&gt; 0K; 0 =&gt; 1K; 110 =&gt; 163K). </Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="24">
+    <Text UId="25">Constant changes of PinchPerformance will cause only relative changes of the effective pinch. Pinch = e^(PinchPerformance/21,6)</Text>
+  </LineComment>
+  <NewLine Num="1" UId="26" />
+  <Token Text="IF" UId="27" />
+  <Blank Num="1" UId="28" />
+  <Access Scope="GlobalVariable" UId="29">
+    <Symbol UId="30">
+      <Component Name="DB_Regulators" UId="31" />
+      <Token Text="." UId="32" />
+      <Component Name="SuperheatControl" UId="33" />
+      <Token Text="." UId="34" />
+      <Component Name="Regulator" UId="35" />
+      <Token Text="." UId="36" />
+      <Component Name="bManualMode" UId="37" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="38" />
+  <Token Text="=" UId="39" />
+  <Blank Num="1" UId="40" />
+  <Access Scope="LiteralConstant" UId="41">
+    <Constant UId="42">
+      <ConstantValue UId="44">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="45" />
+  <Token Text="THEN" UId="46" />
+  <NewLine Num="1" UId="47" />
+  <Blank Num="4" UId="48" />
+  <Access Scope="GlobalVariable" UId="49">
+    <Symbol UId="50">
+      <Component Name="DB_Regulators" UId="51" />
+      <Token Text="." UId="52" />
+      <Component Name="SuperheatControl" UId="53" />
+      <Token Text="." UId="54" />
+      <Component Name="Regulator" UId="55" />
+      <Token Text="." UId="56" />
+      <Component Name="fOut" UId="57" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="58" />
+  <Token Text=":=" UId="59" />
+  <Blank Num="1" UId="60" />
+  <Access Scope="GlobalVariable" UId="61">
+    <Symbol UId="62">
+      <Component Name="DB_Regulators" UId="63" />
+      <Token Text="." UId="64" />
+      <Component Name="SuperheatControl" UId="65" />
+      <Token Text="." UId="66" />
+      <Component Name="FORCE!_FixedPinch_Value" UId="67" />
+    </Symbol>
+  </Access>
+  <Token Text=";" UId="68" />
+  <NewLine Num="1" UId="69" />
+  <Token Text="ELSE" UId="70" />
+  <NewLine Num="1" UId="71" />
+  <Blank Num="4" UId="72" />
+  <Access Scope="GlobalVariable" UId="73">
+    <Symbol UId="74">
+      <Component Name="DB_Regulators" UId="75" />
+      <Token Text="." UId="76" />
+      <Component Name="SuperheatControl" UId="77" />
+      <Token Text="." UId="78" />
+      <Component Name="Regulator" UId="79" />
+      <Token Text="." UId="80" />
+      <Component Name="fOut" UId="81" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="82" />
+  <Token Text=":=" UId="83" />
+  <Blank Num="1" UId="84" />
+  <Access Scope="Call" UId="85">
+    <Instruction Name="EXP" UId="86">
+      <Token Text="(" UId="87" />
+      <NamelessParameter UId="88">
+        <Access Scope="LocalVariable" UId="89">
+          <Symbol UId="90">
+            <Component Name="PinchPerformance" UId="91" />
+          </Symbol>
+        </Access>
+        <Blank Num="1" UId="92" />
+        <Token Text="/" UId="93" />
+        <Blank Num="1" UId="94" />
+        <Access Scope="GlobalVariable" UId="95">
+          <Symbol UId="96">
+            <Component Name="DB_Regulators" UId="97" />
+            <Token Text="." UId="98" />
+            <Component Name="SuperheatControl" UId="99" />
+            <Token Text="." UId="100" />
+            <Component Name="ExponentialPinchFactor" UId="101" />
+          </Symbol>
+        </Access>
+      </NamelessParameter>
+      <Token Text=")" UId="103" />
+    </Instruction>
+  </Access>
+  <Token Text=";" UId="104" />
+  <NewLine Num="1" UId="105" />
+  <Blank Num="4" UId="106" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="107">
+    <Text UId="108"> Keep the manual value in sync to avoid discontinuities when switching from normal operation to Manual:</Text>
+  </LineComment>
+  <NewLine Num="1" UId="109" />
+  <Blank Num="4" UId="110" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="111">
+    <Text UId="112">"DB_Regulators".SuperheatControl."FORCE!_FixedPinch_Value" := "DB_Regulators".SuperheatControl.Regulator.fOut;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="113" />
+  <Blank Num="4" UId="114" />
+  <NewLine Num="1" UId="115" />
+  <Token Text="END_IF" UId="116" />
+  <Token Text=";" UId="117" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="22" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="23" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="24" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="25" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Convert Pinch Performance to Pinch</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="26" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22">IF #Enabled = FALSE THEN</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="24">
+    <Text UId="25">    "DB_Regulators".SuperheatControl.Regulator.fOut := "DB_Regulators".SuperheatControl."FORCE!_FixedPinch_Value";</Text>
+  </LineComment>
+  <NewLine Num="1" UId="26" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="27">
+    <Text UId="28">    "DB_Regulators".SuperheatControl.Regulator.bAtMin := FALSE;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="29" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="30">
+    <Text UId="31">    "DB_Regulators".SuperheatControl.Regulator.bAtMax := FALSE;</Text>
+  </LineComment>
+  <NewLine Num="1" UId="32" />
+  <LineComment Inserted="false" NoClosingBracket="false" UId="33">
+    <Text UId="34">END_IF;</Text>
+  </LineComment>
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="27" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="28" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="29" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2A" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Disable</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="2B" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><FlgNet xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/FlgNet/v4">
+  <Parts>
+    <Access Scope="GlobalVariable" UId="21">
+      <Symbol>
+        <Component Name="DB_Regulators" />
+        <Component Name="SuperheatControl" />
+        <Component Name="bFault" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="22">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="bAckAll" />
+      </Symbol>
+    </Access>
+    <Access Scope="LocalVariable" UId="23">
+      <Symbol>
+        <Component Name="PIDControlInactive" />
+      </Symbol>
+    </Access>
+    <Access Scope="GlobalVariable" UId="24">
+      <Symbol>
+        <Component Name="DB_Alarms" />
+        <Component Name="3020_SuperheatControlRegulatorFault" />
+      </Symbol>
+    </Access>
+    <Call UId="25">
+      <CallInfo Name="fbHMIEvent" BlockType="FB">
+        <Instance Scope="LocalVariable" UId="26">
+          <Component Name="A3020" />
+        </Instance>
+        <Parameter Name="bInput" Section="Input" Type="Bool" />
+        <Parameter Name="bAckAll" Section="Input" Type="Bool" />
+        <Parameter Name="bEnable" Section="Input" Type="Bool" />
+        <Parameter Name="sTag" Section="InOut" Type="&quot;stEvent&quot;" />
+      </CallInfo>
+      <Negated Name="bEnable" />
+    </Call>
+  </Parts>
+  <Wires>
+    <Wire UId="28">
+      <OpenCon UId="27" />
+      <NameCon UId="25" Name="en" />
+    </Wire>
+    <Wire UId="29">
+      <IdentCon UId="21" />
+      <NameCon UId="25" Name="bInput" />
+    </Wire>
+    <Wire UId="30">
+      <IdentCon UId="22" />
+      <NameCon UId="25" Name="bAckAll" />
+    </Wire>
+    <Wire UId="31">
+      <IdentCon UId="23" />
+      <NameCon UId="25" Name="bEnable" />
+    </Wire>
+    <Wire UId="32">
+      <IdentCon UId="24" />
+      <NameCon UId="25" Name="sTag" />
+    </Wire>
+  </Wires>
+</FlgNet></NetworkSource>
+          <ProgrammingLanguage>FBD</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="2C" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="2D" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text />
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="2E" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="2F" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Regulator alarm</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <SW.Blocks.CompileUnit ID="30" CompositionName="CompileUnits">
+        <AttributeList>
+          <NetworkSource><StructuredText xmlns="http://www.siemens.com/automation/Openness/SW/NetworkSource/StructuredText/v3">
+  <LineComment Inserted="false" NoClosingBracket="false" UId="21">
+    <Text UId="22"> Mode</Text>
+  </LineComment>
+  <NewLine Num="1" UId="23" />
+  <Token Text="IF" UId="24" />
+  <Blank Num="1" UId="25" />
+  <Access Scope="GlobalVariable" UId="26">
+    <Symbol UId="27">
+      <Component Name="DB_Regulators" UId="28" />
+      <Token Text="." UId="29" />
+      <Component Name="SuperheatControl" UId="30" />
+      <Token Text="." UId="31" />
+      <Component Name="FORCE!_FixedPinch" UId="32" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="33" />
+  <Token Text="=" UId="34" />
+  <Blank Num="1" UId="35" />
+  <Access Scope="LiteralConstant" UId="36">
+    <Constant UId="37">
+      <ConstantValue UId="39">TRUE</ConstantValue>
+    </Constant>
+  </Access>
+  <Blank Num="1" UId="40" />
+  <Token Text="THEN" UId="41" />
+  <NewLine Num="1" UId="42" />
+  <Blank Num="4" UId="43" />
+  <Access Scope="GlobalVariable" UId="44">
+    <Symbol UId="45">
+      <Component Name="DB_Regulators" UId="46" />
+      <Token Text="." UId="47" />
+      <Component Name="SuperheatControl" UId="48" />
+      <Token Text="." UId="49" />
+      <Component Name="nMode" UId="50" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="51" />
+  <Token Text=":=" UId="52" />
+  <Blank Num="1" UId="53" />
+  <Access Scope="LiteralConstant" UId="54">
+    <Constant UId="55">
+      <ConstantValue UId="57">2</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="58" />
+  <NewLine Num="1" UId="59" />
+  <Token Text="ELSE" UId="60" />
+  <NewLine Num="1" UId="61" />
+  <Blank Num="4" UId="62" />
+  <Access Scope="GlobalVariable" UId="63">
+    <Symbol UId="64">
+      <Component Name="DB_Regulators" UId="65" />
+      <Token Text="." UId="66" />
+      <Component Name="SuperheatControl" UId="67" />
+      <Token Text="." UId="68" />
+      <Component Name="nMode" UId="69" />
+    </Symbol>
+  </Access>
+  <Blank Num="1" UId="70" />
+  <Token Text=":=" UId="71" />
+  <Blank Num="1" UId="72" />
+  <Access Scope="LiteralConstant" UId="73">
+    <Constant UId="74">
+      <ConstantValue UId="76">1</ConstantValue>
+    </Constant>
+  </Access>
+  <Token Text=";" UId="77" />
+  <NewLine Num="1" UId="78" />
+  <Token Text="END_IF" UId="79" />
+  <Token Text=";" UId="80" />
+</StructuredText></NetworkSource>
+          <ProgrammingLanguage>SCL</ProgrammingLanguage>
+        </AttributeList>
+        <ObjectList>
+          <MultilingualText ID="31" CompositionName="Comment">
+            <ObjectList>
+              <MultilingualTextItem ID="32" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Only Auto or Manual in this regulator</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+          <MultilingualText ID="33" CompositionName="Title">
+            <ObjectList>
+              <MultilingualTextItem ID="34" CompositionName="Items">
+                <AttributeList>
+                  <Culture>de-DE</Culture>
+                  <Text>Mode</Text>
+                </AttributeList>
+              </MultilingualTextItem>
+            </ObjectList>
+          </MultilingualText>
+        </ObjectList>
+      </SW.Blocks.CompileUnit>
+      <MultilingualText ID="35" CompositionName="Title">
+        <ObjectList>
+          <MultilingualTextItem ID="36" CompositionName="Items">
+            <AttributeList>
+              <Culture>de-DE</Culture>
+              <Text>Pinch setpoint from superheat</Text>
+            </AttributeList>
+          </MultilingualTextItem>
+        </ObjectList>
+      </MultilingualText>
+    </ObjectList>
+  </SW.Blocks.FB>
+</Document>

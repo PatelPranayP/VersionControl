@@ -1,0 +1,33 @@
+﻿FUNCTION_BLOCK "fbWinCCTime"
+{ S7_Optimized_Access := 'TRUE' }
+AUTHOR : Heaten
+VERSION : 0.1
+   VAR_IN_OUT 
+      tTime : Time;   // The source time value
+      tTOD : Time_Of_Day;   // The TOD value in the HMI
+   END_VAR
+
+   VAR 
+      tTime_prev : Time;
+      tTOD_prev : Time_Of_Day;
+   END_VAR
+
+
+BEGIN
+	// Allow displaying & modifying of a TIME value in WinCC
+	// TIME is displayed as an integer representing milliseconds, which is usually not what you want
+	// TOD is represented hh:mm:ss and can also be entered in this format, which is usually what you want
+	
+	IF #tTOD <> #tTOD_prev THEN
+	    // updated from HMI, update the PLC value
+	    #tTime := TOD_TO_TIME(#tTOD);
+	ELSIF #tTime <> #tTime_prev THEN
+	    // updated from the PLC, update the HMI value
+	    #tTOD := TIME_TO_TOD(#tTime);
+	END_IF;
+	
+	// update
+	#tTOD_prev := #tTOD;
+	#tTime_prev := #tTime;
+END_FUNCTION_BLOCK
+

@@ -1,0 +1,44 @@
+﻿FUNCTION "Restriction" : Void
+{ S7_Optimized_Access := 'TRUE' }
+VERSION : 0.1
+   VAR_INPUT 
+      ID : Int;
+      Target : Real;
+      Value : Real;
+      Kp : Real;
+      Tn : Int;
+      Tv : Int;
+      fCycleTime : Real;
+   END_VAR
+
+   VAR_IN_OUT 
+      IO : Struct
+         ID : Int;
+         Error : Real;
+         Targed : Real;
+         CurrentValue : Real;
+         Kp : Real;
+         Tn : Int;
+         Tv : Int;
+      END_STRUCT;
+      DT1_storage : Real;
+   END_VAR
+
+   VAR_TEMP 
+      Error_calc : Real;
+   END_VAR
+
+
+BEGIN
+	    #Error_calc := (#Target - #Value)*#Kp - #Tv * "DT1"(u:= #Value*#Kp,T1:=7, fCycleTime:= #fCycleTime, xh_merk:=#DT1_storage);
+	            
+	    IF #Error_calc < #IO.Error THEN 
+	        #IO.ID:=#ID;
+	        #IO.Error := #Error_calc;
+	        #IO.Kp := #Kp;
+	        #IO.Tn := #Tn;
+	        #IO.Targed := #Target;
+	        #IO.CurrentValue := #Value;
+	    END_IF;
+END_FUNCTION
+
